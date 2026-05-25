@@ -12,13 +12,19 @@ async function showPage(id){
   const container = document.getElementById('page-container');
   if(!container) return;
 
+  // begin transition out
+  container.classList.add('page-transition-out');
+  // show loader immediately so user sees feedback
   container.innerHTML = '<div class="page-loader">Loading...</div>';
 
   try {
-    const html = await loadPageFragment(`pages/${id}.html`);
-    container.innerHTML = html;
+    // small wait to allow fade-out to be visible
+    await new Promise(resolve => setTimeout(resolve, 180));
 
-    // Handle layout: Home page overlays the nav, other pages start below it
+    const html = await loadPageFragment(`pages/${id}.html`);
+
+    // replace content and fade in
+    container.innerHTML = html;
     document.body.classList.toggle('is-home', id === 'home');
 
     // Update Active Link State
@@ -34,17 +40,25 @@ async function showPage(id){
     // Instant scroll to top on page change
     window.scrollTo(0, 0);
 
+    // trigger fade-in
+    container.classList.remove('page-transition-out');
+    container.classList.add('page-transition-in');
+
     // Re-init components for the new dynamic content
     setTimeout(() => {
       if (window.initReveal) window.initReveal();
       if (window.i18n && typeof window.i18n.apply === 'function') window.i18n.apply();
-      // Initialize particles on all pages
+      // initParticles is idempotent; it will create the persistent overlay only once
       if (window.initParticles) window.initParticles();
       if (window.initSlides && id === 'home') window.initSlides();
+
+      // remove the fade-in helper class after transition completes
+      setTimeout(() => container.classList.remove('page-transition-in'), 340);
     }, 60);
   } catch (err) {
     console.error('Page load error:', err);
     container.innerHTML = '<div class="page-error">Unable to load page. Make sure the site is served via HTTP and that the "pages" folder is present.</div>';
+    container.classList.remove('page-transition-out');
   }
   if(menuOpen) toggleMenu();
 }
@@ -111,6 +125,36 @@ window.toggleAcc = toggleAcc;
 document.addEventListener('click',function(e){
   if(menuOpen && !e.target.closest('nav') && !e.target.closest('.hamburger')) toggleMenu();
 });
+
+// Auto-cycling services tabs
+let serviceCycleInterval;
+function initServiceCycling() {
+  clearInterval(serviceCycleInterval);
+  const tabs = document.querySelectorAll('#services .stab');
+  if (tabs.length === 0) return;
+  let currentIndex = 0;
+  serviceCycleInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % tabs.length;
+    tabs[currentIndex].click();
+  }, 7000);
+  // Reset cycle on manual click
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    clearInterval(serviceCycleInterval);
+    currentIndex = Array.from(tabs).indexOf(tab);
+    initServiceCycling();
+  }));
+}
+
+// Initialize cycling on page loads - MUST be before DOMContentLoaded
+const originalShowPage = window.showPage;
+window.showPage = function(id) {
+  originalShowPage(id);
+  if (id === 'services') {
+    setTimeout(() => initServiceCycling(), 100);
+  } else {
+    clearInterval(serviceCycleInterval);
+  }
+};
 
 document.addEventListener('DOMContentLoaded', () => showPage('home'));
 

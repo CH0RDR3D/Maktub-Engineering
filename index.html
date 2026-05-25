@@ -8,6 +8,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <link rel="stylesheet" href="styles.css">
+<style>
+  #navbar { 
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: transparent; transition: all 0.3s ease;
+  }
+  #navbar.scrolled { 
+    background: #0a192f; /* Solid navy on scroll */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  #page-container {
+    padding-top: 80px; /* Pushes content below the nav by default */
+  }
+  body.is-home #page-container { padding-top: 0; } /* Overlay effect for Home Hero */
+</style>
 </head>
 <body>
 
@@ -29,13 +43,13 @@
     </a>
     <div class="nav-links">
       <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
-      <a href="javascript:void(0)" onclick="showPage('about')">About</a>
+      <a href="javascript:void(0)" onclick="showPage('about')">About Us</a>
       <a href="javascript:void(0)" onclick="showPage('services')">Services</a>
       <a href="javascript:void(0)" onclick="showPage('health')">Health &amp; Safety</a>
       <a href="javascript:void(0)" onclick="showPage('certs')">Credentials</a>
       <a href="javascript:void(0)" onclick="showPage('contact')" class="nav-cta">Contact Us</a>
     </div>
-    <button class="hamburger" id="ham" aria-label="Open menu">
+    <button class="hamburger" id="ham" aria-label="Open menu" onclick="toggleMenu()">
       <i class="ti ti-menu-2" style="font-size:24px"></i>
     </button>
   </div>
@@ -52,474 +66,7 @@
 </div>
 
 <main id="page-container">
-<!-- HERO -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div id="particles" class="particles"></div>
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
-  <div class="hero-content">
-    <div class="hero-badge">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>
-      Zambian-Owned &middot; Est. January 2020
-    </div>
-    <h1 class="hero-title">Empowering Your Vision.<br>Building <span>Stronger Structures.</span></h1>
-    <p class="hero-sub">Integrated engineering solutions, dependable supply services, and civil construction for public and private sector clients across Zambia.</p>
-    <div class="hero-actions">
-      <a href="javascript:void(0)" onclick="showPage('contact')" class="btn-primary"><i class="ti ti-mail" aria-hidden="true"></i> Get In Touch</a>
-      <a href="javascript:void(0)" onclick="showPage('services')" class="btn-outline"><i class="ti ti-tools" aria-hidden="true"></i> Our Services</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <i class="ti ti-chevron-down" aria-hidden="true"></i>
-    Scroll to explore
-  </div>
-</section>
-
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stats-grid">
-    <div class="stat-item reveal">
-      <div class="stat-num" data-target="5" data-suffix="+">0+</div>
-      <div class="stat-label">Years in Business</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num" data-target="3" data-suffix="">0</div>
-      <div class="stat-label">Service Categories</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num" data-target="6" data-suffix="+">0+</div>
-      <div class="stat-label">Regulatory Bodies</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num" data-target="2" data-suffix="">0</div>
-      <div class="stat-label">Branches Nationwide</div>
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="reveal-left">
-        <div class="about-visual">
-          <div class="about-visual-grid"></div>
-          <div class="about-logo-big">M</div>
-          <div class="about-tag">Since January 2020</div>
-          <div class="about-visual-text">Construction | Engineering<br>Equipment &amp; Supplies<br>Office &amp; School Solutions</div>
-        </div>
-      </div>
-      <div class="reveal-right">
-        <div class="section-label">Who We Are</div>
-        <h2 class="section-title">A <span>Zambian-Owned</span> Partner You Can Trust</h2>
-        <p class="section-lead">Maktub Engineering &amp; General Supply Limited delivers integrated engineering solutions and dependable supply services to both public and private sector clients across Zambia — from building construction and civil works to office supplies and school furniture.</p>
-        <div class="mv-grid">
-          <div class="mv-card">
-            <div class="mv-icon"><i class="ti ti-rocket" aria-hidden="true"></i></div>
-            <div class="mv-title">Our Mission</div>
-            <div class="mv-text">To be a reliable partner in the construction and engineering industries by providing high-quality services and products that meet specific client needs.</div>
-          </div>
-          <div class="mv-card">
-            <div class="mv-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
-            <div class="mv-title">Our Vision</div>
-            <div class="mv-text">To be a leading provider of construction, engineering services, and general supplies in Southern Africa.</div>
-          </div>
-        </div>
-        <div class="values-grid" style="margin-top:1.5rem">
-          <div class="value-card">
-            <div class="value-icon"><i class="ti ti-star" aria-hidden="true"></i></div>
-            <div><div class="value-name">Quality</div><div class="value-desc">Delivering excellence in every project</div></div>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="ti ti-bulb" aria-hidden="true"></i></div>
-            <div><div class="value-name">Innovation</div><div class="value-desc">Forward-thinking solutions</div></div>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
-            <div><div class="value-name">Integrity</div><div class="value-desc">Honest, transparent operations</div></div>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
-            <div><div class="value-name">Teamwork</div><div class="value-desc">Collaborative, client-focused</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TIMELINE -->
-    <div style="margin-top:4rem">
-      <div class="section-label">Our Journey</div>
-      <h2 class="section-title" style="margin-bottom:2.5rem">Company <span>Timeline</span></h2>
-      <div class="timeline">
-        <div class="tl-item left reveal">
-          <div class="tl-dot">2020</div>
-          <div class="tl-content">
-            <div class="tl-year">January 2020</div>
-            <div class="tl-event">Company Incorporated</div>
-            <div class="tl-desc">Maktub Engineering &amp; General Supply Limited was registered as a Company Limited by Shares in Zambia (Reg No. 120200000224).</div>
-          </div>
-          <div class="tl-spacer"></div>
-        </div>
-        <div class="tl-item right reveal">
-          <div class="tl-spacer"></div>
-          <div class="tl-dot">2020</div>
-          <div class="tl-content">
-            <div class="tl-year">February 2020</div>
-            <div class="tl-event">ZRA &amp; Tax Registration</div>
-            <div class="tl-desc">Registered with the Zambia Revenue Authority (TPIN: 2558884909) and commenced Turnover Tax obligations.</div>
-          </div>
-        </div>
-        <div class="tl-item left reveal">
-          <div class="tl-dot">2022</div>
-          <div class="tl-content">
-            <div class="tl-year">December 2022</div>
-            <div class="tl-event">Registered Engineering Organisation</div>
-            <div class="tl-desc">Certified by the Engineering Institute of Zambia as a Registered Engineering Organisation (R. Eng. O).</div>
-          </div>
-          <div class="tl-spacer"></div>
-        </div>
-        <div class="tl-item right reveal">
-          <div class="tl-spacer"></div>
-          <div class="tl-dot">2025</div>
-          <div class="tl-content">
-            <div class="tl-year">January 2025</div>
-            <div class="tl-event">Ministry of Defence Clearance</div>
-            <div class="tl-desc">Renewed clearance to conduct business with the Zambia Ministry of Defence (VIN: MOD/VIN/1238/23), valid to December 2026.</div>
-          </div>
-        </div>
-        <div class="tl-item left reveal">
-          <div class="tl-dot">2026</div>
-          <div class="tl-content">
-            <div class="tl-year">2026</div>
-            <div class="tl-event">Engineering Practicing License Renewed</div>
-            <div class="tl-desc">Authorized by the Engineering Registration Board to practice Civil and Electrical/Electronics Engineering in Zambia (EIZ No. SC22022038667, Class C2).</div>
-          </div>
-          <div class="tl-spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="alt-bg">
-  <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our <span>Services</span></h2>
-    <p class="section-lead">From civil engineering and road construction to office furniture and PPE — we cover it all under one roof.</p>
-    <div class="services-tabs">
-      <button class="stab active" onclick="switchTab(this,'civil')"><i class="ti ti-building-arch" aria-hidden="true"></i> Civil Engineering</button>
-      <button class="stab" onclick="switchTab(this,'equipment')"><i class="ti ti-crane" aria-hidden="true"></i> Equipment Supplies</button>
-      <button class="stab" onclick="switchTab(this,'general')"><i class="ti ti-shopping-bag" aria-hidden="true"></i> General Supplies</button>
-    </div>
-
-    <div class="service-panel active" id="civil">
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-building acc-icon" aria-hidden="true"></i><span class="acc-title">Building Construction</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Construction of residential, commercial, and institutional buildings with a focus on quality, safety, and timely delivery. We handle every phase from foundation to finishing, ensuring structures that stand the test of time.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-road acc-icon" aria-hidden="true"></i><span class="acc-title">Road &amp; Bridge Construction</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Execution of road and bridge works including earthworks, drainage, and structural construction in line with engineering standards. We are NCC registered (Grade 5 Category C — General Civil Engineering Works) valid through December 2026.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-tool acc-icon" aria-hidden="true"></i><span class="acc-title">Maintenance &amp; Renovation</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Repair, refurbishment, and maintenance of buildings and infrastructure to improve functionality and extend service life. We bring ageing structures back to full operational capacity.</div>
-      </div>
-    </div>
-
-    <div class="service-panel" id="equipment">
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-crane acc-icon" aria-hidden="true"></i><span class="acc-title">Equipment Supplies</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Supply of reliable construction and engineering equipment for various project requirements. We source quality machinery that meets the operational demands of even the most complex projects.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-settings acc-icon" aria-hidden="true"></i><span class="acc-title">Equipment Repair &amp; Servicing</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Repair and servicing of construction and engineering equipment to ensure operational efficiency and minimise downtime. Keeping your machinery running means your projects stay on schedule.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-components acc-icon" aria-hidden="true"></i><span class="acc-title">Spare Parts Supply</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Provision of genuine spare parts for construction and engineering machinery to support uninterrupted project operations. We supply authentic components that extend equipment life and maintain performance.</div>
-      </div>
-    </div>
-
-    <div class="service-panel" id="general">
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-device-laptop acc-icon" aria-hidden="true"></i><span class="acc-title">Office Equipment</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Supply of office equipment and furniture to support efficient workplace operations. From printers and copiers to ergonomic workstation setups — we equip offices to perform at their best.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-file-text acc-icon" aria-hidden="true"></i><span class="acc-title">Stationery &amp; Consumables</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Provision of essential office stationery and consumables. We supply everything from pens and paper to toner and filing systems, ensuring your team has what it needs.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-armchair acc-icon" aria-hidden="true"></i><span class="acc-title">Office &amp; School Furniture</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Provision of durable office and school furniture including desks, chairs, cabinets, and storage solutions. We serve both corporate offices and educational institutions across Zambia.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-hard-hat acc-icon" aria-hidden="true"></i><span class="acc-title">Personal Protective Equipment (PPE)</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Supply of safety equipment to support safe working environments. From hard hats and high-visibility vests to gloves and safety boots — protecting your workforce is our priority.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-bricks acc-icon" aria-hidden="true"></i><span class="acc-title">Construction Materials</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Supply of essential construction materials including cement, aggregates, steel, and related building inputs. We source quality materials to keep your projects moving without delays.</div>
-      </div>
-      <div class="accordion-item reveal">
-        <div class="accordion-header" onclick="toggleAcc(this)">
-          <div class="acc-left"><i class="ti ti-hammer acc-icon" aria-hidden="true"></i><span class="acc-title">General Hardware</span></div>
-          <i class="ti ti-chevron-down acc-chevron" aria-hidden="true"></i>
-        </div>
-        <div class="accordion-body">Supply of tools, fittings, and general hardware for construction and maintenance works. We stock a comprehensive range of hardware to support any job on site or in the workshop.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HEALTH & SAFETY -->
-<section id="safety">
-  <div class="section-inner">
-    <div class="section-label">Health &amp; Safety</div>
-    <h2 class="section-title">Our <span>Commitment</span> to Safety</h2>
-    <p class="section-lead">The wellbeing of our employees, clients, and the communities we work in is non-negotiable. We set the standard.</p>
-    <div class="hs-grid">
-      <div class="hs-card reveal-left">
-        <div class="hs-icon green"><i class="ti ti-leaf" aria-hidden="true"></i></div>
-        <div class="hs-title">Sustainability</div>
-        <div class="hs-text">We conduct our business in an environmentally responsible and sustainable manner. From responsibly sourcing construction materials to managing energy consumption and waste, we integrate eco-friendly practices across all operations. Our approach reduces environmental impact while supporting long-term community development and the efficient use of resources.</div>
-      </div>
-      <div class="hs-card reveal-right">
-        <div class="hs-icon gold"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
-        <div class="hs-title">Health &amp; Safety Standards</div>
-        <div class="hs-text">All our construction sites, equipment handling, and operational processes strictly adhere to national regulations and internationally recognised best practices. We implement proactive safety measures, conduct regular training, and ensure all personnel are equipped with appropriate personal protective equipment. By fostering a culture of safety, we minimise risks and prevent accidents.</div>
-      </div>
-    </div>
-    <div class="safety-pills">
-      <div class="value-card reveal">
-        <div class="value-icon"><i class="ti ti-clipboard-check" aria-hidden="true"></i></div>
-        <div><div class="value-name">Regular Inspections</div><div class="value-desc">All sites inspected before and during works</div></div>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
-        <div><div class="value-name">Staff Training</div><div class="value-desc">Ongoing safety training for all workers</div></div>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-icon"><i class="ti ti-hard-hat" aria-hidden="true"></i></div>
-        <div><div class="value-name">PPE Compliance</div><div class="value-desc">Full protective equipment provided on site</div></div>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-icon"><i class="ti ti-world" aria-hidden="true"></i></div>
-        <div><div class="value-name">Eco-Friendly Practice</div><div class="value-desc">Waste management and sustainable sourcing</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS -->
-<section id="credentials" class="alt-bg">
-  <div class="section-inner">
-    <div class="section-label">Credentials &amp; Certifications</div>
-    <h2 class="section-title">Registered &amp; <span>Fully Compliant</span></h2>
-    <p class="section-lead">Maktub Engineering &amp; General Supply Limited is registered with all relevant regulatory bodies in Zambia, ensuring full compliance and professional standards.</p>
-    <div class="creds-grid">
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-certificate" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">PACRA — Companies Registry</div>
-          <div class="cred-detail">Certificate of Incorporation as a Company Limited by Shares. Reg No. 120200000224. Incorporated 10 January 2020.</div>
-          <span class="cred-status">Permanent</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-receipt-tax" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">Zambia Revenue Authority (ZRA)</div>
-          <div class="cred-detail">TPIN: 2558884909. Tax Clearance Certificate valid to 31 December 2026. Registered for Turnover Tax and PAYE.</div>
-          <span class="cred-status">Valid to Dec 2026</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-building-arch" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">Engineering Registration Board (ERB)</div>
-          <div class="cred-detail">Practicing License 2026. Authorized to practice Civil Engineering &amp; Electrical/Electronics Engineering. EIZ No. SC22022038667, Class C2.</div>
-          <span class="cred-status">Valid 2026</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-crane" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">National Council for Construction (NCC)</div>
-          <div class="cred-detail">Grade 5 Cat C — General Civil Engineering Works. Grade 6 Cat E — General Electrical &amp; Telecoms. Grade 4 Cat R — Roads &amp; Earthworks. All valid to December 2026.</div>
-          <span class="cred-status">Valid to Dec 2026</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">Zambia Public Procurement Authority (ZPPA)</div>
-          <div class="cred-detail">Registered e-Tender supplier. CEEC Category 2 (Citizen Owned). Areas include building materials, office equipment, cleaning supplies, and food supply. Valid to 15/06/2026.</div>
-          <span class="cred-status">Valid to Jun 2026</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-users" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">NAPSA — National Pension Scheme Authority</div>
-          <div class="cred-detail">Employer Account No. 5603132. Compliance Certificate No. CFC88496A17608718767461299. Issued 19 April 2026. Valid to 19 August 2026.</div>
-          <span class="cred-status">Valid to Aug 2026</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">Workers' Compensation Fund Control Board</div>
-          <div class="cred-detail">Employer Compliance Certificate. Account No. 0004507431091. Registered in compliance with the Workers' Compensation Act of 1999.</div>
-          <span class="cred-status">Registered</span>
-        </div>
-      </div>
-      <div class="cred-card reveal">
-        <div class="cred-badge"><i class="ti ti-shield" aria-hidden="true"></i></div>
-        <div>
-          <div class="cred-name">Ministry of Defence — Approved Vendor</div>
-          <div class="cred-detail">Vendor Identification Number: MOD/VIN/1238/23. Cleared to conduct business with the Zambia Ministry of Defence. Valid to 31 December 2026.</div>
-          <span class="cred-status">Valid to Dec 2026</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <div class="section-label">Get In Touch</div>
-    <h2 class="section-title">Let's <span>Work Together</span></h2>
-    <p class="section-lead">Ready to start your project? Reach out to our team and we will respond promptly.</p>
-    <div class="contact-grid">
-      <div class="reveal-left">
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
-          <div>
-            <div class="ci-label">Phone</div>
-            <div class="ci-value">+260 978 294 747</div>
-            <div class="ci-value">+260 967 861 366</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
-          <div>
-            <div class="ci-label">Email</div>
-            <div class="ci-value">maktubengineering@gmail.com</div>
-            <div class="ci-value" style="font-size:13px;color:var(--text3)">muyundaclive8@gmail.com</div>
-          </div>
-        </div>
-        <div class="branch-title"><i class="ti ti-map-pin" aria-hidden="true" style="color:var(--gold);margin-right:6px"></i>Main Branch — Lusaka</div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="ti ti-building" aria-hidden="true"></i></div>
-          <div>
-            <div class="ci-label">Address</div>
-            <div class="ci-value">Woodgate House ZSIC, Floor 6, Room 1<br>Next to Stanbic, Cairo Road, Lusaka</div>
-          </div>
-        </div>
-        <div class="branch-title"><i class="ti ti-map-pin" aria-hidden="true" style="color:var(--gold);margin-right:6px"></i>Muchinga Branch</div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="ti ti-building" aria-hidden="true"></i></div>
-          <div>
-            <div class="ci-label">Address</div>
-            <div class="ci-value">Chalabesa Kanchibiya Area<br>Muchinga District, Muchinga Province</div>
-          </div>
-        </div>
-        <a href="https://wa.me/260978294747" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Chat on WhatsApp
-        </a>
-        <a href="https://maps.google.com/?q=Woodgate+House+Cairo+Road+Lusaka+Zambia" target="_blank" rel="noopener noreferrer" class="map-placeholder" style="text-decoration:none">
-          <i class="ti ti-map-2" aria-hidden="true"></i>
-          <span>Woodgate House ZSIC, Cairo Road, Lusaka</span>
-          <span class="map-link">Open in Google Maps &rarr;</span>
-        </a>
-      </div>
-      <div class="reveal-right">
-        <div class="contact-form-box">
-          <div class="contact-form-title">Send Us a Message</div>
-          <div class="form-group">
-            <label class="form-label" for="cf-name">Full Name</label>
-            <input type="text" id="cf-name" class="form-control" placeholder="Your full name">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cf-email">Email Address</label>
-            <input type="email" id="cf-email" class="form-control" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cf-phone">Phone Number</label>
-            <input type="tel" id="cf-phone" class="form-control" placeholder="+260 ...">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cf-service">Service of Interest</label>
-            <select id="cf-service" class="form-control">
-              <option value="">Select a service...</option>
-              <option>Building Construction</option>
-              <option>Road &amp; Bridge Construction</option>
-              <option>Maintenance &amp; Renovation</option>
-              <option>Equipment Supplies</option>
-              <option>Equipment Repair</option>
-              <option>Spare Parts Supply</option>
-              <option>Office Equipment &amp; Furniture</option>
-              <option>Stationery &amp; Supplies</option>
-              <option>PPE &amp; Safety Equipment</option>
-              <option>Construction Materials</option>
-              <option>General Hardware</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cf-message">Message</label>
-            <textarea id="cf-message" class="form-control" placeholder="Tell us about your project or enquiry..."></textarea>
-          </div>
-          <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
-            <i class="ti ti-send" aria-hidden="true"></i>
-            Send Message
-          </button>
-          <p class="form-note">We typically respond within 24 hours on business days.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <div class="page-loader">Loading...</div>
 </main>
 
 <!-- FOOTER -->
@@ -544,12 +91,12 @@
       <div>
         <div class="footer-heading">Navigation</div>
         <ul class="footer-links">
-          <li><a href="pages/home.html">Home</a></li>
-          <li><a href="pages/about.html">About Us</a></li>
-          <li><a href="pages/services.html">Our Services</a></li>
-          <li><a href="pages/health.html">Health &amp; Safety</a></li>
-          <li><a href="pages/certs.html">Credentials</a></li>
-          <li><a href="pages/contact.html">Contact Us</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('about')">About Us</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('services')">Services</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('health')">Health &amp; Safety</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('certs')">Credentials</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact Us</a></li>
         </ul>
       </div>
       <div>
@@ -569,9 +116,8 @@
       <div class="footer-reg">Reg No. 120200000224 &middot; TPIN 2558884909</div>
     </div>
   </div>
-</footer>
+ </footer>
 
-</div>
 <!--<script src="js/main.js"></script>-->
 <!-- external scripts (modularized) -->
 <script src="js/i18n.js"></script>

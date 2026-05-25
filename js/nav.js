@@ -12,34 +12,69 @@ async function showPage(id){
   const container = document.getElementById('page-container');
   if(!container) return;
 
+  container.innerHTML = '<div class="page-loader">Loading...</div>';
+
   try {
-    const res = await fetch(`pages/${id}.html`);
-    if(!res.ok) throw new Error('Failed to load page');
-    const html = await res.text();
+    const html = await loadPageFragment(`pages/${id}.html`);
     container.innerHTML = html;
 
+    // Handle layout: Home page overlays the nav, other pages start below it
+    document.body.classList.toggle('is-home', id === 'home');
+
     // Update Active Link State
-    document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
+    const navSelectors = [
+      '.nav-links a',
+      '.mobile-menu a'
+    ].join(', ');
+    document.querySelectorAll(navSelectors).forEach(a => {
       const onclickAttr = a.getAttribute('onclick') || "";
       a.classList.toggle('active', onclickAttr.includes(`'${id}'`));
     });
 
-    window.scrollTo({top:0,behavior:'smooth'});
-    
+    // Instant scroll to top on page change
+    window.scrollTo(0, 0);
+
     // Re-init components for the new dynamic content
-    if(window.initReveal) window.initReveal();
-    if(window.i18n) window.i18n.apply();
-    
-    if(id === 'home'){
-      if(window.animateCounters) window.animateCounters();
-      if(window.initParticles) window.initParticles();
-      if(window.initSlides) window.initSlides();
-    }
+    setTimeout(() => {
+      if (window.initReveal) window.initReveal();
+      if (window.i18n && typeof window.i18n.apply === 'function') window.i18n.apply();
+      // Initialize particles on all pages
+      if (window.initParticles) window.initParticles();
+      if (window.initSlides && id === 'home') window.initSlides();
+    }, 60);
   } catch (err) {
     console.error('Page load error:', err);
+    container.innerHTML = '<div class="page-error">Unable to load page. Make sure the site is served via HTTP and that the "pages" folder is present.</div>';
+  }
+  if(menuOpen) toggleMenu();
+}
+
+function loadPageFragment(url) {
+  if (window.location.protocol === 'file:') {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.onload = function() {
+        const body = xhr.responseText || '';
+        if ((xhr.status === 200 || xhr.status === 0) && body.trim().length > 0) {
+          resolve(body);
+        } else if (xhr.status === 0 && body.trim().length === 0) {
+          reject(new Error('Empty page fragment response when loading local files. Use a local HTTP server instead.'));
+        } else {
+          reject(new Error(`XHR failed with status ${xhr.status}`));
+        }
+      };
+      xhr.onerror = function() {
+        reject(new Error('XHR network error while loading page fragment'));
+      };
+      xhr.send();
+    });
   }
 
-  if(menuOpen) toggleMenu();
+  return fetch(url).then(res => {
+    if (!res.ok) throw new Error('Failed to load page');
+    return res.text();
+  });
 }
 
 window.addEventListener('scroll', function() {

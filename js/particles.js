@@ -1,20 +1,32 @@
 let particleRaf;
+
 function initParticles(){
-  const canvas = document.getElementById('hero-canvas');
-  const hero = document.getElementById('home');
-  if (!canvas || !hero) return;
-  const ctx = canvas.getContext('2d');
-  let mouse = { x: -9999, y: -9999 };
+  const canvases = [];
+  
+  // Find all particle canvases
+  const heroCanvas = document.getElementById('hero-canvas');
+  if (heroCanvas) canvases.push({ canvas: heroCanvas, container: document.getElementById('home') });
+  
+  document.querySelectorAll('.page-canvas').forEach(canvas => {
+    const section = canvas.closest('section');
+    if (section) canvases.push({ canvas, container: section });
+  });
+
+  if (canvases.length === 0) return;
+  
   if (particleRaf) cancelAnimationFrame(particleRaf);
 
   const COLORS = ['#F5A623','#FAC75A','#D4891A','#ffffff','#F5A623'];
   const SHAPES = ['circle','triangle','diamond','rect'];
 
   class Shape {
-    constructor() { this.reset(true); }
+    constructor(canvas) { 
+      this.canvas = canvas;
+      this.reset(true); 
+    }
     reset(init) {
-      this.x = Math.random() * canvas.width;
-      this.y = init ? Math.random() * canvas.height : canvas.height + 80;
+      this.x = Math.random() * this.canvas.width;
+      this.y = init ? Math.random() * this.canvas.height : this.canvas.height + 80;
       this.baseX = this.x; this.baseY = this.y;
       this.r = 18 + Math.random() * 52;
       this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
@@ -31,7 +43,7 @@ function initParticles(){
       this.friction = 0.88;
       this.spring = 0.018 + Math.random() * 0.012;
     }
-    update(t) {
+    update(t, mouse) {
       let tx = this.baseX + Math.sin(t * this.floatSpeed + this.floatOffset) * this.floatAmp;
       let ty = this.baseY + Math.cos(t * this.floatSpeed * 0.7 + this.floatOffset) * (this.floatAmp * 0.6);
       let dx = mouse.x - this.x; let dy = mouse.y - this.y;
@@ -44,7 +56,7 @@ function initParticles(){
       this.vx *= this.friction; this.vy *= this.friction;
       this.x += this.vx; this.y += this.vy; this.rot += this.rotSpeed;
     }
-    draw() {
+    draw(ctx) {
       ctx.save(); ctx.globalAlpha = this.alpha; ctx.fillStyle = this.color;
       ctx.translate(this.x, this.y); ctx.rotate(this.rot);
       let r = this.r;
@@ -56,23 +68,47 @@ function initParticles(){
     }
   }
 
-  let shapes = [];
-  function setup() {
-    canvas.width = hero.offsetWidth; canvas.height = hero.offsetHeight;
-    shapes = []; let count = Math.min(22, Math.floor(canvas.width / 55));
-    for (let i = 0; i < count; i++) shapes.push(new Shape());
-  }
+  const particles = {};
+  const mouseStates = {};
+
+  canvases.forEach(({ canvas, container }) => {
+    const ctx = canvas.getContext('2d');
+    particles[canvas.id || canvas.className] = [];
+    mouseStates[canvas.id || canvas.className] = { x: -9999, y: -9999 };
+
+    function setup() {
+      canvas.width = container.offsetWidth;
+      canvas.height = container.offsetHeight;
+      particles[canvas.id || canvas.className] = [];
+      let count = Math.min(22, Math.floor(canvas.width / 55));
+      for (let i = 0; i < count; i++) particles[canvas.id || canvas.className].push(new Shape(canvas));
+    }
+
+    container.onmousemove = e => {
+      let r = container.getBoundingClientRect();
+      mouseStates[canvas.id || canvas.className] = { x: e.clientX - r.left, y: e.clientY - r.top };
+    };
+    container.onmouseleave = () => mouseStates[canvas.id || canvas.className] = { x: -9999, y: -9999 };
+    window.onresize = () => setup();
+
+    setup();
+  });
 
   function loop(t) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    shapes.forEach(s => { s.update(t); s.draw(); });
+    canvases.forEach(({ canvas, container }) => {
+      const ctx = canvas.getContext('2d');
+      const key = canvas.id || canvas.className;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (particles[key]) {
+        particles[key].forEach(s => {
+          s.update(t, mouseStates[key]);
+          s.draw(ctx);
+        });
+      }
+    });
     particleRaf = requestAnimationFrame(loop);
   }
 
-  hero.onmousemove = e => { let r = hero.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; };
-  hero.onmouseleave = () => mouse = { x: -9999, y: -9999 };
-  window.onresize = () => setup();
-  
-  setup(); loop(0);
+  loop(0);
 }
 window.initParticles = initParticles;

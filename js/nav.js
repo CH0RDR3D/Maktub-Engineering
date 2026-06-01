@@ -48,8 +48,12 @@ async function showPage(id){
     setTimeout(() => {
       if (window.initReveal) window.initReveal();
       if (window.i18n && typeof window.i18n.apply === 'function') window.i18n.apply();
-      // initParticles is idempotent; it will create the persistent overlay only once
+      // Global particles - persistent overlay across all pages
       if (window.initParticles) window.initParticles();
+      // Hero particles only on home page
+      if (id === 'home' && window.initHeroParticles) window.initHeroParticles();
+      // Footer particles on all pages
+      if (window.initFooterParticles) window.initFooterParticles();
       if (window.initSlides && id === 'home') window.initSlides();
 
       // remove the fade-in helper class after transition completes
@@ -90,11 +94,6 @@ function loadPageFragment(url) {
     return res.text();
   });
 }
-
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
-  if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 30);
-});
 
 function switchTab(btn, panelId) {
   document.querySelectorAll('.stab').forEach(function(b) { b.classList.remove('active'); });

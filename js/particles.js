@@ -5,7 +5,7 @@ function initParticles() {
   if (_particlesInitialized) return; // idempotent: do not re-create
   _particlesInitialized = true;
 
-  const COLORS = ['#FF8C42', '#FFB86B', '#D46A00', '#6B7B8C', '#FFFFFF'];
+  const COLORS = ['#Fd9706', '#FFB86B', '#022cfd', '#6B7B8C', '#FFFFFF'];
 
   // Create or reuse a single full-screen canvas overlay
   let canvas = document.getElementById('persistent-particles');
@@ -49,18 +49,18 @@ function initParticles() {
       this.reset(true);
     }
     reset(init) {
-      this.r = 12 + Math.random() * 34; // visible sizes
+      this.r = 12 + Math.random() * 25; // visible sizes
       this.x = Math.random() * window.innerWidth;
       this.y = Math.random() * window.innerHeight;
       this.vx = (Math.random() - 0.5) * 1.4;
       this.vy = (Math.random() - 0.5) * 1.4;
       this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-      this.alpha = 0.16 + Math.random() * 0.18; // reduced opacity
+      this.alpha = 0.16 + Math.random() * 0.003; // reduced opacity
       this.mass = this.r * this.r * 0.009;
       this.baseX = this.x; this.baseY = this.y;
       this.floatAmp = 8 + Math.random() * 16;
       this.floatSpeed = 0.0005 + Math.random() * 0.001;
-      this.shape = ['circle','triangle','rect','diamond','plus'][Math.floor(Math.random() * 5)];
+      this.shape = ['circle','triangle','rect','diamond','plus'][Math.floor(Math.random() * 10)];
     }
     draw(ctx) {
       ctx.save();

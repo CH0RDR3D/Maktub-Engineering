@@ -4,33 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maktub Engineering & General Supply Limited</title>
+<link rel="icon" href="images/maktub-logo.ico">
+<link rel="apple-touch-icon" href="images/maktub_logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <link rel="stylesheet" href="styles.css">
-<style>
-  #navbar { 
-    position: fixed; top: 0; width: 100%; z-index: 1000;
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-  #navbar .nav-logo-text, #navbar .nav-links a {
-    color: #1a1a1a;
-  }
-  @media (prefers-color-scheme: dark) {
-    #navbar {
-      background: rgba(24,28,36,0.85);
-    }
-    #navbar .nav-logo-text, #navbar .nav-links a {
-      color: #f0f2f8;
-    }
-  }
-  #page-container {
-    padding-top: 80px; /* Pushes content below the nav by default */
-  }
-  body.is-home #page-container { padding-top: 0; } /* Overlay effect for Home Hero */
-</style>
 </head>
 <body>
 
@@ -39,11 +18,7 @@
   <div class="nav-inner">
     <a href="javascript:void(0)" onclick="showPage('home')" class="nav-logo">
       <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-          <path d="M3 21L12 3L21 21H3Z" fill="white" opacity="0.3"/>
-          <path d="M3 21L12 8L21 21" fill="none" stroke="white" stroke-width="2"/>
-          <path d="M7 21L12 13L17 21" fill="white" opacity="0.8"/>
-        </svg>
+        <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true">
       </div>
       <div>
         <div class="nav-logo-text">Maktub Engineering</div>
@@ -85,10 +60,7 @@
       <div>
         <div class="footer-logo">
           <div class="footer-logo-mark">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-              <path d="M3 21L12 3L21 21H3Z" opacity="0.4"/>
-              <path d="M7 21L12 11L17 21" fill="white"/>
-            </svg>
+            <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true">
           </div>
           <div>
             <div class="footer-logo-name">Maktub Engineering</div>
@@ -111,7 +83,7 @@
       <div>
         <div class="footer-heading">Contact</div>
         <div class="footer-contact-item"><i class="ti ti-phone" aria-hidden="true"></i><span>+260 978 294 747 / +260 967 861 366</span></div>
-        <div class="footer-contact-item"><i class="ti ti-mail" aria-hidden="true"></i><span>maktubengineering@gmail.com</span></div>
+        <div class="footer-contact-item"><i class="ti ti-mail" aria-hidden="true"></i><span>info@maktubengineering.com</span></div>
         <div class="footer-contact-item"><i class="ti ti-map-pin" aria-hidden="true"></i><span>Woodgate House ZSIC, Floor 6, Room 1, Lusaka</span></div>
         <div style="margin-top:1.25rem">
           <div class="footer-heading">Banking</div>
@@ -125,7 +97,7 @@
       <div class="footer-reg">Reg No. 120200000224 &middot; TPIN 2558884909</div>
     </div>
     <div class="footer-copy">
-      <div>designed by BLACK&middot;Inc</div>
+      <div>designed by BLACK &middot; Inc</div>
     </div>
   </div>
  </footer>
@@ -136,7 +108,7 @@
 <script src="js/nav.js"></script>
 <script src="js/slides.js"></script>
 <script src="js/particles.js"></script>
-<script src="js/hero-particles.js"></script>
+<script src="js/hero.js"></script>
 <script src="js/footer-particles.js"></script>
 <script src="js/counters.js"></script>
 <script src="js/reveal.js"></script>

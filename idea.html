@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maktub Engineering & General Supply Limited</title>
+<link rel="icon" href="images/maktub-logo.ico">
+<link rel="apple-touch-icon" href="images/maktub-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -53,8 +55,8 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     background: var(--nav-bg);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     transition: background var(--transition), box-shadow var(--transition);
   }
@@ -96,7 +98,20 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: linear-gradient(135deg, #1A2744 0%, #0d1829 60%, #1a2744 100%);
+    background-color: var(--navy);
+    background-image: linear-gradient(135deg, rgba(26,39,68,0.75) 0%, rgba(13,24,41,0.75) 60%, rgba(26,39,68,0.85) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 45%);
+    pointer-events: none;
   }
   .hero-grid {
     position: absolute; inset: 0; opacity: 0.08;
@@ -391,7 +406,8 @@
   .mobile-menu {
     display: none; position: fixed; inset: 0; top: 68px; z-index: 999;
     background: var(--nav-bg); padding: 1.5rem; flex-direction: column; gap: 0.5rem;
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
@@ -400,6 +416,16 @@
     transition: background var(--transition), color var(--transition);
   }
   .mobile-menu a:hover { background: var(--bg2); color: var(--gold-dark); }
+
+  /* UTILITY CLASSES */
+  .icon-md { font-size: 24px; }
+  .mt-1-5 { margin-top: 1.5rem; }
+  .mt-4 { margin-top: 4rem; }
+  .mb-2-5 { margin-bottom: 2.5rem; }
+  .text-sm-muted { font-size: 13px; color: var(--text3); }
+  .icon-gold { color: var(--gold); margin-right: 6px; }
+  .no-underline { text-decoration: none; }
+  .mt-1-25 { margin-top: 1.25rem; }
 
   /* SAFETY PILLS */
   .safety-pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 2rem; }
@@ -432,11 +458,7 @@
   <div class="nav-inner">
     <a href="#home" class="nav-logo">
       <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-          <path d="M3 21L12 3L21 21H3Z" fill="white" opacity="0.3"/>
-          <path d="M3 21L12 8L21 21" fill="none" stroke="white" stroke-width="2"/>
-          <path d="M7 21L12 13L17 21" fill="white" opacity="0.8"/>
-        </svg>
+        <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true">
       </div>
       <div>
         <div class="nav-logo-text">Maktub Engineering</div>
@@ -452,7 +474,7 @@
       <a href="#contact" class="nav-cta">Contact Us</a>
     </div>
     <button class="hamburger" id="ham" aria-label="Open menu">
-      <i class="ti ti-menu-2" style="font-size:24px"></i>
+      <i class="ti ti-menu-2 icon-md"></i>
     </button>
   </div>
 </nav>
@@ -540,7 +562,7 @@
             <div class="mv-text">To be a leading provider of construction, engineering services, and general supplies in Southern Africa.</div>
           </div>
         </div>
-        <div class="values-grid" style="margin-top:1.5rem">
+        <div class="values-grid mt-1-5">
           <div class="value-card">
             <div class="value-icon"><i class="ti ti-star" aria-hidden="true"></i></div>
             <div><div class="value-name">Quality</div><div class="value-desc">Delivering excellence in every project</div></div>
@@ -562,9 +584,9 @@
     </div>
 
     <!-- TIMELINE -->
-    <div style="margin-top:4rem">
+    <div class="mt-4">
       <div class="section-label">Our Journey</div>
-      <h2 class="section-title" style="margin-bottom:2.5rem">Company <span>Timeline</span></h2>
+      <h2 class="section-title mb-2-5">Company <span>Timeline</span></h2>
       <div class="timeline">
         <div class="tl-item reveal">
           <div class="tl-dot">2020</div>
@@ -858,10 +880,10 @@
           <div>
             <div class="ci-label">Email</div>
             <div class="ci-value">maktubengineering@gmail.com</div>
-            <div class="ci-value" style="font-size:13px;color:var(--text3)">muyundaclive8@gmail.com</div>
+            <div class="ci-value text-sm-muted">muyundaclive8@gmail.com</div>
           </div>
         </div>
-        <div class="branch-title"><i class="ti ti-map-pin" aria-hidden="true" style="color:var(--gold);margin-right:6px"></i>Main Branch — Lusaka</div>
+        <div class="branch-title"><i class="ti ti-map-pin icon-gold" aria-hidden="true"></i>Main Branch — Lusaka</div>
         <div class="contact-info-item">
           <div class="ci-icon"><i class="ti ti-building" aria-hidden="true"></i></div>
           <div>
@@ -869,7 +891,7 @@
             <div class="ci-value">Woodgate House ZSIC, Floor 6, Room 1<br>Next to Stanbic, Cairo Road, Lusaka</div>
           </div>
         </div>
-        <div class="branch-title"><i class="ti ti-map-pin" aria-hidden="true" style="color:var(--gold);margin-right:6px"></i>Muchinga Branch</div>
+        <div class="branch-title"><i class="ti ti-map-pin icon-gold" aria-hidden="true"></i>Muchinga Branch</div>
         <div class="contact-info-item">
           <div class="ci-icon"><i class="ti ti-building" aria-hidden="true"></i></div>
           <div>
@@ -881,7 +903,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Chat on WhatsApp
         </a>
-        <a href="https://maps.google.com/?q=Woodgate+House+Cairo+Road+Lusaka+Zambia" target="_blank" rel="noopener noreferrer" class="map-placeholder" style="text-decoration:none">
+        <a href="https://maps.google.com/?q=Woodgate+House+Cairo+Road+Lusaka+Zambia" target="_blank" rel="noopener noreferrer" class="map-placeholder no-underline">
           <i class="ti ti-map-2" aria-hidden="true"></i>
           <span>Woodgate House ZSIC, Cairo Road, Lusaka</span>
           <span class="map-link">Open in Google Maps &rarr;</span>
@@ -942,10 +964,7 @@
       <div>
         <div class="footer-logo">
           <div class="footer-logo-mark">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-              <path d="M3 21L12 3L21 21H3Z" opacity="0.4"/>
-              <path d="M7 21L12 11L17 21" fill="white"/>
-            </svg>
+            <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true">
           </div>
           <div>
             <div class="footer-logo-name">Maktub Engineering</div>
@@ -970,7 +989,7 @@
         <div class="footer-contact-item"><i class="ti ti-phone" aria-hidden="true"></i><span>+260 978 294 747 / +260 967 861 366</span></div>
         <div class="footer-contact-item"><i class="ti ti-mail" aria-hidden="true"></i><span>maktubengineering@gmail.com</span></div>
         <div class="footer-contact-item"><i class="ti ti-map-pin" aria-hidden="true"></i><span>Woodgate House ZSIC, Floor 6, Room 1, Lusaka</span></div>
-        <div style="margin-top:1.25rem">
+        <div class="mt-1-25">
           <div class="footer-heading">Banking</div>
           <div class="footer-contact-item"><i class="ti ti-building-bank" aria-hidden="true"></i><span>Stanbic Bank &mdash; A/C 9130007017573 (ZMW)</span></div>
           <div class="footer-contact-item"><i class="ti ti-building-bank" aria-hidden="true"></i><span>Access Bank &mdash; A/C 0080170000251 (ZMW)</span></div>
@@ -1216,6 +1235,37 @@
 
     init();
     requestAnimationFrame(loop);
+  })();
+
+  // Hero background carousel - optimized
+  (function() {
+    var heroBg = document.querySelector('.hero-bg');
+    if (!heroBg) return;
+
+    var heroImages = [
+      'images/hero/hero1.jpg',
+      'images/hero/hero2.jpg',
+      'images/hero/hero3.jpg'
+    ];
+    var currentIndex = 0;
+    var gradientOverlay = 'linear-gradient(135deg, rgba(26,39,68,0.75) 0%, rgba(13,24,41,0.75) 60%, rgba(26,39,68,0.85) 100%)';
+
+    // Set background image
+    function setBackgroundImage(index) {
+      var imageUrl = heroImages[index];
+      heroBg.style.backgroundImage = gradientOverlay + ', url("' + imageUrl + '")';
+      heroBg.style.backgroundPosition = 'center center';
+      heroBg.style.backgroundSize = 'cover';
+    }
+
+    // Initialize with first image
+    setBackgroundImage(0);
+
+    // Cycle through images every 7 seconds
+    setInterval(function() {
+      currentIndex = (currentIndex + 1) % heroImages.length;
+      setBackgroundImage(currentIndex);
+    }, 7000);
   })();
 
   // Contact form

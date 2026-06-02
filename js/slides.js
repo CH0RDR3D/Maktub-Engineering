@@ -29,6 +29,7 @@ function preloadNext(i){
 }
 
 function initSlides(){
+  if (autoTimer) clearInterval(autoTimer);
   slides = Array.from(document.querySelectorAll('.slide'));
   dotsCont = document.getElementById('slideDots');
   if (!slides.length || !dotsCont) return;
@@ -75,5 +76,5 @@ function goSlide(n){
 
 // auto-init
 document.addEventListener('DOMContentLoaded', initSlides);
-
+window.initSlides = initSlides;
 window.goSlide = goSlide;

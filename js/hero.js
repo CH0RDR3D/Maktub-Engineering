@@ -1,5 +1,6 @@
 let heroParticleRaf;
 let heroCarouselInterval;
+let heroObserver;
 // Persistent cache to prevent re-downloading images during a session
 const HERO_LOADED_IMAGES = new Set();
 
@@ -139,10 +140,26 @@ function initHeroParticles() {
     // Ensure the first background is ready before displaying
     preloadImage(0).then(() => setBg(0));
 
-    heroCarouselInterval = setInterval(() => {
-      currentIdx = (currentIdx + 1) % images.length;
-      setBg(currentIdx);
-    }, 7000);
+    const startCarousel = () => {
+      if (heroCarouselInterval) clearInterval(heroCarouselInterval);
+      heroCarouselInterval = setInterval(() => {
+        currentIdx = (currentIdx + 1) % images.length;
+        setBg(currentIdx);
+      }, 7000);
+    };
+
+    // Use IntersectionObserver to stop animations when not visible
+    if (heroObserver) heroObserver.disconnect();
+    heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCarousel();
+        } else {
+          clearInterval(heroCarouselInterval);
+        }
+      });
+    }, { threshold: 0.1 });
+    heroObserver.observe(heroSection);
   }
 }
 

@@ -25,6 +25,18 @@ async function showPage(id){
 
     // replace content and fade in
     container.innerHTML = html;
+    
+    // Update Title for SEO
+    const pageTitles = {
+      'home': 'Home | Maktub Engineering',
+      'about': 'About Us | Maktub Engineering',
+      'services': 'Our Services | Construction & Engineering',
+      'health': 'Health & Safety Commitment',
+      'certs': 'Credentials & Certifications',
+      'contact': 'Contact Us | Get a Quote'
+    };
+    if (pageTitles[id]) document.title = pageTitles[id];
+
     document.body.classList.toggle('is-home', id === 'home');
 
     // Update Active Link State

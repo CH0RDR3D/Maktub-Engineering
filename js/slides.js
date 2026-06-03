@@ -2,17 +2,26 @@ let currentSlide = 0;
 let slides = [];
 let dotsCont = null;
 let autoTimer = null;
+// Persistent cache for slide images across page transitions
+const SLIDE_IMAGE_CACHE = new Set();
 
 function lazyLoadSlide(i) {
   const s = slides[i];
   if (!s) return;
-  if (s.dataset.loaded) return;
   const src = s.dataset.src;
   if (!src) { s.dataset.loaded = '1'; return; }
+  
+  if (s.dataset.loaded || SLIDE_IMAGE_CACHE.has(src)) {
+    s.style.backgroundImage = `url('${src}')`;
+    s.dataset.loaded = '1';
+    return;
+  }
+
   const img = new Image();
   img.onload = function() {
     s.style.backgroundImage = `url('${src}')`;
     s.dataset.loaded = '1';
+    SLIDE_IMAGE_CACHE.add(src);
   };
   img.src = src;
 }
@@ -20,11 +29,14 @@ function lazyLoadSlide(i) {
 function preloadNext(i){
   const next = (i + 1) % slides.length;
   const s = slides[next];
-  if (!s || s.dataset.loaded) return;
+  if (!s || s.dataset.loaded || SLIDE_IMAGE_CACHE.has(s.dataset.src)) return;
   const src = s.dataset.src;
   if (!src) return;
   const img = new Image();
-  img.onload = function(){ s.dataset.loaded = '1'; };
+  img.onload = function(){ 
+    s.dataset.loaded = '1'; 
+    SLIDE_IMAGE_CACHE.add(src);
+  };
   img.src = src;
 }
 

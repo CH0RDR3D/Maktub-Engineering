@@ -1,5 +1,7 @@
 let heroParticleRaf;
 let heroCarouselInterval;
+// Persistent cache to prevent re-downloading images during a session
+const HERO_LOADED_IMAGES = new Set();
 
 function initHeroParticles() {
   // Cleanup existing to avoid memory leaks
@@ -110,15 +112,33 @@ function initHeroParticles() {
   // Hero Background Carousel Logic
   const heroBg = heroSection.querySelector('.hero-bg');
   if (heroBg) {
-    const images = ['images/hero/hero1.jpg', 'images/hero/hero2.jpg', 'images/hero/hero3.jpg'];
+    const images = ['images/hero/hero1.webp', 'images/hero/hero2.webp', 'images/hero/hero3.webp', 'images/hero/hero4.webp', 'images/hero/hero5.webp'];
     const overlay = 'linear-gradient(135deg, rgba(26,39,68,0.75) 0%, rgba(13,24,41,0.75) 60%, rgba(26,39,68,0.85) 100%)';
     let currentIdx = 0;
 
-    function setBg(idx) {
-      heroBg.style.backgroundImage = `${overlay}, url("${images[idx]}")`;
+    function preloadImage(idx) {
+      const src = images[idx];
+      if (HERO_LOADED_IMAGES.has(src)) return Promise.resolve();
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+          HERO_LOADED_IMAGES.add(src);
+          resolve();
+        };
+        img.src = src;
+      });
     }
 
-    setBg(0);
+    function setBg(idx) {
+      const src = images[idx];
+      heroBg.style.backgroundImage = `${overlay}, url("${src}")`;
+      // Preload the next image in the sequence to avoid flickering
+      preloadImage((idx + 1) % images.length);
+    }
+
+    // Ensure the first background is ready before displaying
+    preloadImage(0).then(() => setBg(0));
+
     heroCarouselInterval = setInterval(() => {
       currentIdx = (currentIdx + 1) % images.length;
       setBg(currentIdx);

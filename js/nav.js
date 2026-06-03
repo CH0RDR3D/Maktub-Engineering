@@ -57,20 +57,26 @@ async function showPage(id){
     container.classList.add('page-transition-in');
 
     // Re-init components for the new dynamic content
-    setTimeout(() => {
+    const initComponents = () => {
       if (window.initReveal) window.initReveal();
       if (window.i18n && typeof window.i18n.apply === 'function') window.i18n.apply();
-      // Global particles - persistent overlay across all pages
+      
+      // Particles are heavy; run them when the browser is idle
       if (window.initParticles) window.initParticles();
-      // Hero particles only on home page
       if (id === 'home' && window.initHeroParticles) window.initHeroParticles();
-      // Footer particles on all pages
       if (window.initFooterParticles) window.initFooterParticles();
+      
       if (window.initSlides && id === 'home') window.initSlides();
 
       // remove the fade-in helper class after transition completes
       setTimeout(() => container.classList.remove('page-transition-in'), 340);
-    }, 60);
+    };
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(initComponents, { timeout: 200 });
+    } else {
+      setTimeout(initComponents, 60);
+    }
   } catch (err) {
     console.error('Page load error:', err);
     container.innerHTML = '<div class="page-error">Unable to load page. Make sure the site is served via HTTP and that the "pages" folder is present.</div>';

@@ -16,7 +16,12 @@
 
 <link rel="icon" href="images/maktub-logo.ico">
 <link rel="apple-touch-icon" href="images/maktub_logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload LCP Image -->
+<link rel="preload" href="images/hero/hero1.webp" as="image" type="image/webp" fetchpriority="high">
+
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <link rel="stylesheet" href="styles.css">
@@ -28,7 +33,7 @@
   <div class="nav-inner">
     <a href="javascript:void(0)" onclick="showPage('home')" class="nav-logo">
       <div class="nav-logo-icon">
-        <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true">
+        <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true" width="38" height="38" fetchpriority="high">
       </div>
       <div>
         <div class="nav-logo-text">Maktub Engineering</div>
@@ -70,7 +75,7 @@
       <div>
         <div class="footer-logo">
           <div class="footer-logo-mark">
-            <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true">
+            <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true" width="36" height="36" loading="lazy">
           </div>
           <div>
             <div class="footer-logo-name">Maktub Engineering</div>

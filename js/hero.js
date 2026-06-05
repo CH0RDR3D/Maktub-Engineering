@@ -91,6 +91,7 @@ function initHeroParticles() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     shapes = [];
     var count = Math.min(22, Math.floor(heroCanvas.width / 80));
+    if (window.innerWidth < 768) count = 8; // Fewer shapes on mobile
     for (var i = 0; i < count; i++) shapes.push(new Shape());
   }
 

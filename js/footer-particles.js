@@ -20,7 +20,6 @@ function initFooterParticles() {
     canvas.style.height = '100%';
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '0';
-    footer.style.position = 'relative';
     footer.insertBefore(canvas, footer.firstChild);
   }
 
@@ -107,7 +106,11 @@ function initFooterParticles() {
   }
 
   // Initial spawn
-  const footerParticleCount = Math.max(8, Math.round((canvas.width * canvas.height) / (1200 * 400) * 20));
+  let footerParticleCount = Math.max(8, Math.round((canvas.width * canvas.height) / (1200 * 400) * 20));
+  if (window.innerWidth < 768) {
+    footerParticleCount = 6; // Very low count for mobile footer
+  }
+
   for (let i = 0; i < footerParticleCount; i++) {
     particles.push(new FooterParticle());
   }

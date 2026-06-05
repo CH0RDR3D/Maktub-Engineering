@@ -8,7 +8,7 @@ function toggleMenu(){
   if(icon) icon.className = menuOpen ? 'ti ti-x' : 'ti ti-menu-2';
 }
 
-async function showPage(id){
+async function showPage(id, pushState = true){
   const container = document.getElementById('page-container');
   if(!container) return;
 
@@ -35,7 +35,23 @@ async function showPage(id){
       'certs': 'Credentials & Certifications',
       'contact': 'Contact Us | Get a Quote'
     };
-    if (pageTitles[id]) document.title = pageTitles[id];
+
+    const pageDescs = {
+      'home': 'Maktub Engineering delivers civil construction and equipment supplies across Zambia.',
+      'about': 'Learn about the journey and values of Maktub Engineering, a Zambian-owned firm.',
+      'services': 'Explore our services: Civil Engineering, Road Construction, and General Supplies.',
+      'health': 'Our commitment to sustainability and health and safety standards in Zambia.',
+      'certs': 'PACRA, NCC, and ZPPA registered engineering organization credentials.',
+      'contact': 'Contact our Lusaka or Muchinga branches for construction and supply quotes.'
+    };
+
+    if (pageTitles[id]) {
+      document.title = pageTitles[id];
+      document.getElementById('meta-desc').setAttribute('content', pageDescs[id]);
+      document.getElementById('og-title').setAttribute('content', pageTitles[id]);
+      document.getElementById('og-desc').setAttribute('content', pageDescs[id]);
+      document.getElementById('canonical-link').setAttribute('href', `https://maktubengineering.com/#${id}`);
+    }
 
     document.body.classList.toggle('is-home', id === 'home');
 
@@ -48,6 +64,9 @@ async function showPage(id){
       const onclickAttr = a.getAttribute('onclick') || "";
       a.classList.toggle('active', onclickAttr.includes(`'${id}'`));
     });
+
+    // History API: Update URL without reloading
+    if (pushState) window.history.pushState({pageId: id}, pageTitles[id], `#${id}`);
 
     // Instant scroll to top on page change
     window.scrollTo(0, 0);
@@ -67,6 +86,8 @@ async function showPage(id){
       if (window.initFooterParticles) window.initFooterParticles();
       
       if (window.initSlides && id === 'home') window.initSlides();
+
+      if (window.updateFooterReveal) window.updateFooterReveal();
 
       // remove the fade-in helper class after transition completes
       setTimeout(() => container.classList.remove('page-transition-in'), 340);
@@ -173,7 +194,15 @@ window.showPage = function(id) {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => showPage('home'));
+document.addEventListener('DOMContentLoaded', () => {
+  // Handle deep-linking via hash on load
+  const hash = window.location.hash.replace('#', '') || 'home';
+  showPage(hash, false);
+});
+
+window.addEventListener('popstate', (e) => {
+  if (e.state && e.state.pageId) showPage(e.state.pageId, false);
+});
 
 // expose to global
 window.toggleMenu = toggleMenu;

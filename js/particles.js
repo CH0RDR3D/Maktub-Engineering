@@ -153,7 +153,10 @@ function initParticles() {
   }
 
   // initial spawn based on viewport
-  const baseCount = Math.max(12, Math.round((window.innerWidth * window.innerHeight) / (1200 * 800) * 30));
+  let baseCount = Math.max(12, Math.round((window.innerWidth * window.innerHeight) / (1200 * 800) * 30));
+  if (window.innerWidth < 768) {
+    baseCount = Math.min(10, baseCount); // Cap at 10 for mobile
+  }
   spawn(baseCount);
 
   function resolveCollisions() {

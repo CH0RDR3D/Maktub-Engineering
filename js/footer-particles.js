@@ -6,6 +6,9 @@ function initFooterParticles() {
   if (_footerParticlesInitialized) return;
   _footerParticlesInitialized = true;
 
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const isMobile = window.innerWidth < 768;
+
   const footer = document.querySelector('footer');
   if (!footer) return;
 
@@ -122,6 +125,9 @@ function initFooterParticles() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Optimization: Skip connections on mobile to reduce draw calls
+    const skipConnections = isMobile;
+
     // Update and draw particles
     for (let p of particles) {
       p.update();
@@ -129,6 +135,7 @@ function initFooterParticles() {
     }
 
     // Draw connecting lines between nearby particles
+    if (!skipConnections) {
     ctx.strokeStyle = 'rgba(245, 166, 35, 0.15)';
     ctx.lineWidth = 1;
     for (let i = 0; i < particles.length; i++) {
@@ -144,6 +151,7 @@ function initFooterParticles() {
           ctx.stroke();
         }
       }
+    }
     }
 
     footerParticleRaf = requestAnimationFrame(loop);

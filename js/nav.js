@@ -78,17 +78,19 @@ async function showPage(id, pushState = true){
     // Re-init components for the new dynamic content
     const initComponents = () => {
       if (window.initReveal) window.initReveal();
-      if (window.i18n && typeof window.i18n.apply === 'function') window.i18n.apply();
-      
-      // Particles are heavy; run them when the browser is idle
-      if (window.initParticles) window.initParticles();
-      if (id === 'home' && window.initHeroParticles) window.initHeroParticles();
-      if (window.initFooterParticles) window.initFooterParticles();
+      if (window.updateFooterReveal) window.updateFooterReveal();
       
       if (window.initSlides && id === 'home') window.initSlides();
 
-      if (window.updateFooterReveal) window.updateFooterReveal();
+      // Particles are non-critical and heavy; defer more aggressively
+      const heavyInits = () => {
+        if (window.initParticles) window.initParticles();
+        if (id === 'home' && window.initHeroParticles) window.initHeroParticles();
+        if (window.initFooterParticles) window.initFooterParticles();
+      };
 
+      'requestIdleCallback' in window ? window.requestIdleCallback(heavyInits) : setTimeout(heavyInits, 200);
+      
       // remove the fade-in helper class after transition completes
       setTimeout(() => container.classList.remove('page-transition-in'), 340);
     };

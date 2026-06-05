@@ -5,6 +5,10 @@ function initParticles() {
   if (_particlesInitialized) return; // idempotent: do not re-create
   _particlesInitialized = true;
 
+  // Optimization: Respect user preference for reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
   const COLORS = ['#Fd9706', '#FFB86B', '#022cfd', '#6B7B8C', '#FFFFFF'];
 
   // Create or reuse a single full-screen canvas overlay
@@ -160,6 +164,9 @@ function initParticles() {
   spawn(baseCount);
 
   function resolveCollisions() {
+    // Optimization: Skip expensive collision detection on mobile to save CPU/Battery
+    if (window.innerWidth < 768) return;
+
     for (let i = 0; i < particles.length; i++) {
       const a = particles[i];
       for (let j = i + 1; j < particles.length; j++) {

@@ -2,7 +2,7 @@
 
 let footerParticleRaf;
 let _footerParticlesInitialized = false;
-
+let footerCanvas, footerCtx;
 
 function initFooterParticles() {
   if (_footerParticlesInitialized) return;
@@ -17,45 +17,31 @@ function initFooterParticles() {
   const footer = document.querySelector('footer');
   if (!footer) return;
 
-  let canvas = document.getElementById('footer-particles');
-  if (!canvas) {
-    canvas = document.createElement('canvas');
-    canvas.id = 'footer-particles';
-    canvas.style.position = 'fixed';
-    canvas.style.left = '0';
-    canvas.style.top = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.pointerEvents = 'none';
-    canvas.style.zIndex = '0';
-    footer.insertBefore(canvas, footer.firstChild);
+  footerCanvas = document.getElementById('footer-particles');
+  if (!footerCanvas) {
+    footerCanvas = document.createElement('canvas');
+    footerCanvas.id = 'footer-particles';
+    footerCanvas.style.position = 'fixed';
+    footerCanvas.style.left = '0';
+    footerCanvas.style.top = '0';
+    footerCanvas.style.width = '100%';
+    footerCanvas.style.height = '100%';
+    footerCanvas.style.pointerEvents = 'none';
+    footerCanvas.style.zIndex = '0';
+    footer.insertBefore(footerCanvas, footer.firstChild);
   }
 
-const ctx = canvas.getContext('2d');
+  footerCtx = footerCanvas.getContext('2d');
 
   function resizeFooterCanvas() {
+    if (!footerCanvas || !footerCtx) return;
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = Math.max(300, Math.floor(window.innerWidth * dpr));
-    canvas.height = Math.max(300, Math.floor(window.innerHeight * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-/* 
-  const ctx = canvas.getContext('2d');
-
-  function resizeFooterCanvas() {
-    const dpr = window.devicePixelRatio || 1;
-    const rect = footer.getBoundingClientRect();
-    canvas.width = Math.max(300, Math.floor(window.innerWidth * dpr));
-    canvas.height = Math.max(200, Math.floor(footer.offsetHeight * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    footerCanvas.width = Math.max(300, Math.floor(window.innerWidth * dpr));
+    footerCanvas.height = Math.max(300, Math.floor(window.innerHeight * dpr));
+    footerCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  resizeFooterCanvas();
-  const resizeObs = new ResizeObserver(resizeFooterCanvas);
-  resizeObs.observe(footer);
-
-*/
-  window.addEventListener('resizeFooterCanvas', resizeFooterCanvas);
+  window.addEventListener('resize', resizeFooterCanvas);
   resizeFooterCanvas();
 
   const particles = [];
@@ -69,6 +55,7 @@ const ctx = canvas.getContext('2d');
 
   class Particle {
     constructor() {
+      this.fade = 0;
       this.reset(true);
     }
     reset(init) {
@@ -87,7 +74,7 @@ const ctx = canvas.getContext('2d');
     }
     draw(ctx) {
       ctx.save();
-      ctx.globalAlpha = this.alpha;
+      ctx.globalAlpha = this.alpha * this.fade;
       ctx.fillStyle = this.color;
       ctx.strokeStyle = 'rgba(255,255,255,0.18)';
       ctx.lineWidth = Math.max(1, this.r * 0.08);
@@ -132,6 +119,9 @@ const ctx = canvas.getContext('2d');
       ctx.restore();
     }
     update(dt, t) {
+      // Smooth fade-in
+      if (this.fade < 1) this.fade += 0.015 * dt;
+
       // float motion towards base
       const tx = this.baseX + Math.sin(t * this.floatSpeed) * this.floatAmp;
       const ty = this.baseY + Math.cos(t * this.floatSpeed * 0.7) * (this.floatAmp * 0.6);
@@ -216,7 +206,7 @@ const ctx = canvas.getContext('2d');
   function loop(now) {
     const dt = Math.min(60, now - last) / 16.6667; // normalize to ~60fps units
     last = now;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    footerCtx.clearRect(0, 0, footerCanvas.width, footerCanvas.height);
 
     // update & draw
     for (let p of particles) {
@@ -226,16 +216,16 @@ const ctx = canvas.getContext('2d');
     // collisions
     resolveCollisions();
 
-    for (let p of particles) p.draw(ctx);
+    for (let p of particles) p.draw(footerCtx);
 
-    particleRaf = requestAnimationFrame(loop);
+    footerParticleRaf = requestAnimationFrame(loop);
   }
 
-  particleRaf = requestAnimationFrame(loop);
+  footerParticleRaf = requestAnimationFrame(loop);
 
   // Expose controls for debugging
-  window.startParticles = function() { if (!particleRaf) particleRaf = requestAnimationFrame(loop); };
-  window.stopParticles = function() { if (particleRaf) { cancelAnimationFrame(particleRaf); particleRaf = null; } };
+  window.startParticles = function() { if (!footerParticleRaf) footerParticleRaf = requestAnimationFrame(loop); };
+  window.stopParticles = function() { if (footerParticleRaf) { cancelAnimationFrame(footerParticleRaf); footerParticleRaf = null; } };
 }
 
 window.initFooterParticles = initFooterParticles;

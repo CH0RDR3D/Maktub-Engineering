@@ -16,12 +16,14 @@ async function showPage(id, pushState = true){
   container.classList.add('page-transition-out');
   // show loader immediately so user sees feedback
   container.innerHTML = '<div class="page-loader">Loading...</div>';
+  
+  const [baseId, subId] = id.split(':');
 
   try {
     // small wait to allow fade-out to be visible
     await new Promise(resolve => setTimeout(resolve, 180));
 
-    const html = await loadPageFragment(`pages/${id}.html`);
+    const html = await loadPageFragment(`pages/${baseId}.html`);
 
     // replace content and fade in
     container.innerHTML = html;
@@ -45,15 +47,15 @@ async function showPage(id, pushState = true){
       'contact': 'Contact our Lusaka or Muchinga branches for construction and supply quotes.'
     };
 
-    if (pageTitles[id]) {
-      document.title = pageTitles[id];
-      document.getElementById('meta-desc').setAttribute('content', pageDescs[id]);
-      document.getElementById('og-title').setAttribute('content', pageTitles[id]);
-      document.getElementById('og-desc').setAttribute('content', pageDescs[id]);
+    if (pageTitles[baseId]) {
+      document.title = pageTitles[baseId];
+      document.getElementById('meta-desc').setAttribute('content', pageDescs[baseId]);
+      document.getElementById('og-title').setAttribute('content', pageTitles[baseId]);
+      document.getElementById('og-desc').setAttribute('content', pageDescs[baseId]);
       document.getElementById('canonical-link').setAttribute('href', `https://maktubengineering.com/#${id}`);
     }
 
-    document.body.classList.toggle('is-home', id === 'home');
+    document.body.classList.toggle('is-home', baseId === 'home');
 
     // Update Active Link State
     const navSelectors = [
@@ -62,7 +64,7 @@ async function showPage(id, pushState = true){
     ].join(', ');
     document.querySelectorAll(navSelectors).forEach(a => {
       const onclickAttr = a.getAttribute('onclick') || "";
-      a.classList.toggle('active', onclickAttr.includes(`'${id}'`));
+      a.classList.toggle('active', onclickAttr.includes(`'${baseId}'`));
     });
 
     // History API: Update URL without reloading
@@ -80,7 +82,11 @@ async function showPage(id, pushState = true){
       if (window.initReveal) window.initReveal();
       if (window.updateFooterReveal) window.updateFooterReveal();
       
-      if (window.initSlides && id === 'home') window.initSlides();
+      if (window.initSlides && baseId === 'home') window.initSlides();
+      
+      if (baseId === 'services' && subId) {
+        toggleServiceDetail(subId, false);
+      }
 
       // Particles are non-critical and heavy; defer more aggressively
       const heavyInits = () => {
@@ -161,7 +167,7 @@ function toggleAcc(header) {
 /**
  * Service Details Logic (moved from services.html)
  */
-function toggleServiceDetail(catId) {
+function toggleServiceDetail(catId, pushState = true) {
   const categories = document.getElementById('services-categories');
   const drilldown = document.getElementById('services-drilldown');
   const panels = document.querySelectorAll('.service-panel');
@@ -174,6 +180,11 @@ function toggleServiceDetail(catId) {
     panels.forEach(p => p.classList.toggle('active', p.id === catId));
     window.scrollTo({ top: drilldown.offsetTop - 100, behavior: 'smooth' });
     if (window.initReveal) window.initReveal();
+  }
+
+  if (pushState) {
+    const newId = catId ? `services:${catId}` : 'services';
+    window.history.pushState({pageId: newId}, "", `#${newId}`);
   }
 }
 

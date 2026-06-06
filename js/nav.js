@@ -92,7 +92,7 @@ async function showPage(id, pushState = true){
       'requestIdleCallback' in window ? window.requestIdleCallback(heavyInits) : setTimeout(heavyInits, 200);
       
       // remove the fade-in helper class after transition completes
-      setTimeout(() => container.classList.remove('page-transition-in'), 340);
+      setTimeout(() => container.classList.remove('page-transition-in'), 500);
     };
 
     if ('requestIdleCallback' in window) {
@@ -158,44 +158,44 @@ function toggleAcc(header) {
   }
 }
 
+/**
+ * Service Details Logic (moved from services.html)
+ */
+function toggleServiceDetail(catId) {
+  const categories = document.getElementById('services-categories');
+  const drilldown = document.getElementById('services-drilldown');
+  const panels = document.querySelectorAll('.service-panel');
+  if (!categories || !drilldown) return;
+
+  categories.style.display = catId ? 'none' : 'grid';
+  drilldown.style.display = catId ? 'block' : 'none';
+  
+  if (catId) {
+    panels.forEach(p => p.classList.toggle('active', p.id === catId));
+    window.scrollTo({ top: drilldown.offsetTop - 100, behavior: 'smooth' });
+    if (window.initReveal) window.initReveal();
+  }
+}
+
+function toggleMore(btn) {
+  const more = btn.previousElementSibling;
+  if (!more) return;
+  const isHidden = more.style.display === 'none' || !more.style.display;
+  more.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'View Less' : 'View More';
+}
+
 window.switchTab = switchTab;
 window.toggleAcc = toggleAcc;
+window.toggleServiceDetail = toggleServiceDetail;
+window.toggleMore = toggleMore;
 
 // Close menu when clicking outside
 document.addEventListener('click',function(e){
   if(menuOpen && !e.target.closest('nav') && !e.target.closest('.hamburger')) toggleMenu();
 });
 
-// Auto-cycling services tabs
-let serviceCycleInterval;
-function initServiceCycling() {
-  clearInterval(serviceCycleInterval);
-  const tabs = document.querySelectorAll('#services .stab');
-  if (tabs.length === 0) return;
-  let currentIndex = 0;
-  serviceCycleInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % tabs.length;
-    tabs[currentIndex].click();
-  }, 7000);
-  // Reset cycle on manual click
-  tabs.forEach(tab => tab.addEventListener('click', () => {
-    clearInterval(serviceCycleInterval);
-    currentIndex = Array.from(tabs).indexOf(tab);
-    initServiceCycling();
-  }));
-}
-
 // Initialize cycling on page loads - MUST be before DOMContentLoaded
-const originalShowPage = window.showPage;
-window.showPage = function(id) {
-  originalShowPage(id);
-  if (id === 'services') {
-    setTimeout(() => initServiceCycling(), 100);
-  } else {
-    clearInterval(serviceCycleInterval);
-  }
-};
-
 document.addEventListener('DOMContentLoaded', () => {
   // Handle deep-linking via hash on load
   const hash = window.location.hash.replace('#', '') || 'home';

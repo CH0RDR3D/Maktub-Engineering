@@ -1,22 +1,23 @@
   /* CRITICAL VARIABLES & BASE */
   :root {
     --gold: #F5A623; --gold-dark: #D4891A; --gold-light: #FAC75A;
-    --navy: #1A2744; --navy-light: #243359;
+    --navy: #1b4192; --navy-light: #243359;
     --bg: #ffffff; --bg2: #f7f7f5; --bg3: #efefec;
     --text: #1a1a1a; --text2: #333333; --text3: #555555;
-    --border: rgba(0,0,0,0.15); --card-bg: #ffffff;
-    --nav-bg: rgba(255,255,255,0.18); --nav-scroll-bg: rgba(0, 0, 0, 0.97); --section-alt: #ffffff;
+    --border: #00000026; --card-bg: #ffffff;
+    --nav-bg:  rgba(73, 73, 78, 0); --nav-scroll-bg: rgba(0, 0, 0, 0.97);  --section-alt: #1a1a1a;
     --footer-bg: #ffffff; --footer-text: #1a1a1a;
     --shadow: 0 2px 16px rgba(0,0,0,0.08);
+    --nav-height: 80px;
     --transition: 0.28s cubic-bezier(.4,0,.2,1);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #010101; --bg2: #181c24; --bg3: #000000;
-      --text: #f0f2f8; --text2: #d0d8f0; --text3: #a8b0c8;
+      --bg: #1a1a1a; --bg2: #181c24; --bg3: #243359;
+      --text: #eeeff4; --text2: #d0d8f0; --text3: #a8b0c8;
       --border: rgba(255,255,255,0.1); --card-bg: #1e2330;
-      --nav-bg: rgba(19, 19, 22, 0); --section-alt: #181c24;
-      --footer-bg: #181c24; --footer-text: #ffffff;
+      --nav-bg: rgba(73, 73, 78, 0); --section-alt: #181c24;
+      --footer-bg: #0b1935; --footer-text: #ffffff;
       --shadow: 0 2px 20px rgba(0,0,0,0.4);
     }
   }
@@ -47,52 +48,50 @@
     nav { background: rgba(24,28,36,0.85); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
   }
   .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; height: 68px; }
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 200px; }
-  .nav-logo-icon { width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .nav-logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
-  .nav-logo-text { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 15px; color: var(--text); line-height: 1.2; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: auto; }
+  .nav-logo-icon { width: 38px; height: 38px; border-radius: 8px; display: flex; blur: 25px; align-items: center; justify-content: center; flex-shrink: 0; }
+  .nav-logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; background-color: #fff; border-radius: 6px; }
+  .nav-logo-text { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 15px; color: var(--text); line-height: 1.2; background }
   .nav-logo-sub { font-weight: 400; font-size: 11px; color: var(--text3); }
   .nav-links { display: flex; align-items: center; gap: 0.25rem; }
   .nav-links a { text-decoration: none; color: var(--text); font-size: 13.5px; font-weight: 700; padding: 0.4rem 0.75rem; border-radius: 6px; letter-spacing: 0.02em; transition: color var(--transition), background var(--transition); }
   .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); background: rgba(245,166,35,0.12); }
-  .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 0.45rem 1.1rem !important; border-radius: 6px !important; font-weight: 700 !important; }
+  .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 0.45rem 1.1rem !important; border-radius: 6px !important; }
   .nav-cta:hover { background: var(--gold-dark) !important; color: white !important; }
   .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--text); }
 
 
     #navbar { 
     position: fixed; top: 0; width: 100%; z-index: 1000;
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
   }
   #navbar .nav-logo-text, #navbar .nav-links a {
     color: #1a1a1a;
   }
   @media (prefers-color-scheme: dark) {
     #navbar {
-      background: rgba(24,28,36,0.85);
+      background: rgba(24, 28, 36, 0.25);
     }
     #navbar .nav-logo-text, #navbar .nav-links a {
       color: #f0f2f8;
     }
   }
   #page-container {
-    padding-top: 80px; /* Pushes content below the nav by default */
-    min-height: 100vh;
-    min-height: 100dvh;
+    padding-top: var(--nav-height);
+    min-height: 100vh; min-height: 100dvh;
     position: relative;
     z-index: 2;
     background: var(--bg);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
   }
-  body.is-home #page-container { padding-top: 0; } /* Overlay effect for Home Hero */
+  body.is-home #page-container { padding-top: 0; }
     /* HERO */
   #home {
     min-height: 100vh; min-height: 100dvh; position: relative;
     display: flex; align-items: center; justify-content: center;
-    aspect-ratio: 16 / 9;
     background: var(--navy); overflow: hidden;
+    padding-top: var(--nav-height);
   }
   .hero-bg {
     position: absolute; inset: 0;
@@ -206,7 +205,7 @@
   .section-title { font-family: 'Raleway', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--text); margin-bottom: 1rem; }
   .section-title span { color: var(--gold); }
   .section-lead { color: var(--text); font-size: 1.05rem; max-width: 640px; margin-bottom: 3rem; font-weight: 500; }
-  .alt-bg { background: var(--section-alt); }
+  .alt-bg { background: white; }
 
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
   .about-visual { position: relative; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, var(--navy) 0%, #243359 100%); padding: 2.5rem; min-height: 360px; display: flex; flex-direction: column; justify-content: flex-end; }
@@ -261,13 +260,56 @@
   .hs-text { color: var(--text); font-size: 0.95rem; font-weight: 500; }
 
   .creds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-  .cred-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
+  .cred-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); text-decoration: none; }
   .cred-card:hover { transform: translateY(-3px); border-color: var(--gold); box-shadow: 0 4px 20px rgba(245,166,35,0.12); }
   .cred-badge { width: 46px; height: 46px; border-radius: 10px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .cred-badge i { color: var(--gold); font-size: 22px; }
   .cred-name { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px; }
   .cred-detail { font-size: 12.5px; color: var(--text); margin-top: 2px; line-height: 1.5; font-weight: 500; }
   .cred-status { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-top: 6px; background: rgba(40,180,80,0.12); color: #228b3a; }
+
+  /* Modified Cred Cards for Service Categories */
+  .category-card { cursor: pointer; text-align: center; flex-direction: column; align-items: center; }
+  .category-card .cred-badge { margin: 0 auto 1.25rem; width: 80px; height: 80px; font-size: 2.5rem; }
+  .category-card .cred-name { font-size: 1.6rem; }
+  .category-card .cred-detail { width: 100%; }
+  .category-card .glimpse-list { 
+    margin-top: 1.5rem; text-align: left; font-size: 0.9rem; color: var(--text3); 
+    border-top: 1px solid var(--border); padding-top: 1rem; 
+  }
+  .category-card .glimpse-list div { margin-bottom: 0.4rem; }
+  .category-card .glimpse-list i { color: var(--gold); }
+  .category-explore { 
+    margin-top: 1rem; color: var(--gold); font-weight: 700; font-size: 12px; 
+    text-transform: uppercase; letter-spacing: 1px; 
+  }
+
+  .services-drilldown { display: none; margin-top: 3rem; }
+  .services-drilldown .btn-outline { margin-bottom: 2rem; padding: 8px 16px; font-size: 14px; }
+
+  .service-card .more-content { 
+    display: none; margin-top: 1rem; padding-top: 1rem; 
+    border-top: 1px solid var(--border); font-size: 0.95rem; color: var(--text3); 
+  }
+  .btn-toggle-more { 
+    margin-top: 1rem; color: var(--gold); font-weight: 600; 
+    cursor: pointer; background: none; border: none; padding: 0; 
+  }
+
+  /* Glimpse List Animation */
+  .glimpse-list div {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .cred-card:hover .glimpse-list div {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .glimpse-list div:nth-child(1) { transition-delay: 0.1s; }
+  .glimpse-list div:nth-child(2) { transition-delay: 0.2s; }
+  .glimpse-list div:nth-child(3) { transition-delay: 0.3s; }
+  .glimpse-list div:nth-child(n+4) { transition-delay: 0.4s; }
 
   .timeline { position: relative; padding: 2rem 0; }
   .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 0; bottom: 0; width: 2px; background: var(--border); }
@@ -286,6 +328,10 @@
   .ci-icon i { color: var(--gold-dark); font-size: 18px; }
   .ci-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text2); margin-bottom: 2px; }
   .ci-value { font-size: 14px; color: var(--text); font-weight: 600; }
+  .ci-value.secondary { font-size: 13px; color: var(--text3); }
+  .branch-title i { color: var(--gold); margin-right: 6px; }
+  .map-placeholder span.map-link { font-weight: 700; color: var(--gold); }
+
   .branch-title { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 16px; color: var(--text); margin: 1.5rem 0 0.75rem; }
   .form-group { margin-bottom: 1.1rem; }
   .form-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; display: block; }
@@ -319,11 +365,12 @@
   }
   .footer-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
   .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+  .footer-banking { margin-top: 1.25rem; }
   .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
-  .footer-logo-mark { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .footer-logo-mark { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background-color: rgb(255, 255, 255); }
   .footer-logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
-  .footer-logo-name { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 14px; color: white; }
-  .footer-logo-sub { font-weight: 400; font-size: 12px; color: rgba(255,255,255,0.5); }
+  .footer-logo-name { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 14px; color: var(--gold); }
+  .footer-logo-sub { font-weight: 400; font-size: 12px; color: var(--gold); }
   .footer-heading { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 13px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
   .footer-links { list-style: none; }
   .footer-links a { color: #333333; font-size: 13px; text-decoration: none; transition: color var(--transition); }
@@ -331,6 +378,25 @@
   .footer-contact-item { display: flex; gap: 8px; font-size: 13px; color: #333333; margin-bottom: 0.6rem; }
   .footer-contact-item i { color: var(--gold); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
   .footer-bottom { border-top: 1px solid rgba(0,0,0,0.15); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+  /* Leadership / Team Styling */
+  .leadership-grid .cred-card { flex-direction: column; align-items: flex-start; }
+  .leadership-grid .cred-badge { 
+    width: 120px; height: 120px; border-radius: 12px; 
+    overflow: hidden; margin-bottom: 1rem; 
+  }
+  .leadership-grid .cred-badge img { width: 100%; height: 100%; object-fit: cover; }
+  .leadership-grid .cred-status { display: inline-block; margin-bottom: 0.5rem; }
+  .member-links { margin-top: 1.25rem; display: flex; gap: 1rem; }
+  .member-links a { color: var(--gold); font-size: 1.25rem; transition: color var(--transition); }
+  .member-links a:hover { color: var(--gold-dark); }
+
+  /* About Page Specific Layouts */
+  .about-timeline-wrap { margin-top: 4rem; }
+  .about-timeline-wrap .section-title { margin-bottom: 2.5rem; }
+  .about-values-grid { margin-top: 1.5rem; }
+  .home-learn-more { margin-top: 1.25rem; }
+
   .footer-middle { border-top: 1px solid rgba(0,0,0,0.15); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;}
   .footer-copy { font-size: 13px; color: #333333; }
   .footer-reg { font-size: 12px; color: #555555; }
@@ -371,6 +437,20 @@
     .timeline::before { left: 24px; }
     .tl-item, .tl-item:nth-child(odd) { flex-direction: row; }
     .tl-spacer { display: none; }
+
+    .nav-inner { padding: 0 1rem; }
+    .nav-logo-text { font-size: 13px; }
+    .nav-logo-sub { font-size: 9px; }
+
+    #home {
+      aspect-ratio: auto;
+      padding-top: 80px;
+      min-height: 100vh;
+    }
+    .hero-content { padding: 1rem; width: 100%; }
+    .hero-title { font-size: 1.8rem; margin-bottom: 1.5rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; max-width: 300px; margin: 0 auto; }
+    .btn-primary, .btn-outline { justify-content: center; width: 100%; }
   }
 
   /* Dark mode footer text adjustments */
@@ -381,4 +461,5 @@
     .footer-reg { color: #c0c0c0; }
     .footer-tagline { color: #e0e0e0; }
     .footer-bottom { border-top-color: rgba(255,255,255,0.1); }
+    .alt-bg { background: var(--section-alt); }
   }

@@ -15,7 +15,7 @@
     :root {
       --bg: #181c24; --bg2: #181c24; --bg3: #243359;
       --text: #eeeff4; --text2: #d0d8f0; --text3: #a8b0c8;
-      --border: rgba(255,255,255,0.1); --card-bg: #1a1a1a;
+      --border: rgba(255,255,255,0.1); --card-bg: #1a1a1a59;
       --nav-bg: rgba(73, 73, 78, 0); --section-alt: #181c24;
       --footer-bg: #1a1a1a; --footer-text: #ffffff;
       --shadow: 0 2px 20px rgba(0,0,0,0.4);

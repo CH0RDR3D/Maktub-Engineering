@@ -3,8 +3,17 @@
   <div class="page-bg"></div>
   <canvas class="page-canvas" aria-hidden="true"></canvas>
   <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our <span>Services</span></h2>
+    <div class="sticky-header-container">
+      <div class="sticky-header-flex">
+        <div>
+          <div class="section-label">What We Do</div>
+          <h2 class="section-title">Our <span>Services</span></h2>
+        </div>
+        <button id="service-back-btn" onclick="toggleServiceDetail(null)" class="btn-outline btn-sm" style="display: none;">
+          <i class="ti ti-arrow-narrow-left"></i> Back to Categories
+        </button>
+      </div>
+    </div>
     <p class="section-lead">From civil engineering and road construction to office furniture and PPE — we cover it all under one roof.</p>
 
     <!-- CATEGORY OVERVIEW -->
@@ -46,10 +55,6 @@
 
     <!-- DRILL DOWN CONTAINER -->
     <div id="services-drilldown" class="services-drilldown">
-      <button onclick="toggleServiceDetail(null)" class="btn-outline">
-        <i class="ti ti-arrow-narrow-left"></i> Back to Categories
-      </button>
-
       <div class="service-panel" id="civil">
       <div class="services-container">
         <div class="service-card reveal">

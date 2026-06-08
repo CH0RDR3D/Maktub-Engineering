@@ -8,6 +8,33 @@ function toggleMenu(){
   if(icon) icon.className = menuOpen ? 'ti ti-x' : 'ti ti-menu-2';
 }
 
+const PAGE_CONFIG = {
+  'home': {
+    title: 'Home | Maktub Engineering',
+    desc: 'Maktub Engineering delivers civil construction and equipment supplies across Zambia.'
+  },
+  'about': {
+    title: 'About Us | Maktub Engineering',
+    desc: 'Learn about the journey and values of Maktub Engineering, a Zambian-owned firm.'
+  },
+  'services': {
+    title: 'Our Services | Construction & Engineering',
+    desc: 'Explore our services: Civil Engineering, Road Construction, and General Supplies.'
+  },
+  'health': {
+    title: 'Health & Safety Commitment',
+    desc: 'Our commitment to sustainability and health and safety standards in Zambia.'
+  },
+  'certs': {
+    title: 'Credentials & Certifications',
+    desc: 'PACRA, NCC, and ZPPA registered engineering organization credentials.'
+  },
+  'contact': {
+    title: 'Contact Us | Get a Quote',
+    desc: 'Contact our Lusaka or Muchinga branches for construction and supply quotes.'
+  }
+};
+
 async function showPage(id, pushState = true){
   const container = document.getElementById('page-container');
   if(!container) return;
@@ -28,30 +55,13 @@ async function showPage(id, pushState = true){
     // replace content and fade in
     container.innerHTML = html;
     
-    // Update Title for SEO
-    const pageTitles = {
-      'home': 'Home | Maktub Engineering',
-      'about': 'About Us | Maktub Engineering',
-      'services': 'Our Services | Construction & Engineering',
-      'health': 'Health & Safety Commitment',
-      'certs': 'Credentials & Certifications',
-      'contact': 'Contact Us | Get a Quote'
-    };
-
-    const pageDescs = {
-      'home': 'Maktub Engineering delivers civil construction and equipment supplies across Zambia.',
-      'about': 'Learn about the journey and values of Maktub Engineering, a Zambian-owned firm.',
-      'services': 'Explore our services: Civil Engineering, Road Construction, and General Supplies.',
-      'health': 'Our commitment to sustainability and health and safety standards in Zambia.',
-      'certs': 'PACRA, NCC, and ZPPA registered engineering organization credentials.',
-      'contact': 'Contact our Lusaka or Muchinga branches for construction and supply quotes.'
-    };
-
-    if (pageTitles[baseId]) {
-      document.title = pageTitles[baseId];
-      document.getElementById('meta-desc').setAttribute('content', pageDescs[baseId]);
-      document.getElementById('og-title').setAttribute('content', pageTitles[baseId]);
-      document.getElementById('og-desc').setAttribute('content', pageDescs[baseId]);
+    // Update SEO Metadata from Config
+    const config = PAGE_CONFIG[baseId];
+    if (config) {
+      document.title = config.title;
+      document.getElementById('meta-desc').setAttribute('content', config.desc);
+      document.getElementById('og-title').setAttribute('content', config.title);
+      document.getElementById('og-desc').setAttribute('content', config.desc);
       document.getElementById('canonical-link').setAttribute('href', `https://maktubengineering.com/#${id}`);
     }
 
@@ -68,7 +78,7 @@ async function showPage(id, pushState = true){
     });
 
     // History API: Update URL without reloading
-    if (pushState) window.history.pushState({pageId: id}, pageTitles[id], `#${id}`);
+    if (pushState) window.history.pushState({pageId: id}, config ? config.title : '', `#${id}`);
 
     // Instant scroll to top on page change
     window.scrollTo(0, 0);
@@ -83,6 +93,7 @@ async function showPage(id, pushState = true){
       if (window.updateFooterReveal) window.updateFooterReveal();
       
       if (window.initSlides && baseId === 'home') window.initSlides();
+      if (window.initServicesCarousel && baseId === 'home') window.initServicesCarousel();
       
       if (baseId === 'services' && subId) {
         toggleServiceDetail(subId, false);
@@ -99,6 +110,9 @@ async function showPage(id, pushState = true){
       
       // remove the fade-in helper class after transition completes
       setTimeout(() => container.classList.remove('page-transition-in'), 500);
+
+      // Ensure sticky headers are evaluated immediately for the new content
+      handleScrollEffects();
     };
 
     if ('requestIdleCallback' in window) {
@@ -171,11 +185,14 @@ function toggleServiceDetail(catId, pushState = true) {
   const categories = document.getElementById('services-categories');
   const drilldown = document.getElementById('services-drilldown');
   const panels = document.querySelectorAll('.service-panel');
+  const backBtn = document.getElementById('service-back-btn');
   if (!categories || !drilldown) return;
 
   categories.style.display = catId ? 'none' : 'grid';
   drilldown.style.display = catId ? 'block' : 'none';
   
+  if (backBtn) backBtn.style.display = catId ? 'inline-flex' : 'none';
+
   if (catId) {
     panels.forEach(p => p.classList.toggle('active', p.id === catId));
     window.scrollTo({ top: drilldown.offsetTop - 100, behavior: 'smooth' });
@@ -205,6 +222,36 @@ window.toggleMore = toggleMore;
 document.addEventListener('click',function(e){
   if(menuOpen && !e.target.closest('nav') && !e.target.closest('.hamburger')) toggleMenu();
 });
+
+// Sticky Header and Navbar Logic
+function handleScrollEffects() {
+  const nav = document.getElementById('navbar');
+  const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 68;
+
+  if (nav) {
+    let threshold = 50;
+    if (document.body.classList.contains('is-home')) {
+      const hero = document.getElementById('home');
+      // Trigger the background change exactly as the navbar hits the section below the hero
+      if (hero) threshold = hero.offsetHeight - navHeight;
+    }
+    nav.classList.toggle('scrolled', window.scrollY > threshold);
+  }
+
+  const headers = Array.from(document.querySelectorAll('.sticky-header-container'));
+  headers.forEach((header, index) => {
+    // If it's the last header on the page, don't let it stick
+    if (index === headers.length - 1 && headers.length > 1) {
+      header.classList.remove('is-stuck');
+      return;
+    }
+
+    const rect = header.getBoundingClientRect();
+    // Compare against navHeight with a 1px buffer for sub-pixel rendering
+    header.classList.toggle('is-stuck', rect.top <= navHeight + 1);
+  });
+}
+window.addEventListener('scroll', handleScrollEffects);
 
 // Initialize cycling on page loads - MUST be before DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {

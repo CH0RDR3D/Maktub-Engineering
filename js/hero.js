@@ -15,6 +15,8 @@ function initHeroParticles() {
   const heroSection = document.getElementById('home');
   const mouse = { x: -9999, y: -9999 };
 
+  let globalFade = 0;
+
   const COLORS = ['#F5A623', '#FAC75A', '#D4891A', '#ffffff', '#F5A623'];
   const SHAPES = ['circle', 'triangle', 'diamond', 'rect'];
 
@@ -66,7 +68,7 @@ function initHeroParticles() {
 
   Shape.prototype.draw = function() {
     ctx.save();
-    ctx.globalAlpha = this.alpha;
+    ctx.globalAlpha = this.alpha * globalFade;
     ctx.fillStyle = this.color;
     ctx.translate(this.x, this.y);
     ctx.rotate(this.rot);
@@ -97,6 +99,7 @@ function initHeroParticles() {
 
   function loop(t) {
     ctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
+    if (globalFade < 1) globalFade += 0.05; // Faster fade-in for particles (~20 frames)
     shapes.forEach(s => { s.update(t); s.draw(); });
     heroParticleRaf = requestAnimationFrame(loop);
   }
@@ -114,6 +117,9 @@ function initHeroParticles() {
   // Hero Background Carousel Logic
   const heroBg = heroSection.querySelector('.hero-bg');
   if (heroBg) {
+    // Ensure initial state is transparent for the fade-in effect
+    heroBg.style.opacity = '0';
+
     const images = ['images/hero/hero1.webp', 'images/hero/hero2.webp', 'images/hero/hero3.webp', 'images/hero/hero4.webp', 'images/hero/hero5.webp'];
     const overlay = 'linear-gradient(135deg, rgba(26,39,68,0.75) 0%, rgba(13,24,41,0.75) 60%, rgba(26,39,68,0.85) 100%)';
     let currentIdx = 0;
@@ -134,6 +140,7 @@ function initHeroParticles() {
     function setBg(idx) {
       const src = images[idx];
       heroBg.style.backgroundImage = `${overlay}, url("${src}")`;
+      heroBg.style.opacity = '1'; // Trigger the CSS transition defined in styles.css
       // Preload the next image in the sequence to avoid flickering
       preloadImage((idx + 1) % images.length);
     }

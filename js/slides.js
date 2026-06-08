@@ -86,7 +86,47 @@ function goSlide(n){
   preloadNext(currentSlide);
 }
 
+const featuredServices = [
+  { title: "Building Construction", img: "resources/civileng.webp", id: "civil" },
+  { title: "Road & Bridge Works", img: "resources/road.webp", id: "civil" },
+  { title: "Equipment Supplies", img: "resources/equipment2.webp", id: "equipment" },
+  { title: "PPE & Safety Gear", img: "resources/ppe.webp", id: "general" },
+  { title: "Office & School Furniture", img: "resources/office.webp", id: "general" },
+  { title: "Spare Parts Supply", img: "resources/warehouse.webp", id: "equipment" }
+];
+
+function initServicesCarousel() {
+  const track = document.getElementById('servicesCarousel');
+  if (!track) return;
+
+  // Shuffle the services for "at rand" behavior
+  const shuffled = [...featuredServices].sort(() => Math.random() - 0.5);
+  
+  const cardsHtml = shuffled.map(s => `
+    <div class="carousel-card" onclick="showPage('services:${s.id}')">
+      <div class="carousel-img-box">
+        <img src="${s.img}" alt="${s.title}" loading="lazy">
+      </div>
+      <div class="carousel-content">
+        <div class="carousel-title">${s.title}</div>
+        <div class="carousel-cta">Explore Details &rarr;</div>
+      </div>
+    </div>
+  `).join('');
+
+  // Duplicate content for seamless infinite loop effect
+  track.innerHTML = cardsHtml + cardsHtml;
+
+  // Handle touch interactions to pause animation
+  const container = document.querySelector('.services-carousel-container');
+  if (container) {
+    container.addEventListener('touchstart', () => { track.style.animationPlayState = 'paused'; }, {passive: true});
+    container.addEventListener('touchend', () => { track.style.animationPlayState = 'running'; }, {passive: true});
+  }
+}
+
 // auto-init
 document.addEventListener('DOMContentLoaded', initSlides);
 window.initSlides = initSlides;
+window.initServicesCarousel = initServicesCarousel;
 window.goSlide = goSlide;

@@ -262,8 +262,8 @@
 
   .nav-links a {
     text-decoration: none;
-    color: var(--gold-light);
-    mix-blend-mode: difference;
+    color: #2469ff;
+    mix-blend-mode: normal;
     font-size: 13.5px;
     font-weight: 700;
     padding: 0.4rem 0.75rem;
@@ -273,24 +273,24 @@
   }
 
   .nav-links a:hover {
-    color: var(--text3);
+    color: var(--gold-light);
   }
 
   .nav-links a.active {
-    color: var(--footer-text);
-    background: rgba(245, 165, 35, 0.371);
+    color: var(--gold);
+    background: #2469ff76;
   }
 
   .nav-cta {
     background: var(--gold);
-    color: var(--text3);
+    color: var(--navy);
     mix-blend-mode: normal;
     padding: 0.45rem 1.1rem;
     border-radius: 6px;
   }
 
   .nav-cta:hover {
-    background: var(--gold-light);
+    background: var(--footer-text);
     color: white;
   }
 
@@ -310,16 +310,40 @@
     width: 100%;
     z-index: 1000;
     background: rgba(203, 36, 36, 0);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(6px);
   }
 
   #navbar.scrolled {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.71);
     backdrop-filter: blur(16px);
     box-shadow: 0 4px 20px rgba(141, 141, 141, 0.08);
   }
 
+  nav.scrolled .nav-links a {
+    mix-blend-mode: normal;
+    color: var(--navy);
+  }
+
+  nav.scrolled .nav-links a:hover {
+    mix-blend-mode: normal;
+    color: #2469ff;
+  }
+
+  nav.scrolled .nav-links a.active {
+    mix-blend-mode: normal;
+    color: var(--gold);
+    background-color: var(--navy);
+  }
+
+  nav.scrolled .nav-logo-text {
+    mix-blend-mode: normal;
+    color: var(--text3);
+  }
+
+  nav.scrolled .nav-logo-sub {
+    mix-blend-mode: normal;
+    color: var(--text);
+  }
 
   @media (prefers-color-scheme: dark) {
     #navbar {

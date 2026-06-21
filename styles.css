@@ -196,13 +196,6 @@
     transition: background var(--transition), box-shadow var(--transition);
   }
 
-  @media (prefers-color-scheme: dark) {
-    nav {
-      background: rgba(24, 28, 36, 0.85);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-  }
-
   .nav-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -237,9 +230,13 @@
     height: 100%;
     object-fit: contain;
     display: block;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 6px;
     mix-blend-mode: normal;
+  }
+
+  nav.scrolled .nav-logo-icon img {
+    background-color: #ffffff;
   }
 
   .nav-logo-text {
@@ -265,7 +262,7 @@
 
   .nav-links a {
     text-decoration: none;
-    color: var(--gold);
+    color: var(--gold-light);
     mix-blend-mode: difference;
     font-size: 13.5px;
     font-weight: 700;
@@ -275,23 +272,26 @@
     transition: color var(--transition), background var(--transition);
   }
 
-  .nav-links a:hover,
+  .nav-links a:hover {
+    color: var(--text3);
+  }
+
   .nav-links a.active {
-    color: var(--gold-dark);
-    background: rgba(245, 166, 35, 0.12);
+    color: var(--footer-text);
+    background: rgba(245, 165, 35, 0.371);
   }
 
   .nav-cta {
-    background: var(--gold) !important;
-    color: var(--navy) !important;
-    mix-blend-mode: normal !important;
-    padding: 0.45rem 1.1rem !important;
-    border-radius: 6px !important;
+    background: var(--gold);
+    color: var(--text3);
+    mix-blend-mode: normal;
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
   }
 
   .nav-cta:hover {
-    background: var(--gold-dark) !important;
-    color: white !important;
+    background: var(--gold-light);
+    color: white;
   }
 
   .hamburger {
@@ -309,33 +309,69 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
+    background: rgba(203, 36, 36, 0);
+    backdrop-filter: blur(16px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
   }
 
-  nav.scrolled {
-    background: rgba(255, 255, 255, 0.24);
+  #navbar.scrolled {
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(16px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(141, 141, 141, 0.08);
   }
 
-  nav.scrolled .nav-links a,
-  nav.scrolled .nav-logo-text,
-  nav.scrolled .nav-logo-sub {
-    mix-blend-mode: normal;
-    color: var(--text);
-  }
 
   @media (prefers-color-scheme: dark) {
     #navbar {
-      background: rgba(26, 26, 26, 0.24);
+      background: rgba(26, 26, 26, 0.20);
       backdrop-filter: blur(5px);
     }
 
     #navbar.scrolled {
-      background: rgba(26, 26, 26, 0.61);
+      background: rgba(26, 26, 26, 0.818);
       backdrop-filter: blur(15px);
+    }
+
+    .nav-links a {
+      color: #2469ff;
+    }
+
+    .nav-links a.active {
+      color: var(--gold-dark);
+      background: var(--navy);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta a {
+      background: var(--gold);
+      color: white;
+      mix-blend-mode: normal;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+    }
+
+    nav.scrolled .nav-links a {
+      mix-blend-mode: normal;
+      color: var(--text);
+    }
+
+    nav.scrolled .nav-links a:hover {
+      mix-blend-mode: normal;
+      color: #204cad;
+    }
+
+    nav.scrolled .nav-links a.active {
+      mix-blend-mode: normal;
+      color: var(--gold);
+    }
+
+    nav.scrolled .nav-logo-text,
+    nav.scrolled .nav-logo-sub {
+      mix-blend-mode: normal;
+      color: var(--text);
     }
   }
 
@@ -727,15 +763,14 @@
     background: var(--bg);
     padding: 0.6rem 0;
     transition: background 0.5s, padding 0.3s, border 0.3s, box-shadow 0.3s;
-    margin-bottom: 1.25rem;
+    /*margin-bottom: 1.25rem;*/
   }
 
   .sticky-header-container.is-stuck {
-    background: rgba(255, 255, 255, 0.24);
-    backdrop-filter: blur(4mpx);
-    -webkit-backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.111);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     /*padding: 0.6rem 0;
-    //box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     //border-bottom: 1px solid var(--border);*/
   }
 
@@ -1653,7 +1688,6 @@
     background: var(--footer-bg);
     color: var(--footer-text);
     padding: 3rem 1.5rem 1.5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
     position: fixed;
     bottom: 0;
     left: 0;

@@ -15,7 +15,7 @@ let playEventListener2 = null;
 const HERO_TEXTS = [
   {
     badge: "Est. January 2020",
-    title: "Empowering Your Vision By Helping You To <br><span>Build Stronger Structures.</span>",
+    title: "Empowering Your Vision<br>By Helping You To <br><span>Build Stronger Structures.</span>",
     sub: "Integrated engineering solutions, dependable supply services, and civil construction for public and private sector clients across Zambia."
   },
   {
@@ -103,7 +103,7 @@ function initCanvasParticles() {
     this.reset(true);
   }
 
-  Shape.prototype.reset = function(init) {
+  Shape.prototype.reset = function (init) {
     this.x = Math.random() * heroCanvas.width;
     this.y = init ? Math.random() * heroCanvas.height : heroCanvas.height + 80;
     this.baseX = this.x;
@@ -124,7 +124,7 @@ function initCanvasParticles() {
     this.spring = 0.015 + Math.random() * 0.010;
   };
 
-  Shape.prototype.update = function(t) {
+  Shape.prototype.update = function (t) {
     var tx = this.baseX + Math.sin(t * this.floatSpeed + this.floatOffset) * this.floatAmp;
     var ty = this.baseY + Math.cos(t * this.floatSpeed * 0.7 + this.floatOffset) * (this.floatAmp * 0.6);
     var dx = mouse.x - this.x;
@@ -145,7 +145,7 @@ function initCanvasParticles() {
     this.rot += this.rotSpeed;
   };
 
-  Shape.prototype.draw = function() {
+  Shape.prototype.draw = function () {
     ctx.save();
     ctx.globalAlpha = this.alpha * globalFade;
     ctx.fillStyle = this.color;

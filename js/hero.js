@@ -10,7 +10,7 @@ const HERO_CONFIG = {
     'resources/hero2.mp4',
     'resources/hero3.mp4'
   ],
-  playbackRate: 0.55,       // Slow motion speed
+  playbackRate: 0.65,       // Slow motion speed
   textCycleInterval: 7500,  // Time each slide's text is visible (ms)
   crossfadeDuration: 1600   // Video crossfade duration (ms) - matches CSS transition
 };

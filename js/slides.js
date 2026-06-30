@@ -125,8 +125,38 @@ function initServicesCarousel() {
   }
 }
 
+let categoryCarouselIntervals = [];
+
+function initCategoryCarousels() {
+  if (categoryCarouselIntervals.length > 0) {
+    cleanupCategoryCarousels();
+  }
+
+  const carousels = document.querySelectorAll('.category-card-carousel');
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    if (slides.length <= 1) return;
+
+    let activeIdx = 0;
+    const intervalId = setInterval(() => {
+      slides[activeIdx].classList.remove('active');
+      activeIdx = (activeIdx + 1) % slides.length;
+      slides[activeIdx].classList.add('active');
+    }, 3000);
+
+    categoryCarouselIntervals.push(intervalId);
+  });
+}
+
+function cleanupCategoryCarousels() {
+  categoryCarouselIntervals.forEach(id => clearInterval(id));
+  categoryCarouselIntervals = [];
+}
+
 // auto-init
 document.addEventListener('DOMContentLoaded', initSlides);
 window.initSlides = initSlides;
 window.initServicesCarousel = initServicesCarousel;
 window.goSlide = goSlide;
+window.initCategoryCarousels = initCategoryCarousels;
+window.cleanupCategoryCarousels = cleanupCategoryCarousels;

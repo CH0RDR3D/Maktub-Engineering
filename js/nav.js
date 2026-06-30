@@ -39,6 +39,11 @@ async function showPage(id, pushState = true){
   const container = document.getElementById('page-container');
   if(!container) return;
 
+  // Clean up page-specific components to avoid memory leaks
+  if (window.cleanupCategoryCarousels) {
+    window.cleanupCategoryCarousels();
+  }
+
   // begin transition out
   container.classList.add('page-transition-out');
   // show loader immediately so user sees feedback
@@ -94,6 +99,7 @@ async function showPage(id, pushState = true){
       
       if (window.initSlides && baseId === 'home') window.initSlides();
       if (window.initServicesCarousel && baseId === 'home') window.initServicesCarousel();
+      if (window.initCategoryCarousels && baseId === 'services') window.initCategoryCarousels();
       
       if (baseId === 'services' && subId) {
         toggleServiceDetail(subId, false);
@@ -182,30 +188,20 @@ function toggleAcc(header) {
  * Service Details Logic (moved from services.html)
  */
 function toggleServiceDetail(catId, pushState = true) {
-  const categories = document.getElementById('services-categories');
-  const drilldown = document.getElementById('services-drilldown');
-  const panels = document.querySelectorAll('.service-panel');
-  const backBtn = document.getElementById('service-back-btn');
-  if (!categories || !drilldown) return;
-
-  categories.style.display = catId ? 'none' : 'grid';
-  drilldown.style.display = catId ? 'block' : 'none';
-  
-  if (backBtn) backBtn.style.display = catId ? 'inline-flex' : 'none';
-
-  if (catId) {
-    panels.forEach(p => p.classList.toggle('active', p.id === catId));
-    window.scrollTo({ top: drilldown.offsetTop - 100, behavior: 'smooth' });
-    if (window.initReveal) window.initReveal();
+  if (!catId) return;
+  const section = document.getElementById(`services-section-${catId}`);
+  if (section) {
+    window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
   }
 
   if (pushState) {
-    const newId = catId ? `services:${catId}` : 'services';
+    const newId = `services:${catId}`;
     window.history.pushState({pageId: newId}, "", `#${newId}`);
   }
 }
 
 function toggleMore(btn) {
+  // Support both old (.more-content) and new (.svc-more) patterns
   const more = btn.previousElementSibling;
   if (!more) return;
   const isHidden = more.style.display === 'none' || !more.style.display;

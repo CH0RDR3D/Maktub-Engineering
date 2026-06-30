@@ -6,9 +6,9 @@
 const HERO_CONFIG = {
   // List of video background sources. If 1 is provided, it loops. If multiple, they cycle.
   videos: [
-    'resources/herovid1.mp4',
-    'resources/herovid2.mp4',
-    'resources/herovid3.mp4'
+    'resources/hero1.mp4',
+    'resources/hero2.mp4',
+    'resources/hero3.mp4'
   ],
   playbackRate: 0.55,       // Slow motion speed
   textCycleInterval: 7500,  // Time each slide's text is visible (ms)

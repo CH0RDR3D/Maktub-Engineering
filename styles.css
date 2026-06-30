@@ -261,6 +261,7 @@
   }
 
   .nav-links a {
+    position: relative;
     text-decoration: none;
     color: #2469ff;
     mix-blend-mode: normal;
@@ -270,6 +271,28 @@
     border-radius: 6px;
     letter-spacing: 0.02em;
     transition: color var(--transition), background var(--transition);
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #dc3545;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    /* Retracts to the right on mouse-leave */
+    transition: transform 0.3s ease-out;
+  }
+
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    /* Expands from the left on hover */
+  }
+
   }
 
   .nav-links a:hover {
@@ -2541,12 +2564,12 @@
 
   /* ── COLOUR TOKENS ─────────────────────────────────────────────── */
   :root {
-    --ge-green:       #1a7a3c;
-    --ge-green-dark:  #145e2d;
+    --ge-green: #1a7a3c;
+    --ge-green-dark: #145e2d;
     --ge-green-light: #2db55d;
-    --ge-green-glow:  rgba(29, 185, 84, 0.15);
-    --ge-teal:        #0d9488;
-    --ge-hero-bg:     #081a0e;
+    --ge-green-glow: rgba(29, 185, 84, 0.15);
+    --ge-teal: #0d9488;
+    --ge-hero-bg: #081a0e;
   }
 
   /* ── HERO BANNER ───────────────────────────────────────────────── */
@@ -2577,14 +2600,23 @@
     width: var(--s);
     height: var(--s);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(45,181,93,0.55) 0%, rgba(45,181,93,0) 70%);
+    background: radial-gradient(circle, rgba(45, 181, 93, 0.55) 0%, rgba(45, 181, 93, 0) 70%);
     animation: geFloat 6s ease-in-out infinite;
     animation-delay: var(--d);
   }
 
   @keyframes geFloat {
-    0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
-    50%       { transform: translateY(-20px) scale(1.15); opacity: 1; }
+
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.6;
+    }
+
+    50% {
+      transform: translateY(-20px) scale(1.15);
+      opacity: 1;
+    }
   }
 
   .ge-hero-inner {
@@ -2794,7 +2826,7 @@
   }
 
   .ge-label-light {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -2908,7 +2940,7 @@
 
   .ge-img-sub {
     font-size: 12px;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.55);
     letter-spacing: 0.06em;
     font-weight: 600;
   }
@@ -2962,7 +2994,7 @@
 
   .ge-init-img-inner {
     font-size: 4rem;
-    color: rgba(255,255,255,0.18);
+    color: rgba(255, 255, 255, 0.18);
     position: relative;
     z-index: 1;
     transition: transform var(--transition);
@@ -2970,7 +3002,7 @@
 
   .ge-init-card:hover .ge-init-img-inner {
     transform: scale(1.1);
-    color: rgba(255,255,255,0.28);
+    color: rgba(255, 255, 255, 0.28);
   }
 
   .ge-init-body {
@@ -2985,7 +3017,7 @@
     height: 46px;
     border-radius: 12px;
     background: var(--ge-green-glow);
-    border: 1px solid rgba(29,185,84,0.25);
+    border: 1px solid rgba(29, 185, 84, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2995,14 +3027,14 @@
   }
 
   .ge-init-badge-gold {
-    background: rgba(245,166,35,0.1);
-    border-color: rgba(245,166,35,0.25);
+    background: rgba(245, 166, 35, 0.1);
+    border-color: rgba(245, 166, 35, 0.25);
     color: var(--gold-dark);
   }
 
   .ge-init-badge-teal {
-    background: rgba(13,148,136,0.1);
-    border-color: rgba(13,148,136,0.25);
+    background: rgba(13, 148, 136, 0.1);
+    border-color: rgba(13, 148, 136, 0.25);
     color: var(--ge-teal);
   }
 
@@ -3075,17 +3107,19 @@
 
   /* Horizontal connector line between steps */
   .ge-step-connector {
-    display: none; /* shown via pseudo on step wrapper */
+    display: none;
+    /* shown via pseudo on step wrapper */
   }
 
   .ge-step:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 78px; /* aligns with center of icon */
+    top: 78px;
+    /* aligns with center of icon */
     right: -12%;
     width: 24%;
     height: 2px;
-    background: linear-gradient(to right, var(--ge-green), rgba(29,185,84,0.2));
+    background: linear-gradient(to right, var(--ge-green), rgba(29, 185, 84, 0.2));
     z-index: 0;
   }
 
@@ -3100,7 +3134,7 @@
     height: 64px;
     border-radius: 50%;
     background: var(--ge-green-glow);
-    border: 2px solid rgba(29,185,84,0.3);
+    border: 2px solid rgba(29, 185, 84, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3113,7 +3147,7 @@
   }
 
   .ge-step:hover .ge-step-icon {
-    background: rgba(29,185,84,0.25);
+    background: rgba(29, 185, 84, 0.25);
     border-color: var(--ge-green);
     transform: scale(1.08);
   }
@@ -3148,7 +3182,7 @@
     transform: translateX(-50%);
     width: 600px;
     height: 400px;
-    background: radial-gradient(ellipse, rgba(29,185,84,0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(29, 185, 84, 0.12) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -3171,7 +3205,7 @@
 
   .ge-impact-sub {
     font-size: 1.05rem;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.55);
     max-width: 600px;
     margin: 0 auto;
     font-weight: 400;
@@ -3196,8 +3230,8 @@
   }
 
   .ge-impact-card:hover {
-    border-color: rgba(29,185,84,0.4);
-    background: rgba(29,185,84,0.07);
+    border-color: rgba(29, 185, 84, 0.4);
+    background: rgba(29, 185, 84, 0.07);
     transform: translateY(-4px);
   }
 
@@ -3205,8 +3239,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(29,185,84,0.15);
-    border: 1px solid rgba(29,185,84,0.3);
+    background: rgba(29, 185, 84, 0.15);
+    border: 1px solid rgba(29, 185, 84, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3216,14 +3250,14 @@
   }
 
   .ge-impact-icon-gold {
-    background: rgba(245,166,35,0.12);
-    border-color: rgba(245,166,35,0.3);
+    background: rgba(245, 166, 35, 0.12);
+    border-color: rgba(245, 166, 35, 0.3);
     color: var(--gold);
   }
 
   .ge-impact-icon-teal {
-    background: rgba(13,148,136,0.12);
-    border-color: rgba(13,148,136,0.3);
+    background: rgba(13, 148, 136, 0.12);
+    border-color: rgba(13, 148, 136, 0.3);
     color: #2dd4bf;
   }
 
@@ -3248,7 +3282,7 @@
 
   .ge-impact-metric-desc {
     font-size: 0.88rem;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     line-height: 1.6;
     font-weight: 400;
   }
@@ -3261,12 +3295,12 @@
   .ge-commit-card:hover {
     transform: translateY(-3px);
     border-color: var(--ge-green) !important;
-    box-shadow: 0 8px 24px rgba(26,122,60,0.12) !important;
+    box-shadow: 0 8px 24px rgba(26, 122, 60, 0.12) !important;
   }
 
   /* Green and teal icon colour overrides */
   .ge-icon-amber {
-    background: rgba(245,166,35,0.1) !important;
+    background: rgba(245, 166, 35, 0.1) !important;
   }
 
   .ge-icon-amber i {
@@ -3274,7 +3308,7 @@
   }
 
   .ge-icon-teal {
-    background: rgba(13,148,136,0.1) !important;
+    background: rgba(13, 148, 136, 0.1) !important;
   }
 
   .ge-icon-teal i {
@@ -3288,7 +3322,7 @@
 
   .ge-pill .icon {
     background: var(--ge-green-glow) !important;
-    border-color: rgba(29,185,84,0.3) !important;
+    border-color: rgba(29, 185, 84, 0.3) !important;
     color: var(--ge-green) !important;
   }
 
@@ -3300,7 +3334,7 @@
   .ge-cta-card {
     position: relative;
     background: linear-gradient(135deg, var(--ge-hero-bg) 0%, #0d2b15 100%);
-    border: 1px solid rgba(29,185,84,0.25);
+    border: 1px solid rgba(29, 185, 84, 0.25);
     border-radius: 24px;
     padding: 3.5rem;
     display: grid;
@@ -3308,7 +3342,7 @@
     gap: 2.5rem;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(26,122,60,0.2);
+    box-shadow: 0 20px 60px rgba(26, 122, 60, 0.2);
   }
 
   .ge-cta-glow {
@@ -3318,7 +3352,7 @@
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(29,185,84,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(29, 185, 84, 0.15) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -3350,7 +3384,7 @@
 
   .ge-cta-desc {
     font-size: 0.95rem;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     max-width: 480px;
     line-height: 1.7;
     font-weight: 400;
@@ -3470,16 +3504,16 @@
     }
 
     .ge-init-card {
-      background: rgba(26,122,60,0.04);
+      background: rgba(26, 122, 60, 0.04);
     }
 
     .ge-commit-card:hover {
-      box-shadow: 0 8px 24px rgba(26,122,60,0.25) !important;
+      box-shadow: 0 8px 24px rgba(26, 122, 60, 0.25) !important;
     }
   }
 
   /* Pill hover green override */
   .ge-pill:hover {
     border-color: var(--ge-green) !important;
-    box-shadow: 0 8px 24px rgba(26,122,60,0.12) !important;
+    box-shadow: 0 8px 24px rgba(26, 122, 60, 0.12) !important;
   }

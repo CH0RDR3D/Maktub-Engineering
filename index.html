@@ -63,9 +63,41 @@
     "closes": "17:00"
   }
 }
-</script>
 
+</script>
+<script>
+  // Loader Script
+document.addEventListener("DOMContentLoaded", () => {
+  // Wait for full page load (DOM + assets)
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const app = document.getElementById("app");
+
+    // Animate loader out
+    loader.classList.add("fade-out");
+
+    // Reveal SPA root after animation
+    loader.addEventListener("animationend", () => {
+      loader.style.display = "none";
+      app.style.display = "block";
+    });
+  });
+});
+
+</script>
 <body>
+
+  <!-- Loader HTML -->
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading your experience...</p>
+</div>
+
+<!-- Page Content -->
+<div id="app" style="display:none;">
+  <!-- Your SPA root -->
+</div>
+
 
   <!-- NAV -->
   <nav id="navbar">
@@ -167,10 +199,14 @@
   <script src="js/i18n.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/slides.js" defer></script>
+<!--
+  
+  <script src="js/particles.js" defer></script>
+   -->
   <script src="js/footer.js" defer></script>
-  <!-- <script src="js/particles.js" defer></script> -->
-  <script src="js/hero.js" defer></script>
   <script src="js/footer-particles.js" defer></script>
+  <script src="js/hero.js" defer></script> 
+ 
   <script src="js/counters.js" defer></script>
   <script src="js/reveal.js" defer></script>
   <script src="js/form.js" defer></script>

@@ -22,10 +22,10 @@
   <meta property="og:title" id="og-title" content="Maktub Engineering & General Supply Limited">
   <meta property="og:description" id="og-desc"
     content="Empowering your vision by helping you build stronger structures. Proudly Zambian-owned.">
-  <meta property="og:image" content="images/maktub_logo.png">
+  <meta property="og:image" content="images/maktub-logo.png">
 
   <link rel="icon" href="images/maktub-logo.ico">
-  <link rel="apple-touch-icon" href="images/maktub_logo.webp">
+  <link rel="apple-touch-icon" href="images/maktub-logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -41,7 +41,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Maktub Engineering & General Supply Limited",
-  "image": "https://maktubengineering.com/images/maktub_logo.png",
+  "image": "https://maktubengineering.com/images/maktub-logo.png",
   "description": "Zambian-owned integrated engineering solutions and civil construction partner.",
   "address": {
     "@type": "PostalAddress",
@@ -77,9 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.classList.add("fade-out");
 
     // Reveal SPA root after animation
-    loader.addEventListener("animationend", () => {
+      loader.addEventListener("animationend", () => {
       loader.style.display = "none";
-      app.style.display = "block";
     });
   });
 });
@@ -94,18 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <!-- Page Content -->
-<div id="app" style="display:none;">
-  <!-- Your SPA root -->
-</div>
-
-
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="javascript:void(0)" onclick="showPage('home')" class="nav-logo">
+      <a href="#home" onclick="showPage('home'); return false" class="nav-logo">
         <div class="nav-logo-icon">
-          <img src="images/maktub-logo.png" alt="Maktub Engineering logo" aria-hidden="true" width="38" height="38"
-            fetchpriority="high">
+          <img src="images/maktub-logo.png" alt="Maktub Engineering logo" width="38" height="38">
         </div>
         <div>
           <div class="nav-logo-text">Maktub Engineering</div>
@@ -113,14 +106,14 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </a>
       <div class="nav-links">
-        <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
-        <a href="javascript:void(0)" onclick="showPage('about')">About Us</a>
-        <a href="javascript:void(0)" onclick="showPage('services')">Services</a>
-        <a href="javascript:void(0)" onclick="showPage('greenenergy')">Green Energy</a>
-        <a href="javascript:void(0)" onclick="showPage('certs')">Credentials</a>
-        <a href="javascript:void(0)" onclick="showPage('contact')" class="nav-cta">Contact Us</a>
+        <a href="#home" onclick="showPage('home'); return false">Home</a>
+        <a href="#about" onclick="showPage('about'); return false">About Us</a>
+        <a href="#services" onclick="showPage('services'); return false">Services</a>
+        <a href="#greenenergy" onclick="showPage('greenenergy'); return false">Green Energy</a>
+        <a href="#certs" onclick="showPage('certs'); return false">Credentials</a>
+        <a href="#contact" onclick="showPage('contact'); return false" class="nav-cta">Contact Us</a>
       </div>
-      <button class="hamburger" id="ham" aria-label="Open menu" onclick="toggleMenu()">
+      <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">
         <i class="ti ti-menu-2"></i>
       </button>
     </div>
@@ -128,11 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
-    <a href="javascript:void(0)" onclick="showPage('about')">About Us</a>
-    <a href="javascript:void(0)" onclick="showPage('services')">Services</a>
-    <a href="javascript:void(0)" onclick="showPage('certs')">Credentials</a>
-    <a href="javascript:void(0)" onclick="showPage('contact')">Contact Us</a>
+    <a href="#home" onclick="showPage('home'); return false">Home</a>
+    <a href="#about" onclick="showPage('about'); return false">About Us</a>
+    <a href="#services" onclick="showPage('services'); return false">Services</a>
+    <a href="#greenenergy" onclick="showPage('greenenergy'); return false">Green Energy</a>
+    <a href="#certs" onclick="showPage('certs'); return false">Credentials</a>
+    <a href="#contact" onclick="showPage('contact'); return false">Contact Us</a>
   </div>
 
   <main id="page-container">
@@ -160,19 +154,19 @@ document.addEventListener("DOMContentLoaded", () => {
         <div>
           <div class="footer-heading">Navigation</div>
           <ul class="footer-links">
-            <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
-            <li><a href="javascript:void(0)" onclick="showPage('about')">About Us</a></li>
-            <li><a href="javascript:void(0)" onclick="showPage('services')">Services</a></li>
-            <li><a href="javascript:void(0)" onclick="showPage('certs')">Credentials</a></li>
-            <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact Us</a></li>
+            <li><a href="#home" onclick="showPage('home'); return false">Home</a></li>
+            <li><a href="#about" onclick="showPage('about'); return false">About Us</a></li>
+            <li><a href="#services" onclick="showPage('services'); return false">Services</a></li>
+            <li><a href="#greenenergy" onclick="showPage('greenenergy'); return false">Green Energy</a></li>
+            <li><a href="#certs" onclick="showPage('certs'); return false">Credentials</a></li>
+            <li><a href="#contact" onclick="showPage('contact'); return false">Contact Us</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-heading">Contact</div>
-          <div class="footer-contact-item"><i class="ti ti-phone" aria-hidden="true"></i><span>+260 978 294 747 / +260
-              966 363 525</span></div>
-          <div class="footer-contact-item"><i class="ti ti-mail"
-              aria-hidden="true"></i><span>info@maktubengineering.com</span></div>
+            <div class="footer-contact-item"><i class="ti ti-phone" aria-hidden="true"></i><span><a href="tel:+260978294747">+260 978 294 747</a> / <a href="tel:+260966363525">+260 966 363 525</a></span></div>
+            <div class="footer-contact-item"><i class="ti ti-mail"
+              aria-hidden="true"></i><span><a href="mailto:info@maktubengineering.com">info@maktubengineering.com</a></span></div>
           <div class="footer-contact-item"><i class="ti ti-map-pin" aria-hidden="true"></i><span>Woodgate House ZSIC,
               Floor 6, Suite 1, Nairobi Place, Cairo Road, Lusaka - Zambia</span></div>
           <div class="footer-banking">
@@ -194,17 +188,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </footer>
 
-  <!--<script src="js/main.js"></script>-->
   <!-- external scripts (modularized) -->
   <script src="js/i18n.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/slides.js" defer></script>
-<!--
-  
-  <script src="js/particles.js" defer></script>
-   -->
   <script src="js/footer.js" defer></script>
-  <script src="js/footer-particles.js" defer></script>
   <script src="js/hero.js" defer></script> 
  
   <script src="js/counters.js" defer></script>

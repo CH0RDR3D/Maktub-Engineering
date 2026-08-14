@@ -53,23 +53,23 @@
         </a>
       </div>
       <div class="reveal-right">
-        <div class="contact-form-box">
+        <form class="contact-form-box" id="contactForm" onsubmit="submitForm(event)">
           <div class="contact-form-title">Send Us a Message</div>
           <div class="form-group">
             <label class="form-label" for="cf-name">Full Name</label>
-            <input type="text" id="cf-name" class="form-control" placeholder="Your full name">
+            <input type="text" id="cf-name" name="name" class="form-control" placeholder="Your full name" autocomplete="name" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="cf-email">Email Address</label>
-            <input type="email" id="cf-email" class="form-control" placeholder="your@email.com">
+            <input type="email" id="cf-email" name="email" class="form-control" placeholder="your@email.com" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="cf-phone">Phone Number</label>
-            <input type="tel" id="cf-phone" class="form-control" placeholder="+260 ...">
+            <input type="tel" id="cf-phone" name="phone" class="form-control" placeholder="+260 ..." autocomplete="tel">
           </div>
           <div class="form-group">
             <label class="form-label" for="cf-service">Service of Interest</label>
-            <select id="cf-service" class="form-control">
+            <select id="cf-service" name="service" class="form-control">
               <option value="">Select a service...</option>
               <option>Building Construction</option>
               <option>Road &amp; Bridge Construction</option>
@@ -87,14 +87,14 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="cf-message">Message</label>
-            <textarea id="cf-message" class="form-control" placeholder="Tell us about your project or enquiry..."></textarea>
+            <textarea id="cf-message" name="message" class="form-control" placeholder="Tell us about your project or enquiry..." required></textarea>
           </div>
-          <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+          <button class="submit-btn" id="submitBtn" type="submit">
             <i class="ti ti-send" aria-hidden="true"></i>
             Send Message
           </button>
-          <p class="form-note">We typically respond within 24 hours on business days.</p>
-        </div>
+          <p class="form-note" id="formStatus" role="status" aria-live="polite">We typically respond within 24 hours on business days.</p>
+        </form>
       </div>
     </div>
   </div>

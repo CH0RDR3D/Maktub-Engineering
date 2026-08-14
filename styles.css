@@ -332,13 +332,13 @@
     /* Expands from the left on hover */
   }
 
-  }
 
   .nav-links a:hover {
     color: var(--gold-dark);
   }
 
-  .nav-links a.active {
+  .nav-links a.active,
+  .nav-links a[aria-current='page'] {
     color: var(--gold);
     background: #2469ff76;
   }
@@ -391,7 +391,8 @@
     color: #2469ff;
   }
 
-  nav.scrolled .nav-links a.active {
+  nav.scrolled .nav-links a.active,
+  nav.scrolled .nav-links a[aria-current='page'] {
     mix-blend-mode: normal;
     color: var(--gold);
     background-color: var(--navy);
@@ -422,7 +423,8 @@
       color: #2469ff;
     }
 
-    .nav-links a.active {
+    .nav-links a.active,
+    .nav-links a[aria-current='page'] {
       color: var(--gold-light);
       background: var(--navy);
     }
@@ -449,7 +451,8 @@
       color: #204cad;
     }
 
-    nav.scrolled .nav-links a.active {
+    nav.scrolled .nav-links a.active,
+    nav.scrolled .nav-links a[aria-current='page'] {
       mix-blend-mode: normal;
       color: var(--gold);
     }
@@ -470,6 +473,22 @@
     background: var(--bg);
   }
 
+  .skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1100;
+    padding: 0.65rem 0.9rem;
+    background: var(--navy);
+    color: #fff;
+    transform: translateY(-150%);
+    transition: transform var(--transition);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
   body.is-home #page-container {
     padding-top: 0;
   }
@@ -482,7 +501,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg);
+    background: var(--bg) url('/images/hero/hero1.webp') center / cover no-repeat;
     overflow: hidden;
     padding-top: var(--nav-height);
   }
@@ -886,8 +905,6 @@
     border-bottom: 1px solid var(--border);
     margin-bottom: 2rem;
   }
-
-  */
 
   /* Services Carousel */
   .services-carousel-container {
@@ -2136,6 +2153,18 @@
 
   .mobile-menu.open {
     display: flex;
+  }
+
+  .mobile-menu[aria-hidden='true'] {
+    visibility: hidden;
+  }
+
+  .mobile-menu a:focus-visible,
+  .nav-links a:focus-visible,
+  .hamburger:focus-visible,
+  .skip-link:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
   }
 
   .mobile-menu a {

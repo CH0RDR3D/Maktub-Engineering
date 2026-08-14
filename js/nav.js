@@ -3,8 +3,13 @@ let menuOpen=false;
 function toggleMenu(){
   menuOpen=!menuOpen;
   const menu = document.getElementById('mobileMenu');
+  const button = document.getElementById('ham');
   const icon = document.querySelector('.hamburger i');
   if(menu) menu.classList.toggle('open', menuOpen);
+  if(button) {
+    button.setAttribute('aria-expanded', String(menuOpen));
+    button.setAttribute('aria-label', menuOpen ? 'Close menu' : 'Open menu');
+  }
   if(icon) icon.className = menuOpen ? 'ti ti-x' : 'ti ti-menu-2';
 }
 
@@ -21,9 +26,9 @@ const PAGE_CONFIG = {
     title: 'Our Services | Construction & Engineering',
     desc: 'Explore our services: Civil Engineering, Road Construction, and General Supplies.'
   },
-  'health': {
-    title: 'Health & Safety Commitment',
-    desc: 'Our commitment to sustainability and health and safety standards in Zambia.'
+  'greenenergy': {
+    title: 'Green Energy | Maktub Engineering',
+    desc: 'Solar energy, sustainable construction, and environmental initiatives for clients across Zambia.'
   },
   'certs': {
     title: 'Credentials & Certifications',

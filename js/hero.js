@@ -149,13 +149,12 @@ function initVideoBackgrounds() {
   v2.playsInline = true;
 
   v1.src = videos[0];
-  v2.src = videos[1];
+  v2.preload = 'none';
 
   v1.classList.add('active');
   v2.classList.remove('active');
 
   v1.load();
-  v2.load();
 
   v1.play().then(() => {
     v1.playbackRate = playbackRate;
@@ -169,6 +168,8 @@ function initVideoBackgrounds() {
 
     activeVideo.classList.remove('active');
     idleVideo.classList.add('active');
+    idleVideo.src = videos[currentVideoIdx];
+    idleVideo.load();
 
     idleVideo.play().then(() => {
       idleVideo.playbackRate = playbackRate;

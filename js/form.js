@@ -1,13 +1,26 @@
-async function submitForm(){
+async function submitForm(event){
+  if (event) event.preventDefault();
+
   // Support both index.html (cf-) and page-specific (f-) IDs
-  const name = (document.getElementById('f-name') || document.getElementById('cf-name')).value.trim();
-  const email = (document.getElementById('f-email') || document.getElementById('cf-email')).value.trim();
-  const message = (document.getElementById('f-msg') || document.getElementById('cf-message')).value.trim();
-  const phone = (document.getElementById('f-phone') || document.getElementById('cf-phone')).value.trim();
+  const nameField = document.getElementById('f-name') || document.getElementById('cf-name');
+  const emailField = document.getElementById('f-email') || document.getElementById('cf-email');
+  const messageField = document.getElementById('f-msg') || document.getElementById('cf-message');
+  const phoneField = document.getElementById('f-phone') || document.getElementById('cf-phone');
+  if (!nameField || !emailField || !messageField) return;
+
+  const name = nameField.value.trim();
+  const email = emailField.value.trim();
+  const message = messageField.value.trim();
+  const phone = phoneField ? phoneField.value.trim() : '';
   const service = document.getElementById('cf-service') ? document.getElementById('cf-service').value : '';
 
   const btn = document.getElementById('submitBtn');
-  if (!name || !email || !message) { alert('Please fill in your name, email, and message.'); return; }
+  const status = document.getElementById('formStatus');
+  if (!name || !email || !message) {
+    if (status) status.textContent = 'Please fill in your name, email, and message.';
+    return;
+  }
+  if (!btn) return;
 
   // Show loading state
   const originalBtnText = btn.innerHTML;
@@ -35,7 +48,7 @@ async function submitForm(){
     window.open(whatsappUrl, '_blank');
 
     // Success feedback
-    alert('Thank you! Your message has been sent successfully.');
+    if (status) status.textContent = 'Thank you. Your message has been sent successfully.';
     
     // Reset Form fields
     (document.getElementById('f-name') || document.getElementById('cf-name')).value = '';
@@ -45,7 +58,7 @@ async function submitForm(){
 
   } catch (err) {
     console.error("Submission error:", err);
-    alert('Oops! There was a problem sending your message. Please try again or reach out via WhatsApp.');
+    if (status) status.textContent = 'There was a problem sending your message. Please try again or reach out via WhatsApp.';
   } finally {
     // Restore button state
     btn.innerHTML = originalBtnText;

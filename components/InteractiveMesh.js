@@ -382,6 +382,36 @@ export default function InteractiveMesh() {
           const dy = node.y - node2.y;
           const dist = Math.hypot(dx, dy);
 
+          // Particle-to-Particle Collision (Bounce & Repel)
+          const minDist = (node.radius + node2.radius) * 4.5; // Contact boundary (~10-15px)
+          if (dist < minDist && dist > 0) {
+            const nx = dx / dist; // Collision normal vector
+            const ny = dy / dist;
+
+            // 1. Resolve overlap immediately to prevent nodes from merging/sticking
+            const overlap = (minDist - dist) * 0.5;
+            node.x += nx * overlap;
+            node.y += ny * overlap;
+            node2.x -= nx * overlap;
+            node2.y -= ny * overlap;
+
+            // 2. Calculate relative velocity along the collision normal
+            const rvx = (node.baseVx + node.impulseVx) - (node2.baseVx + node2.impulseVx);
+            const rvy = (node.baseVy + node.impulseVy) - (node2.baseVy + node2.impulseVy);
+            const velAlongNormal = rvx * nx + rvy * ny;
+
+            // 3. Apply elastic impulse if they are moving towards each other
+            if (velAlongNormal < 0) {
+              const restitution = 0.85; // Bounciness factor
+              const impulse = -(1 + restitution) * velAlongNormal * 0.5;
+
+              node.impulseVx += nx * impulse;
+              node.impulseVy += ny * impulse;
+              node2.impulseVx -= nx * impulse;
+              node2.impulseVy -= ny * impulse;
+            }
+          }
+
           if (dist < maxConnectionDistance) {
             // Proximity to mouse enhances line brightness
             let alphaFactor = 1 - dist / maxConnectionDistance;

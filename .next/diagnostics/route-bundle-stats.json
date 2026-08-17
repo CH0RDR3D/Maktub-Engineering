@@ -1,10 +1,10 @@
 [
   {
     "route": "/",
-    "firstLoadUncompressedJsBytes": 498933,
+    "firstLoadUncompressedJsBytes": 499239,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\2753ooe-1s0g4.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
@@ -15,10 +15,10 @@
   },
   {
     "route": "/contact",
-    "firstLoadUncompressedJsBytes": 498857,
+    "firstLoadUncompressedJsBytes": 499163,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\3bgzpy_e8gqu6.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
@@ -29,10 +29,10 @@
   },
   {
     "route": "/services",
-    "firstLoadUncompressedJsBytes": 492977,
+    "firstLoadUncompressedJsBytes": 493283,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\3ib1_x4ulwpbv.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
@@ -43,10 +43,10 @@
   },
   {
     "route": "/_not-found",
-    "firstLoadUncompressedJsBytes": 491927,
+    "firstLoadUncompressedJsBytes": 492233,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
       ".next\\static\\chunks\\227kwhsrjlnp4.js",
@@ -56,10 +56,10 @@
   },
   {
     "route": "/about",
-    "firstLoadUncompressedJsBytes": 491927,
+    "firstLoadUncompressedJsBytes": 492233,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
       ".next\\static\\chunks\\227kwhsrjlnp4.js",
@@ -69,10 +69,10 @@
   },
   {
     "route": "/credentials",
-    "firstLoadUncompressedJsBytes": 491927,
+    "firstLoadUncompressedJsBytes": 492233,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
       ".next\\static\\chunks\\227kwhsrjlnp4.js",
@@ -82,10 +82,10 @@
   },
   {
     "route": "/green-energy",
-    "firstLoadUncompressedJsBytes": 491927,
+    "firstLoadUncompressedJsBytes": 492233,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\3fntmmi971322.js",
-      ".next\\static\\chunks\\1uf4vlvd4zp8_.js",
+      ".next\\static\\chunks\\0fsddn5dal5ao.js",
       ".next\\static\\chunks\\3s6nzrbk-8mnv.js",
       ".next\\static\\chunks\\19mx3mg6lkumu.js",
       ".next\\static\\chunks\\227kwhsrjlnp4.js",

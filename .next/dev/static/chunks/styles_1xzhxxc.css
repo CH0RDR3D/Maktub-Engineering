@@ -174,7 +174,11 @@ button, input, select, textarea {
 }
 
 .section-alt-bg {
-  background-color: var(--bg-alt);
+  background-color: #eef2f673;
+}
+
+[data-theme="dark"] .section-alt-bg {
+  background-color: #0f162673;
 }
 
 @media (max-width: 768px) {
@@ -832,12 +836,8 @@ button, input, select, textarea {
   inset: 0;
 }
 
-.hero-video.is-active {
+.hero-video.is-active, [data-theme="light"] .hero-video.is-active {
   opacity: .55;
-}
-
-[data-theme="light"] .hero-video.is-active {
-  opacity: .7;
 }
 
 .hero-inner {
@@ -894,7 +894,7 @@ button, input, select, textarea {
 
 [data-theme="light"] .hero-title-main {
   color: #0f172a;
-  text-shadow: 0 1px 20px #fffffff2, 0 1px 4px #ffffffe6;
+  text-shadow: 0 1px 20px #faca4698, 0 1px 4px #a7a7a7e6;
 }
 
 .hero-highlight-gradient {
@@ -1523,11 +1523,15 @@ button, input, select, textarea {
 }
 
 .page-hero-header {
-  background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
   text-align: center;
+  background: #eef2f673;
   padding: 130px 0 60px;
   position: relative;
+}
+
+[data-theme="dark"] .page-hero-header {
+  background: #0f162673;
 }
 
 .page-hero-inner {
@@ -2429,7 +2433,7 @@ button, input, select, textarea {
 .ge-hero-section {
   color: #fff;
   text-align: center;
-  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+  background: linear-gradient(135deg, #064e3bd9 0%, #065f46d9 50%, #047857d9 100%);
   padding: 140px 0 100px;
   position: relative;
   overflow: hidden;
@@ -3434,8 +3438,9 @@ button, input, select, textarea {
 }
 
 .site-footer {
-  background: var(--bg-card);
   border-top: 1px solid var(--border);
+  z-index: 1;
+  background: none;
   padding: 80px 0 32px;
   position: relative;
 }

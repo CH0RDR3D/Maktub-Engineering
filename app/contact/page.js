@@ -112,7 +112,7 @@ export default function ContactPage() {
                   className="contact-whatsapp-action"
                 >
                   <i className="ti ti-brand-whatsapp" aria-hidden="true" />
-                  <span>Chat on WhatsApp (+260 978 294 747)</span>
+                  <span>Chat on WhatsApp</span>
                 </a>
 
                 <a

@@ -278,8 +278,9 @@ function InteractiveMesh() {
                     ctx.arc(sw.x, sw.y, Math.max(0, sw.radius - 20), 0, Math.PI * 2);
                     ctx.stroke();
                 }
-                // 4. Update and draw nodes
+                // 4. Update nodes and collect connection coordinates
                 const n = nodes.length;
+                const connectionGroups = {};
                 for(let i = 0; i < n; i++){
                     const node = nodes[i];
                     // Apply friction to dynamic impulse velocities
@@ -349,7 +350,7 @@ function InteractiveMesh() {
                             }
                         }
                     }["InteractiveMesh.useEffect.loop"]);
-                    // Draw connections to nearby nodes
+                    // Collect connections to nearby nodes
                     for(let j = i + 1; j < n; j++){
                         const node2 = nodes[j];
                         const dx = node.x - node2.x;
@@ -369,12 +370,20 @@ function InteractiveMesh() {
                             }
                             const baseAlpha = isDark ? 0.08 : 0.05;
                             const finalAlpha = Math.min(baseAlpha * alphaFactor + mouseBoost, 0.4);
-                            ctx.strokeStyle = `rgba(${lineColor}, ${finalAlpha})`;
-                            ctx.lineWidth = mouseBoost > 0 ? 1.2 : 0.8;
-                            ctx.beginPath();
-                            ctx.moveTo(node.x, node.y);
-                            ctx.lineTo(node2.x, node2.y);
-                            ctx.stroke();
+                            // Group lines by rounded opacity (0.05 increments) and thickness
+                            const isBoosted = mouseBoost > 0;
+                            const roundedAlpha = Math.round(finalAlpha * 20) / 20;
+                            if (roundedAlpha > 0.01) {
+                                const groupKey = `${isBoosted ? 'b' : 'r'}_${roundedAlpha}`;
+                                if (!connectionGroups[groupKey]) {
+                                    connectionGroups[groupKey] = {
+                                        alpha: roundedAlpha,
+                                        width: isBoosted ? 1.2 : 0.8,
+                                        lines: []
+                                    };
+                                }
+                                connectionGroups[groupKey].lines.push(node.x, node.y, node2.x, node2.y);
+                            }
                             // Handle Neural Pulse generation
                             if (pulses.length < maxPulses) {
                                 let spawnChance = 0.00015; // very rare ambient spawn
@@ -401,7 +410,23 @@ function InteractiveMesh() {
                             }
                         }
                     }
-                    // Draw node point
+                }
+                // 4b. Draw all connection lines in grouped batches
+                for(const key in connectionGroups){
+                    const group = connectionGroups[key];
+                    if (group.lines.length === 0) continue;
+                    ctx.strokeStyle = `rgba(${lineColor}, ${group.alpha})`;
+                    ctx.lineWidth = group.width;
+                    ctx.beginPath();
+                    for(let k = 0; k < group.lines.length; k += 4){
+                        ctx.moveTo(group.lines[k], group.lines[k + 1]);
+                        ctx.lineTo(group.lines[k + 2], group.lines[k + 3]);
+                    }
+                    ctx.stroke();
+                }
+                // 4c. Draw node points (so they layer cleanly on top of connections)
+                for(let i = 0; i < n; i++){
+                    const node = nodes[i];
                     const isAccent = i % 3 === 0;
                     const color = isAccent ? altNodeColor : nodeColor;
                     const nodeAlpha = isDark ? isAccent ? 0.6 : 0.4 : isAccent ? 0.45 : 0.3;
@@ -471,7 +496,7 @@ function InteractiveMesh() {
         "aria-hidden": "true"
     }, void 0, false, {
         fileName: "[project]/components/InteractiveMesh.js",
-        lineNumber: 507,
+        lineNumber: 536,
         columnNumber: 5
     }, this);
 }

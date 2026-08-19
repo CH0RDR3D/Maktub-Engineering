@@ -7,9 +7,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: '/:path*', has: [{ type: 'query', key: 'page', value: 'about' }], destination: '/about', permanent: true },
-      { source: '/greenenergy', destination: '/green-energy', permanent: true },
-      { source: '/certs', destination: '/credentials', permanent: true }
+      { source: '/', has: [{ type: 'query', key: 'page', value: 'about' }], destination: '/about', permanent: false },
+      { source: '/greenenergy', destination: '/green-energy', permanent: false },
+      { source: '/certs', destination: '/credentials', permanent: false }
     ];
   }
 };

@@ -96,14 +96,14 @@ export default function Footer() {
               <div className="footer-contact-item">
                 <i className="ti ti-phone" aria-hidden="true" />
                 <div>
-                  <a href="tel:+260978294747">+260 978 294 747</a> / <a href="tel:+260966363525">+260 966 363 525</a>
+                  <a href="tel:+260978294747">+260-978-294-747</a> / <a href="tel:+260966363525">+260-966-363-525</a>
                 </div>
               </div>
 
               <div className="footer-contact-item">
                 <i className="ti ti-mail" aria-hidden="true" />
                 <div>
-                  <a href="mailto:info@maktubengineering.com">info@maktubengineering.com</a>
+                  <a href="mailto:info@maktubengineering.com">maktubengineering@gmail.com</a>
                 </div>
               </div>
 
@@ -122,13 +122,6 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="footer-banking-block">
-                <div className="footer-banking-title">
-                  <i className="ti ti-building-bank" aria-hidden="true" /> Official Banking Details (ZMW)
-                </div>
-                <div className="footer-bank-row">Stanbic Bank: <code>9130007017573</code></div>
-                <div className="footer-bank-row">Access Bank: <code>0080170000251</code></div>
-              </div>
             </div>
           </div>
         </div>

@@ -328,7 +328,7 @@ self.__SERVER_FILES_MANIFEST={
     "distDirRoot": ".next",
     "_originalRedirects": [
       {
-        "source": "/:path*",
+        "source": "/",
         "has": [
           {
             "type": "query",
@@ -337,17 +337,17 @@ self.__SERVER_FILES_MANIFEST={
           }
         ],
         "destination": "/about",
-        "permanent": true
+        "permanent": false
       },
       {
         "source": "/greenenergy",
         "destination": "/green-energy",
-        "permanent": true
+        "permanent": false
       },
       {
         "source": "/certs",
         "destination": "/credentials",
-        "permanent": true
+        "permanent": false
       }
     ]
   },

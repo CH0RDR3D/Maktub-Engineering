@@ -4,14 +4,13 @@
 type AppRoutes = never
 type PageRoutes = never
 type LayoutRoutes = "/"
-type RedirectRoutes = "/[[...path]]" | "/certs" | "/greenenergy"
+type RedirectRoutes = "/" | "/certs" | "/greenenergy"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
 
 
 interface ParamMap {
   "/": {}
-  "/[[...path]]": { "path"?: string[]; }
   "/certs": {}
   "/greenenergy": {}
 }

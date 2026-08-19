@@ -266,7 +266,7 @@ function ContactForm() {
                                         id: "cf-phone",
                                         name: "phone",
                                         className: "form-control",
-                                        placeholder: "+260 978 ...",
+                                        placeholder: "+260 977 ...",
                                         value: formData.phone,
                                         onChange: handleChange,
                                         autoComplete: "tel"

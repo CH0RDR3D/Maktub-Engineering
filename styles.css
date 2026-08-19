@@ -900,11 +900,11 @@ textarea {
 }
 
 .hero-video.is-active {
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
 [data-theme="light"] .hero-video.is-active {
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
 .hero-inner {

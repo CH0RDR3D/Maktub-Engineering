@@ -171,9 +171,8 @@ export default function GreenEnergyClientHub() {
                 <a
                   key={sec.id}
                   href={`#${sec.id}`}
-                  className={`ge-spy-pill ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''} ${
-                    sec.isQuote ? 'quote-pill' : ''
-                  }`}
+                  className={`ge-spy-pill ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''} ${sec.isQuote ? 'quote-pill' : ''
+                    }`}
                   onClick={(e) => scrollToSection(e, sec.id)}
                 >
                   <span className="spy-status-indicator">
@@ -509,7 +508,7 @@ export default function GreenEnergyClientHub() {
                 <span className="stepper-mode-tag">
                   {isStepperInView && !isUserPaused ? (
                     <>
-                      <i className="ti ti-player-play" /> Auto-Tour Active (Scroll-Aware)
+                      <i className="ti ti-wind" /> Project Delivery Model
                     </>
                   ) : (
                     <>
@@ -555,9 +554,8 @@ export default function GreenEnergyClientHub() {
                     type="button"
                     role="tab"
                     aria-selected={isActive}
-                    className={`ge-stepper-btn ${
-                      isActive ? 'active in-progress' : isCompleted ? 'completed' : 'upcoming'
-                    }`}
+                    className={`ge-stepper-btn ${isActive ? 'active in-progress' : isCompleted ? 'completed' : 'upcoming'
+                      }`}
                     onClick={() => handleManualStepSelect(step.step)}
                   >
                     <span className="ge-stepper-dot">
@@ -714,9 +712,8 @@ export default function GreenEnergyClientHub() {
               return (
                 <div
                   key={step.step}
-                  className={`ge-approach-node ${
-                    isActive ? 'active in-progress' : isCompleted ? 'completed' : 'upcoming'
-                  }`}
+                  className={`ge-approach-node ${isActive ? 'active in-progress' : isCompleted ? 'completed' : 'upcoming'
+                    }`}
                   onClick={() => setActiveApproachStep(idx)}
                   role="button"
                   tabIndex={0}

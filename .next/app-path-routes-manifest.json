@@ -4,6 +4,7 @@
   "/about/page": "/about",
   "/contact/page": "/contact",
   "/credentials/page": "/credentials",
+  "/green-energy/[slug]/page": "/green-energy/[slug]",
   "/green-energy/page": "/green-energy",
   "/page": "/",
   "/robots.txt/route": "/robots.txt",

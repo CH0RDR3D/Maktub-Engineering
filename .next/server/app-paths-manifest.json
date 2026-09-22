@@ -4,6 +4,7 @@
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
   "/credentials/page": "app/credentials/page.js",
+  "/green-energy/[slug]/page": "app/green-energy/[slug]/page.js",
   "/green-energy/page": "app/green-energy/page.js",
   "/page": "app/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",

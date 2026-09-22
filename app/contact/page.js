@@ -50,10 +50,10 @@ export default function ContactPage() {
                   <div className="contact-card-detail">
                     <div className="contact-card-label">Direct Lines</div>
                     <div className="contact-card-value">
-                      <a href="tel:+260978294747">+260 978 294 747</a>
+                      <a href="tel:+260978294747">+260-978-294-747</a>
                     </div>
                     <div className="contact-card-value">
-                      <a href="tel:+260966363525">+260 966 363 525</a>
+                      <a href="tel:+260966363525">+260-966-363-525</a>
                     </div>
                   </div>
                 </div>

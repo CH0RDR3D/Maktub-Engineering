@@ -33,7 +33,7 @@ const CREDENTIALS = [
         statusType: 'success',
         icon: 'ti ti-building-bank',
         pdf: '/resources/pdf/MAKTUBPROFILE.pdf',
-        pdfLabel: 'Download Company Profile'
+        pdfLabel: 'View Company Profile'
     },
     {
         name: 'Zambia Revenue Authority (ZRA)',

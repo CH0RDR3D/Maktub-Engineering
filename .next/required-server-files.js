@@ -65,7 +65,12 @@ self.__SERVER_FILES_MANIFEST={
           "search": ""
         }
       ],
-      "remotePatterns": [],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "placehold.co"
+        }
+      ],
       "qualities": [
         75
       ],
@@ -337,6 +342,11 @@ self.__SERVER_FILES_MANIFEST={
           }
         ],
         "destination": "/about",
+        "permanent": false
+      },
+      {
+        "source": "/green",
+        "destination": "/green-energy",
         "permanent": false
       },
       {

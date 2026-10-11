@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
 import { navItems } from '../lib/navigation';
 
 export default function Navbar() {
@@ -93,9 +92,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Actions: Theme Toggle & Quote CTA */}
+          {/* Actions: Quote CTA & Mobile Menu */}
           <div className="nav-actions">
-
             <Link href="/contact" className="nav-cta-btn">
               <span>Get a Quote</span>
               <i className="ti ti-arrow-right" aria-hidden="true" />
@@ -167,10 +165,6 @@ export default function Navbar() {
         </div>
 
         <div className="mobile-menu-footer">
-          <div className="mobile-theme-row">
-            <span>Appearance</span>
-            <ThemeToggle />
-          </div>
           <Link
             href="/contact"
             className="mobile-cta-btn"

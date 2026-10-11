@@ -37,7 +37,7 @@ export default function ServicesPage() {
         <div className="page-hero-bg" aria-hidden="true" />
         <div className="section-inner page-hero-inner">
           <div className="page-hero-badge reveal">
-            <i className="ti ti-tools" aria-hidden="true" /> Comprehensive Solutions
+            <span className="font-mono">[ 01 / SCOPE &amp; CAPABILITIES ]</span>
           </div>
           <h1 className="page-hero-title reveal">
             Engineering Excellence &amp; <span>Dependable Supplies</span>
@@ -53,7 +53,7 @@ export default function ServicesPage() {
         <div className="section-inner">
           <div className="section-header-center reveal">
             <span className="section-badge">
-              <i className="ti ti-category" aria-hidden="true" /> Service Divisions
+              [ 02 / CORE DIVISIONS ]
             </span>
             <h2 className="section-title">
               Our <span>Three Core Divisions</span>
@@ -67,8 +67,11 @@ export default function ServicesPage() {
             {/* Division 1: Civil Engineering */}
             <div className="category-overview-card reveal">
               <div className="category-card-text">
-                <div className="category-badge-icon">
-                  <i className="ti ti-building-arch" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="category-badge-icon !mb-0">
+                    <i className="ti ti-building-arch" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ DIV 01 ]</span>
                 </div>
                 <h3 className="category-card-title">Civil Engineering</h3>
                 <p className="category-card-desc">
@@ -92,8 +95,11 @@ export default function ServicesPage() {
             {/* Division 2: Equipment Supplies */}
             <div className="category-overview-card reveal">
               <div className="category-card-text">
-                <div className="category-badge-icon">
-                  <i className="ti ti-crane" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="category-badge-icon !mb-0">
+                    <i className="ti ti-crane" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ DIV 02 ]</span>
                 </div>
                 <h3 className="category-card-title">Equipment Supplies</h3>
                 <p className="category-card-desc">
@@ -117,8 +123,11 @@ export default function ServicesPage() {
             {/* Division 3: General Supplies */}
             <div className="category-overview-card reveal">
               <div className="category-card-text">
-                <div className="category-badge-icon">
-                  <i className="ti ti-shopping-bag" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="category-badge-icon !mb-0">
+                    <i className="ti ti-shopping-bag" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ DIV 03 ]</span>
                 </div>
                 <h3 className="category-card-title">General Supplies</h3>
                 <p className="category-card-desc">
@@ -147,7 +156,7 @@ export default function ServicesPage() {
         <div className="section-inner">
           <div className="section-header-left reveal">
             <span className="section-badge">
-              <i className="ti ti-building" aria-hidden="true" /> Division 01
+              [ 03 / CIVIL INFRASTRUCTURE ]
             </span>
             <h2 className="section-title">
               Civil Engineering &amp; <span>Construction</span>
@@ -171,8 +180,11 @@ export default function ServicesPage() {
                 <span className="service-card-pill">Grade 5 NCC</span>
               </div>
               <div className="service-card-body">
-                <div className="service-icon-bubble">
-                  <i className="ti ti-building-community" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="service-icon-bubble !mb-0">
+                    <i className="ti ti-building-community" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ SPEC 01 ]</span>
                 </div>
                 <h3 className="service-card-title">Building Construction</h3>
                 <p className="service-card-text">
@@ -199,8 +211,11 @@ export default function ServicesPage() {
                 <span className="service-card-pill">Category R</span>
               </div>
               <div className="service-card-body">
-                <div className="service-icon-bubble">
-                  <i className="ti ti-road" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="service-icon-bubble !mb-0">
+                    <i className="ti ti-road" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ SPEC 02 ]</span>
                 </div>
                 <h3 className="service-card-title">Road &amp; Bridge Works</h3>
                 <p className="service-card-text">
@@ -227,8 +242,11 @@ export default function ServicesPage() {
                 <span className="service-card-pill">Refurbishment</span>
               </div>
               <div className="service-card-body">
-                <div className="service-icon-bubble">
-                  <i className="ti ti-tool" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="service-icon-bubble !mb-0">
+                    <i className="ti ti-tool" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ SPEC 03 ]</span>
                 </div>
                 <h3 className="service-card-title">Maintenance &amp; Renovation</h3>
                 <p className="service-card-text">
@@ -250,7 +268,7 @@ export default function ServicesPage() {
         <div className="section-inner">
           <div className="section-header-left reveal">
             <span className="section-badge">
-              <i className="ti ti-crane" aria-hidden="true" /> Division 02
+              [ 04 / INDUSTRIAL MACHINERY ]
             </span>
             <h2 className="section-title">
               Equipment Supplies &amp; <span>Technical Servicing</span>
@@ -274,8 +292,11 @@ export default function ServicesPage() {
                 <span className="service-card-pill">Procurement</span>
               </div>
               <div className="service-card-body">
-                <div className="service-icon-bubble">
-                  <i className="ti ti-tractor" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="service-icon-bubble !mb-0">
+                    <i className="ti ti-tractor" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ SPEC 04 ]</span>
                 </div>
                 <h3 className="service-card-title">Machinery Procurement</h3>
                 <p className="service-card-text">
@@ -302,8 +323,11 @@ export default function ServicesPage() {
                 <span className="service-card-pill">Field Technicians</span>
               </div>
               <div className="service-card-body">
-                <div className="service-icon-bubble">
-                  <i className="ti ti-settings" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="service-icon-bubble !mb-0">
+                    <i className="ti ti-settings" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ SPEC 05 ]</span>
                 </div>
                 <h3 className="service-card-title">Repair &amp; Field Servicing</h3>
                 <p className="service-card-text">
@@ -330,8 +354,11 @@ export default function ServicesPage() {
                 <span className="service-card-pill">OEM Parts</span>
               </div>
               <div className="service-card-body">
-                <div className="service-icon-bubble">
-                  <i className="ti ti-components" aria-hidden="true" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="service-icon-bubble !mb-0">
+                    <i className="ti ti-components" aria-hidden="true" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ SPEC 06 ]</span>
                 </div>
                 <h3 className="service-card-title">Spare Parts Supply</h3>
                 <p className="service-card-text">
@@ -353,7 +380,7 @@ export default function ServicesPage() {
         <div className="section-inner">
           <div className="section-header-left reveal">
             <span className="section-badge">
-              <i className="ti ti-shopping-bag" aria-hidden="true" /> Division 03
+              [ 05 / PROCUREMENT &amp; LOGISTICS ]
             </span>
             <h2 className="section-title">
               General Supplies &amp; <span>Corporate Logistics</span>
@@ -370,7 +397,10 @@ export default function ServicesPage() {
                 <Image src="/resources/office2.webp" alt="Office Equipment & Printers" fill sizes="300px" className="mini-card-img" />
               </div>
               <div className="mini-card-body">
-                <div className="mini-card-icon"><i className="ti ti-device-laptop" /></div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="mini-card-icon !mb-0"><i className="ti ti-device-laptop" /></div>
+                  <span className="text-[10px] font-mono text-neutral-400">[ CAT 01 ]</span>
+                </div>
                 <h4 className="mini-card-title">Office Equipment &amp; IT</h4>
                 <p className="mini-card-text">High-speed multi-function printers, laser copiers, UPS backups, and complete administrative IT deployments.</p>
               </div>
@@ -382,7 +412,10 @@ export default function ServicesPage() {
                 <Image src="/resources/stationary.webp" alt="Stationery & Office Consumables" fill sizes="300px" className="mini-card-img" />
               </div>
               <div className="mini-card-body">
-                <div className="mini-card-icon"><i className="ti ti-file-text" /></div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="mini-card-icon !mb-0"><i className="ti ti-file-text" /></div>
+                  <span className="text-[10px] font-mono text-neutral-400">[ CAT 02 ]</span>
+                </div>
                 <h4 className="mini-card-title">Stationery &amp; Consumables</h4>
                 <p className="mini-card-text">High-volume paper supplies, toner cartridges, filing systems, and priority delivery supply contracts.</p>
               </div>
@@ -394,7 +427,10 @@ export default function ServicesPage() {
                 <Image src="/resources/office.webp" alt="Office & School Furniture" fill sizes="300px" className="mini-card-img" />
               </div>
               <div className="mini-card-body">
-                <div className="mini-card-icon"><i className="ti ti-armchair" /></div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="mini-card-icon !mb-0"><i className="ti ti-armchair" /></div>
+                  <span className="text-[10px] font-mono text-neutral-400">[ CAT 03 ]</span>
+                </div>
                 <h4 className="mini-card-title">Office &amp; School Furniture</h4>
                 <p className="mini-card-text">Ergonomic executive chairs, modular workstations, durable school desks, and laboratory workbenches.</p>
               </div>
@@ -406,7 +442,10 @@ export default function ServicesPage() {
                 <Image src="/resources/ppe.webp" alt="PPE and Safety Wear" fill sizes="300px" className="mini-card-img" />
               </div>
               <div className="mini-card-body">
-                <div className="mini-card-icon"><i className="ti ti-hard-hat" /></div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="mini-card-icon !mb-0"><i className="ti ti-hard-hat" /></div>
+                  <span className="text-[10px] font-mono text-neutral-400">[ CAT 04 ]</span>
+                </div>
                 <h4 className="mini-card-title">PPE &amp; Safety Equipment</h4>
                 <p className="mini-card-text">Industrial hard hats, high-visibility vest systems, steel-toe boots, and chemical handling gear meeting EIZ/Labour standards.</p>
               </div>
@@ -418,7 +457,10 @@ export default function ServicesPage() {
                 <Image src="/resources/construction.webp" alt="Construction Materials & Steel" fill sizes="300px" className="mini-card-img" />
               </div>
               <div className="mini-card-body">
-                <div className="mini-card-icon"><i className="ti ti-bricks" /></div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="mini-card-icon !mb-0"><i className="ti ti-bricks" /></div>
+                  <span className="text-[10px] font-mono text-neutral-400">[ CAT 05 ]</span>
+                </div>
                 <h4 className="mini-card-title">Construction Materials</h4>
                 <p className="mini-card-text">High-tensile rebar, premium grade cement, high-purity aggregates, blocks, and timber with direct site drop-off.</p>
               </div>
@@ -430,7 +472,10 @@ export default function ServicesPage() {
                 <Image src="/resources/construction2.webp" alt="General Hardware & Workshop Tools" fill sizes="300px" className="mini-card-img" />
               </div>
               <div className="mini-card-body">
-                <div className="mini-card-icon"><i className="ti ti-hammer" /></div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="mini-card-icon !mb-0"><i className="ti ti-hammer" /></div>
+                  <span className="text-[10px] font-mono text-neutral-400">[ CAT 06 ]</span>
+                </div>
                 <h4 className="mini-card-title">General Hardware &amp; Tools</h4>
                 <p className="mini-card-text">Precision toolkits, industrial-grade fasteners, electrical fittings, and heavy-duty workshop power tools.</p>
               </div>
@@ -444,7 +489,7 @@ export default function ServicesPage() {
         <div className="section-inner">
           <div className="section-header-center reveal">
             <span className="section-badge green">
-              <i className="ti ti-shield-heart" aria-hidden="true" /> Health, Safety &amp; Environment
+              [ 06 / RESPONSIBILITY &amp; PROTOCOLS ]
             </span>
             <h2 className="section-title">
               Our <span>Commitment</span> to Safety &amp; Standards
@@ -464,7 +509,7 @@ export default function ServicesPage() {
                 className="hs-banner-img"
               />
               <div className="hs-banner-overlay">
-                <div className="hs-banner-tag">
+                <div className="hs-banner-tag font-mono text-xs uppercase tracking-widest">
                   <i className="ti ti-certificate" aria-hidden="true" /> Zero Incident Target
                 </div>
               </div>
@@ -535,7 +580,7 @@ export default function ServicesPage() {
           <div className="cta-banner-box reveal">
             <div className="cta-banner-glow" aria-hidden="true" />
             <div className="cta-banner-text">
-              <span className="section-badge light">Request a Quotation</span>
+              <span className="section-badge light">[ 07 / ENGAGEMENT ]</span>
               <h2 className="cta-banner-title">
                 Ready to Discuss Your <span>Project Scope?</span>
               </h2>

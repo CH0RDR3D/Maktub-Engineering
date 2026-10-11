@@ -105,23 +105,24 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
         />
-        {/* Anti-FOUC Theme Script */}
+        {/* Automatic OS Preference Theme Script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){
               try {
-                var theme = localStorage.getItem('theme');
-                if (!theme) {
-                  theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                }
+                var mql = window.matchMedia('(prefers-color-scheme: dark)');
+                var theme = mql.matches ? 'dark' : 'light';
                 document.documentElement.setAttribute('data-theme', theme);
+                mql.addEventListener('change', function(e) {
+                  document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                });
               } catch(e){}
             })();`
           }}

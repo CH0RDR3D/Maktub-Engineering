@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="page-hero-bg" aria-hidden="true" />
         <div className="section-inner page-hero-inner">
           <div className="page-hero-badge reveal">
-            <i className="ti ti-info-circle" aria-hidden="true" /> About Our Organization
+            <span className="font-mono">[ about MAKTUB Engineering ]</span>
           </div>
           <h1 className="page-hero-title reveal">
             Building <span>Stronger Structures</span>, Empowering Zambian Growth
@@ -88,7 +88,7 @@ export default function AboutPage() {
               <div className="about-visual-banner">
                 <div className="about-visual-inner">
                   <div className="about-big-mark">M</div>
-                  <div className="about-pill-tag">Established January 2020</div>
+                  <div className="about-pill-tag">[ EST. JAN 2020 / ZAMBIA ]</div>
                   <h3 className="about-visual-heading">
                     Civil Construction <br />
                     Equipment &amp; Supplies <br />
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
             <div className="col-content reveal-right">
               <span className="section-badge">
-                <i className="ti ti-building" aria-hidden="true" /> Corporate Overview
+                [ 02 / CORPORATE OVERVIEW ]
               </span>
               <h2 className="section-title">
                 A <span>Zambian-Owned</span> Partner Built on Reliability
@@ -122,6 +122,7 @@ export default function AboutPage() {
                     <i className="ti ti-rocket" aria-hidden="true" />
                   </div>
                   <div>
+                    <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1">[ 01 / MISSION ]</div>
                     <h3 className="mv-card-title">Our Mission</h3>
                     <p className="mv-card-text">
                       To be a premier, dependable partner in construction, engineering, and supply industries by delivering high-caliber services tailored to client requirements.
@@ -134,6 +135,7 @@ export default function AboutPage() {
                     <i className="ti ti-eye" aria-hidden="true" />
                   </div>
                   <div>
+                    <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-amber-500/80 mb-1">[ 02 / VISION ]</div>
                     <h3 className="mv-card-title">Our Vision</h3>
                     <p className="mv-card-text">
                       To be a leading provider of construction, engineering innovations, and general supplies throughout Southern Africa.
@@ -151,7 +153,7 @@ export default function AboutPage() {
         <div className="section-inner">
           <div className="section-header-center reveal">
             <span className="section-badge">
-              <i className="ti ti-heart-handshake" aria-hidden="true" /> Our Guiding Principles
+              [ 03 / PRINCIPLES &amp; GOVERNANCE ]
             </span>
             <h2 className="section-title">
               Values That <span>Define Us</span>
@@ -163,8 +165,11 @@ export default function AboutPage() {
 
           <div className="values-grid-4">
             <div className="value-item-card reveal">
-              <div className="value-icon gold">
-                <i className="ti ti-star" aria-hidden="true" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="value-icon gold !mb-0">
+                  <i className="ti ti-star" aria-hidden="true" />
+                </div>
+                <span className="text-[11px] font-mono text-neutral-400 font-semibold">[ 01 ]</span>
               </div>
               <h3 className="value-title">Quality</h3>
               <p className="value-desc">
@@ -173,8 +178,11 @@ export default function AboutPage() {
             </div>
 
             <div className="value-item-card reveal">
-              <div className="value-icon blue">
-                <i className="ti ti-bulb" aria-hidden="true" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="value-icon blue !mb-0">
+                  <i className="ti ti-bulb" aria-hidden="true" />
+                </div>
+                <span className="text-[11px] font-mono text-neutral-400 font-semibold">[ 02 ]</span>
               </div>
               <h3 className="value-title">Innovation</h3>
               <p className="value-desc">
@@ -183,8 +191,11 @@ export default function AboutPage() {
             </div>
 
             <div className="value-item-card reveal">
-              <div className="value-icon green">
-                <i className="ti ti-shield-check" aria-hidden="true" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="value-icon green !mb-0">
+                  <i className="ti ti-shield-check" aria-hidden="true" />
+                </div>
+                <span className="text-[11px] font-mono text-neutral-400 font-semibold">[ 03 ]</span>
               </div>
               <h3 className="value-title">Integrity</h3>
               <p className="value-desc">
@@ -193,8 +204,11 @@ export default function AboutPage() {
             </div>
 
             <div className="value-item-card reveal">
-              <div className="value-icon purple">
-                <i className="ti ti-users" aria-hidden="true" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="value-icon purple !mb-0">
+                  <i className="ti ti-users" aria-hidden="true" />
+                </div>
+                <span className="text-[11px] font-mono text-neutral-400 font-semibold">[ 04 ]</span>
               </div>
               <h3 className="value-title">Teamwork</h3>
               <p className="value-desc">
@@ -210,7 +224,7 @@ export default function AboutPage() {
         <div className="section-inner">
           <div className="section-header-center reveal">
             <span className="section-badge">
-              <i className="ti ti-history" aria-hidden="true" /> Growth &amp; Milestones
+              [ 04 / MILESTONES &amp; ACCREDITATION ]
             </span>
             <h2 className="section-title">
               Our <span>Journey</span>
@@ -228,7 +242,10 @@ export default function AboutPage() {
                   {idx < TIMELINE_EVENTS.length - 1 && <div className="timeline-connector-line" />}
                 </div>
                 <div className="timeline-card">
-                  <span className="timeline-date">{item.year}</span>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="timeline-date">{item.year}</span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">[ 0{idx + 1} ]</span>
+                  </div>
                   <h3 className="timeline-heading">{item.title}</h3>
                   <p className="timeline-text">{item.desc}</p>
                 </div>
@@ -243,7 +260,7 @@ export default function AboutPage() {
         <div className="section-inner">
           <div className="section-header-center reveal">
             <span className="section-badge">
-              <i className="ti ti-users-group" aria-hidden="true" /> Leadership
+              [ 05 / EXECUTIVE GOVERNANCE ]
             </span>
             <h2 className="section-title">
               The <span>Visionaries</span> Behind Maktub
@@ -270,6 +287,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="leader-info">
+                  <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1">[ EXEC 0{idx + 1} ]</div>
                   <h3 className="leader-name">{leader.name}</h3>
                   <div className="leader-role">{leader.role}</div>
                   <p className="leader-bio">{leader.bio}</p>
@@ -314,7 +332,7 @@ export default function AboutPage() {
           <div className="cta-banner-box reveal">
             <div className="cta-banner-glow" aria-hidden="true" />
             <div className="cta-banner-text">
-              <span className="section-badge light">Work With Us</span>
+              <span className="section-badge light">[ 06 / COLLABORATION ]</span>
               <h2 className="cta-banner-title">
                 Ready to Partner with a <span>Certified Leader?</span>
               </h2>

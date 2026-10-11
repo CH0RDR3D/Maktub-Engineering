@@ -93,20 +93,28 @@ function ContactForm() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "contact-form-header",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "contact-form-title",
-                        children: "Send Us a Message"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-[10px] font-mono uppercase tracking-[0.25em] text-neutral-400 mb-1",
+                        children: "[ DIRECT DISPATCH ]"
                     }, void 0, false, {
                         fileName: "[project]/components/ContactForm.js",
                         lineNumber: 82,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "contact-form-subtitle",
-                        children: "Fill in your details below and we will get back to you promptly."
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "contact-form-title",
+                        children: "Send Us a Message"
                     }, void 0, false, {
                         fileName: "[project]/components/ContactForm.js",
                         lineNumber: 83,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "contact-form-subtitle",
+                        children: "Fill in your project specifications below and our engineering team will get back to you promptly."
+                    }, void 0, false, {
+                        fileName: "[project]/components/ContactForm.js",
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this)
                 ]
@@ -122,19 +130,19 @@ function ContactForm() {
                         className: "form-label",
                         htmlFor: "cf-name",
                         children: [
-                            "Full Name ",
+                            "[ FULL NAME ] ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "req",
                                 children: "*"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 90,
-                                columnNumber: 21
+                                lineNumber: 91,
+                                columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 89,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -145,7 +153,7 @@ function ContactForm() {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 93,
+                                lineNumber: 94,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -160,19 +168,19 @@ function ContactForm() {
                                 autoComplete: "name"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 94,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 92,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 88,
+                lineNumber: 89,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -185,19 +193,19 @@ function ContactForm() {
                                 className: "form-label",
                                 htmlFor: "cf-email",
                                 children: [
-                                    "Email Address ",
+                                    "[ CORPORATE EMAIL ] ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "req",
                                         children: "*"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 111,
-                                        columnNumber: 27
+                                        lineNumber: 112,
+                                        columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 110,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -208,7 +216,7 @@ function ContactForm() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 114,
+                                        lineNumber: 115,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -223,19 +231,19 @@ function ContactForm() {
                                         autoComplete: "email"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 115,
+                                        lineNumber: 116,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 113,
+                                lineNumber: 114,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 109,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -244,10 +252,10 @@ function ContactForm() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                 className: "form-label",
                                 htmlFor: "cf-phone",
-                                children: "Phone / WhatsApp Number"
+                                children: "[ PHONE / WHATSAPP ]"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 130,
+                                lineNumber: 131,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -258,7 +266,7 @@ function ContactForm() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 134,
+                                        lineNumber: 135,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -272,25 +280,25 @@ function ContactForm() {
                                         autoComplete: "tel"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 135,
+                                        lineNumber: 136,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 133,
+                                lineNumber: 134,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 129,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 108,
+                lineNumber: 109,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -299,10 +307,10 @@ function ContactForm() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                         className: "form-label",
                         htmlFor: "cf-service",
-                        children: "Service of Interest"
+                        children: "[ DISCIPLINE OF INTEREST ]"
                     }, void 0, false, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 150,
+                        lineNumber: 151,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -313,7 +321,7 @@ function ContactForm() {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 154,
+                                lineNumber: 155,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -328,7 +336,7 @@ function ContactForm() {
                                         children: "Select a service category..."
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 162,
+                                        lineNumber: 163,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("optgroup", {
@@ -339,7 +347,7 @@ function ContactForm() {
                                                 children: "Building Construction"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 164,
+                                                lineNumber: 165,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -347,7 +355,7 @@ function ContactForm() {
                                                 children: "Road & Bridge Works"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 165,
+                                                lineNumber: 166,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -355,13 +363,13 @@ function ContactForm() {
                                                 children: "Maintenance & Renovation"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 166,
+                                                lineNumber: 167,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 163,
+                                        lineNumber: 164,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("optgroup", {
@@ -372,7 +380,7 @@ function ContactForm() {
                                                 children: "Heavy Machinery Procurement"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 169,
+                                                lineNumber: 170,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -380,7 +388,7 @@ function ContactForm() {
                                                 children: "Equipment Repair & Servicing"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 170,
+                                                lineNumber: 171,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -388,13 +396,13 @@ function ContactForm() {
                                                 children: "Spare Parts Supply (Komatsu/CAT/Volvo)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 171,
+                                                lineNumber: 172,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 168,
+                                        lineNumber: 169,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("optgroup", {
@@ -405,7 +413,7 @@ function ContactForm() {
                                                 children: "Office & School Furniture"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 174,
+                                                lineNumber: 175,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -413,7 +421,7 @@ function ContactForm() {
                                                 children: "Stationery & Consumables"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 175,
+                                                lineNumber: 176,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -421,7 +429,7 @@ function ContactForm() {
                                                 children: "PPE & Safety Equipment"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 176,
+                                                lineNumber: 177,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -429,7 +437,7 @@ function ContactForm() {
                                                 children: "Construction Materials (Steel/Cement)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 177,
+                                                lineNumber: 178,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -437,13 +445,13 @@ function ContactForm() {
                                                 children: "General Hardware & Tools"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 178,
+                                                lineNumber: 179,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 173,
+                                        lineNumber: 174,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("optgroup", {
@@ -454,7 +462,7 @@ function ContactForm() {
                                                 children: "Residential Solar System"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 181,
+                                                lineNumber: 182,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -462,7 +470,7 @@ function ContactForm() {
                                                 children: "Commercial & Industrial Solar"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 182,
+                                                lineNumber: 183,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -470,13 +478,13 @@ function ContactForm() {
                                                 children: "Solar Water Pumping / Irrigation"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ContactForm.js",
-                                                lineNumber: 183,
+                                                lineNumber: 184,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 180,
+                                        lineNumber: 181,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -484,25 +492,25 @@ function ContactForm() {
                                         children: "Other / Tender Inquiry"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ContactForm.js",
-                                        lineNumber: 185,
+                                        lineNumber: 186,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 155,
+                                lineNumber: 156,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 153,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 149,
+                lineNumber: 150,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -512,19 +520,19 @@ function ContactForm() {
                         className: "form-label",
                         htmlFor: "cf-message",
                         children: [
-                            "Project Details / Message ",
+                            "[ PROJECT BRIEF & REQUIREMENTS ] ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "req",
                                 children: "*"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 192,
-                                columnNumber: 37
+                                lineNumber: 193,
+                                columnNumber: 48
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 191,
+                        lineNumber: 192,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -535,7 +543,7 @@ function ContactForm() {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 195,
+                                lineNumber: 196,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -549,19 +557,19 @@ function ContactForm() {
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/components/ContactForm.js",
-                                lineNumber: 196,
+                                lineNumber: 197,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 194,
+                        lineNumber: 195,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 190,
+                lineNumber: 191,
                 columnNumber: 7
             }, this),
             status.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -574,20 +582,20 @@ function ContactForm() {
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 215,
+                        lineNumber: 216,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: status.message
                     }, void 0, false, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 219,
+                        lineNumber: 220,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 210,
+                lineNumber: 211,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -602,20 +610,20 @@ function ContactForm() {
                             "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/components/ContactForm.js",
-                            lineNumber: 231,
+                            lineNumber: 232,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: "Sending Message..."
+                            children: "Transmitting Inquiry..."
                         }, void 0, false, {
                             fileName: "[project]/components/ContactForm.js",
-                            lineNumber: 232,
+                            lineNumber: 233,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ContactForm.js",
-                    lineNumber: 230,
+                    lineNumber: 231,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                     children: [
@@ -624,25 +632,25 @@ function ContactForm() {
                             "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/components/ContactForm.js",
-                            lineNumber: 236,
+                            lineNumber: 237,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: "Send Message & Chat"
+                            children: "Transmit Inquiry & WhatsApp"
                         }, void 0, false, {
                             fileName: "[project]/components/ContactForm.js",
-                            lineNumber: 237,
+                            lineNumber: 238,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ContactForm.js",
-                    lineNumber: 235,
+                    lineNumber: 236,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 223,
+                lineNumber: 224,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -653,14 +661,14 @@ function ContactForm() {
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/components/ContactForm.js",
-                        lineNumber: 243,
+                        lineNumber: 244,
                         columnNumber: 9
                     }, this),
-                    " We respect your privacy. Standard response time is under 24 hours on business days."
+                    " Confidential & statutory compliance. Guaranteed response within 24 business hours."
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ContactForm.js",
-                lineNumber: 242,
+                lineNumber: 243,
                 columnNumber: 7
             }, this)
         ]

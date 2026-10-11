@@ -103,18 +103,15 @@ function ServicesPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "page-hero-badge reveal",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                        className: "ti ti-tools",
-                                        "aria-hidden": "true"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/services/page.js",
-                                        lineNumber: 40,
-                                        columnNumber: 13
-                                    }, this),
-                                    " Comprehensive Solutions"
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-mono",
+                                    children: "[ 01 / SCOPE & CAPABILITIES ]"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/services/page.js",
+                                    lineNumber: 40,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/app/services/page.js",
                                 lineNumber: 39,
                                 columnNumber: 11
@@ -166,18 +163,8 @@ function ServicesPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-category",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/services/page.js",
-                                            lineNumber: 56,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Service Divisions"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 02 / CORE DIVISIONS ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
                                     lineNumber: 55,
                                     columnNumber: 13
@@ -223,16 +210,33 @@ function ServicesPage() {
                                             className: "category-card-text",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "category-badge-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-building-arch",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 71,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-4",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "category-badge-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-building-arch",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 72,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 71,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ DIV 01 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 74,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
                                                     lineNumber: 70,
                                                     columnNumber: 17
@@ -242,7 +246,7 @@ function ServicesPage() {
                                                     children: "Civil Engineering"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 73,
+                                                    lineNumber: 76,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -250,7 +254,7 @@ function ServicesPage() {
                                                     children: "Infrastructure development, high-spec building construction, and civil roadworks across Zambia."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 74,
+                                                    lineNumber: 77,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -262,14 +266,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 78,
+                                                                    lineNumber: 81,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Commercial & Residential Building"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 78,
+                                                            lineNumber: 81,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -278,14 +282,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 79,
+                                                                    lineNumber: 82,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Feeder Roads & Asphalt Surfacing"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 79,
+                                                            lineNumber: 82,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -294,20 +298,20 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 80,
+                                                                    lineNumber: 83,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Structural Refurbishment & Roofing"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 80,
+                                                            lineNumber: 83,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 77,
+                                                    lineNumber: 80,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -318,7 +322,7 @@ function ServicesPage() {
                                                             children: "Explore Civil Engineering"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 83,
+                                                            lineNumber: 86,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
@@ -326,13 +330,13 @@ function ServicesPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 84,
+                                                            lineNumber: 87,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 82,
+                                                    lineNumber: 85,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
@@ -347,12 +351,12 @@ function ServicesPage() {
                                                 slides: CIVIL_SLIDES
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 88,
+                                                lineNumber: 91,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 87,
+                                            lineNumber: 90,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -368,18 +372,35 @@ function ServicesPage() {
                                             className: "category-card-text",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "category-badge-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-crane",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 96,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-4",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "category-badge-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-crane",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 100,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 99,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ DIV 02 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 102,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 95,
+                                                    lineNumber: 98,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -387,7 +408,7 @@ function ServicesPage() {
                                                     children: "Equipment Supplies"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 98,
+                                                    lineNumber: 104,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -395,7 +416,7 @@ function ServicesPage() {
                                                     children: "Procurement, mobile technical support, and genuine OEM spare parts for heavy industrial machinery."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 99,
+                                                    lineNumber: 105,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -407,14 +428,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 103,
+                                                                    lineNumber: 109,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Heavy Machinery Procurement"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 103,
+                                                            lineNumber: 109,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -423,14 +444,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 104,
+                                                                    lineNumber: 110,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " On-Site Diagnostics & Overhauls"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 104,
+                                                            lineNumber: 110,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -439,20 +460,20 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 105,
+                                                                    lineNumber: 111,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Komatsu, CAT & Volvo OEM Spares"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 105,
+                                                            lineNumber: 111,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 102,
+                                                    lineNumber: 108,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -463,7 +484,7 @@ function ServicesPage() {
                                                             children: "Explore Equipment Supplies"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 108,
+                                                            lineNumber: 114,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
@@ -471,19 +492,19 @@ function ServicesPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 109,
+                                                            lineNumber: 115,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 107,
+                                                    lineNumber: 113,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 94,
+                                            lineNumber: 97,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -492,18 +513,18 @@ function ServicesPage() {
                                                 slides: EQUIPMENT_SLIDES
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 113,
+                                                lineNumber: 119,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 112,
+                                            lineNumber: 118,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 93,
+                                    lineNumber: 96,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,18 +534,35 @@ function ServicesPage() {
                                             className: "category-card-text",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "category-badge-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-shopping-bag",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 121,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-4",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "category-badge-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-shopping-bag",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 128,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 127,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ DIV 03 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 130,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 120,
+                                                    lineNumber: 126,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -532,7 +570,7 @@ function ServicesPage() {
                                                     children: "General Supplies"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 123,
+                                                    lineNumber: 132,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -540,7 +578,7 @@ function ServicesPage() {
                                                     children: "A dependable one-stop partner for corporate, educational, safety, and structural materials."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 124,
+                                                    lineNumber: 133,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -552,14 +590,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 128,
+                                                                    lineNumber: 137,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Ergonomic Office & School Desks"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 128,
+                                                            lineNumber: 137,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -568,14 +606,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 129,
+                                                                    lineNumber: 138,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Certified Safety Gear & PPE"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 129,
+                                                            lineNumber: 138,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -584,20 +622,20 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 130,
+                                                                    lineNumber: 139,
                                                                     columnNumber: 24
                                                                 }, this),
                                                                 " Cement, Steel & Bulk Building Supplies"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 130,
+                                                            lineNumber: 139,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 127,
+                                                    lineNumber: 136,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -608,7 +646,7 @@ function ServicesPage() {
                                                             children: "Explore General Supplies"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 133,
+                                                            lineNumber: 142,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
@@ -616,19 +654,19 @@ function ServicesPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 134,
+                                                            lineNumber: 143,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 132,
+                                                    lineNumber: 141,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 119,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,18 +675,18 @@ function ServicesPage() {
                                                 slides: GENERAL_SLIDES
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 138,
+                                                lineNumber: 147,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 137,
+                                            lineNumber: 146,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 118,
+                                    lineNumber: 124,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -679,20 +717,10 @@ function ServicesPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-building",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/services/page.js",
-                                            lineNumber: 150,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Division 01"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 03 / CIVIL INFRASTRUCTURE ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 149,
+                                    lineNumber: 158,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -703,13 +731,13 @@ function ServicesPage() {
                                             children: "Construction"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 153,
+                                            lineNumber: 162,
                                             columnNumber: 39
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 152,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -717,13 +745,13 @@ function ServicesPage() {
                                     children: "National Council for Construction (NCC Grade 5 Cat C, Grade 4 Cat R) registered works. We handle full project lifecycles from architectural review and foundation to high-end finishing."
                                 }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 155,
+                                    lineNumber: 164,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 148,
+                            lineNumber: 157,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -743,7 +771,7 @@ function ServicesPage() {
                                                     className: "service-card-img"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 164,
+                                                    lineNumber: 173,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -751,31 +779,48 @@ function ServicesPage() {
                                                     children: "Grade 5 NCC"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 171,
+                                                    lineNumber: 180,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 163,
+                                            lineNumber: 172,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "service-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "service-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-building-community",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 175,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "service-icon-bubble !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-building-community",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 185,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 184,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ SPEC 01 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 187,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 174,
+                                                    lineNumber: 183,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -783,7 +828,7 @@ function ServicesPage() {
                                                     children: "Building Construction"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 177,
+                                                    lineNumber: 189,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -791,7 +836,7 @@ function ServicesPage() {
                                                     children: "Quality residential, commercial, and institutional construction. We handle structural framing, masonry, electrical reticulation, plumbing, and specialized HVAC installations in strict compliance with the Zambian Building Code."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 178,
+                                                    lineNumber: 190,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -803,14 +848,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 182,
+                                                                    lineNumber: 194,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Commercial & Institutional"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 182,
+                                                            lineNumber: 194,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -819,14 +864,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 183,
+                                                                    lineNumber: 195,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " High-End Residential"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 183,
+                                                            lineNumber: 195,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -835,32 +880,32 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 184,
+                                                                    lineNumber: 196,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Turnkey Project Management"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 184,
+                                                            lineNumber: 196,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 181,
+                                                    lineNumber: 193,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 173,
+                                            lineNumber: 182,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 162,
+                                    lineNumber: 171,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -877,7 +922,7 @@ function ServicesPage() {
                                                     className: "service-card-img"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 192,
+                                                    lineNumber: 204,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -885,31 +930,48 @@ function ServicesPage() {
                                                     children: "Category R"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 199,
+                                                    lineNumber: 211,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 191,
+                                            lineNumber: 203,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "service-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "service-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-road",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 203,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "service-icon-bubble !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-road",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 216,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 215,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ SPEC 02 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 218,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 202,
+                                                    lineNumber: 214,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -917,7 +979,7 @@ function ServicesPage() {
                                                     children: "Road & Bridge Works"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 205,
+                                                    lineNumber: 220,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -925,7 +987,7 @@ function ServicesPage() {
                                                     children: "Urban asphalt surfacing, gravel feeder roads, storm-water drainage culverts, and structural bridge engineering designed to withstand seasonal weather variations and heavy axle transport loads."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 206,
+                                                    lineNumber: 221,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -937,14 +999,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 210,
+                                                                    lineNumber: 225,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Asphalt & Feeder Roads"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 210,
+                                                            lineNumber: 225,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -953,14 +1015,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 211,
+                                                                    lineNumber: 226,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Massive Earthworks & Grading"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 211,
+                                                            lineNumber: 226,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -969,32 +1031,32 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 212,
+                                                                    lineNumber: 227,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Culverts & Drainage Systems"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 212,
+                                                            lineNumber: 227,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 209,
+                                                    lineNumber: 224,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 201,
+                                            lineNumber: 213,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 190,
+                                    lineNumber: 202,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1011,7 +1073,7 @@ function ServicesPage() {
                                                     className: "service-card-img"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 220,
+                                                    lineNumber: 235,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1019,31 +1081,48 @@ function ServicesPage() {
                                                     children: "Refurbishment"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 227,
+                                                    lineNumber: 242,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 219,
+                                            lineNumber: 234,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "service-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "service-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-tool",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 231,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "service-icon-bubble !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-tool",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 247,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 246,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ SPEC 03 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 249,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 230,
+                                                    lineNumber: 245,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1051,7 +1130,7 @@ function ServicesPage() {
                                                     children: "Maintenance & Renovation"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 233,
+                                                    lineNumber: 251,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1059,7 +1138,7 @@ function ServicesPage() {
                                                     children: "Turnkey refurbishment for commercial and government assets. Includes structural integrity audits, modern roof waterproofing, industrial electrical upgrades, and aesthetic interior remodeling."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 234,
+                                                    lineNumber: 252,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1071,14 +1150,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 238,
+                                                                    lineNumber: 256,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Structural Audits & Retrofits"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 238,
+                                                            lineNumber: 256,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1087,14 +1166,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 239,
+                                                                    lineNumber: 257,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Industrial Waterproofing"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 239,
+                                                            lineNumber: 257,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1103,49 +1182,49 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 240,
+                                                                    lineNumber: 258,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Electrical & Mechanical Upgrades"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 240,
+                                                            lineNumber: 258,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 237,
+                                                    lineNumber: 255,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 229,
+                                            lineNumber: 244,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 218,
+                                    lineNumber: 233,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 160,
+                            lineNumber: 169,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/services/page.js",
-                    lineNumber: 147,
+                    lineNumber: 156,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/services/page.js",
-                lineNumber: 146,
+                lineNumber: 155,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1159,20 +1238,10 @@ function ServicesPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-crane",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/services/page.js",
-                                            lineNumber: 253,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Division 02"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 04 / INDUSTRIAL MACHINERY ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 252,
+                                    lineNumber: 270,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1183,13 +1252,13 @@ function ServicesPage() {
                                             children: "Technical Servicing"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 256,
+                                            lineNumber: 274,
                                             columnNumber: 40
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 255,
+                                    lineNumber: 273,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1197,13 +1266,13 @@ function ServicesPage() {
                                     children: "High-performance machinery procurement, spare parts distribution, and mobile field servicing to maximize equipment uptime across Zambia."
                                 }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 258,
+                                    lineNumber: 276,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 251,
+                            lineNumber: 269,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1223,7 +1292,7 @@ function ServicesPage() {
                                                     className: "service-card-img"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 267,
+                                                    lineNumber: 285,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1231,31 +1300,48 @@ function ServicesPage() {
                                                     children: "Procurement"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 274,
+                                                    lineNumber: 292,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 266,
+                                            lineNumber: 284,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "service-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "service-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-tractor",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 278,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "service-icon-bubble !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-tractor",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 297,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 296,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ SPEC 04 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 299,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 277,
+                                                    lineNumber: 295,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1263,7 +1349,7 @@ function ServicesPage() {
                                                     children: "Machinery Procurement"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 280,
+                                                    lineNumber: 301,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1271,7 +1357,7 @@ function ServicesPage() {
                                                     children: "Global supply chain access for heavy earthmovers, high-capacity concrete mixers, excavators, tippers, and industrial diesel generators delivered directly to active mining or construction sites."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 281,
+                                                    lineNumber: 302,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1283,14 +1369,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 285,
+                                                                    lineNumber: 306,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Earthmovers & Excavators"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 285,
+                                                            lineNumber: 306,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1299,14 +1385,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 286,
+                                                                    lineNumber: 307,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Concrete Mixing Plants"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 286,
+                                                            lineNumber: 307,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1315,32 +1401,32 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 287,
+                                                                    lineNumber: 308,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Duty Clearance & Logistics"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 287,
+                                                            lineNumber: 308,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 284,
+                                                    lineNumber: 305,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 276,
+                                            lineNumber: 294,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 265,
+                                    lineNumber: 283,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1357,7 +1443,7 @@ function ServicesPage() {
                                                     className: "service-card-img"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 295,
+                                                    lineNumber: 316,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1365,31 +1451,48 @@ function ServicesPage() {
                                                     children: "Field Technicians"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 302,
+                                                    lineNumber: 323,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 294,
+                                            lineNumber: 315,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "service-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "service-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-settings",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 306,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "service-icon-bubble !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-settings",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 328,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 327,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ SPEC 05 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 330,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 305,
+                                                    lineNumber: 326,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1397,7 +1500,7 @@ function ServicesPage() {
                                                     children: "Repair & Field Servicing"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 308,
+                                                    lineNumber: 332,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1405,7 +1508,7 @@ function ServicesPage() {
                                                     children: "Minimize costly site downtime with our mobile repair crews. We specialize in hydraulic system rebuilding, diesel engine overhauls, and preventative scheduled maintenance programs."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 309,
+                                                    lineNumber: 333,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1417,14 +1520,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 313,
+                                                                    lineNumber: 337,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Mobile Rapid Response"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 313,
+                                                            lineNumber: 337,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1433,14 +1536,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 314,
+                                                                    lineNumber: 338,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Hydraulic & Engine Overhauls"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 314,
+                                                            lineNumber: 338,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1449,32 +1552,32 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 315,
+                                                                    lineNumber: 339,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Preventative Maintenance Plans"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 315,
+                                                            lineNumber: 339,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 312,
+                                                    lineNumber: 336,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 304,
+                                            lineNumber: 325,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 293,
+                                    lineNumber: 314,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1491,7 +1594,7 @@ function ServicesPage() {
                                                     className: "service-card-img"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 323,
+                                                    lineNumber: 347,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1499,31 +1602,48 @@ function ServicesPage() {
                                                     children: "OEM Parts"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 330,
+                                                    lineNumber: 354,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 322,
+                                            lineNumber: 346,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "service-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "service-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-components",
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 334,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "service-icon-bubble !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-components",
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 359,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 358,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: "[ SPEC 06 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 361,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 333,
+                                                    lineNumber: 357,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1531,7 +1651,7 @@ function ServicesPage() {
                                                     children: "Spare Parts Supply"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 336,
+                                                    lineNumber: 363,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1539,7 +1659,7 @@ function ServicesPage() {
                                                     children: "Extensive inventory of authentic OEM parts for Caterpillar, Komatsu, JCB, and Volvo machinery. High-pressure seals, heavy-duty filters, engine components, and bucket teeth."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 337,
+                                                    lineNumber: 364,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1551,14 +1671,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 341,
+                                                                    lineNumber: 368,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Genuine OEM Components"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 341,
+                                                            lineNumber: 368,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1567,14 +1687,14 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 342,
+                                                                    lineNumber: 369,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " High-Pressure Hydraulic Seals"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 342,
+                                                            lineNumber: 369,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1583,49 +1703,49 @@ function ServicesPage() {
                                                                     className: "ti ti-check"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/services/page.js",
-                                                                    lineNumber: 343,
+                                                                    lineNumber: 370,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " Fast Air & Road Delivery"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/services/page.js",
-                                                            lineNumber: 343,
+                                                            lineNumber: 370,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 340,
+                                                    lineNumber: 367,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 332,
+                                            lineNumber: 356,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 321,
+                                    lineNumber: 345,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 263,
+                            lineNumber: 281,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/services/page.js",
-                    lineNumber: 250,
+                    lineNumber: 268,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/services/page.js",
-                lineNumber: 249,
+                lineNumber: 267,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1639,20 +1759,10 @@ function ServicesPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-shopping-bag",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/services/page.js",
-                                            lineNumber: 356,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Division 03"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 05 / PROCUREMENT & LOGISTICS ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 355,
+                                    lineNumber: 382,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1663,13 +1773,13 @@ function ServicesPage() {
                                             children: "Corporate Logistics"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 359,
+                                            lineNumber: 386,
                                             columnNumber: 38
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 358,
+                                    lineNumber: 385,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1677,13 +1787,13 @@ function ServicesPage() {
                                     children: "ZPPA-approved citizen-owned supplier for government departments, mining firms, private businesses, and educational institutions across Zambia."
                                 }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 361,
+                                    lineNumber: 388,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 354,
+                            lineNumber: 381,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1702,29 +1812,46 @@ function ServicesPage() {
                                                 className: "mini-card-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 370,
+                                                lineNumber: 397,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 369,
+                                            lineNumber: 396,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mini-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mini-card-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-device-laptop"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 373,
-                                                        columnNumber: 49
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "mini-card-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-device-laptop"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 401,
+                                                                columnNumber: 57
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 401,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400",
+                                                            children: "[ CAT 01 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 402,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 373,
+                                                    lineNumber: 400,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1732,7 +1859,7 @@ function ServicesPage() {
                                                     children: "Office Equipment & IT"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 374,
+                                                    lineNumber: 404,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1740,19 +1867,19 @@ function ServicesPage() {
                                                     children: "High-speed multi-function printers, laser copiers, UPS backups, and complete administrative IT deployments."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 375,
+                                                    lineNumber: 405,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 372,
+                                            lineNumber: 399,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 368,
+                                    lineNumber: 395,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1768,29 +1895,46 @@ function ServicesPage() {
                                                 className: "mini-card-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 382,
+                                                lineNumber: 412,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 381,
+                                            lineNumber: 411,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mini-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mini-card-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-file-text"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 385,
-                                                        columnNumber: 49
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "mini-card-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-file-text"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 416,
+                                                                columnNumber: 57
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 416,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400",
+                                                            children: "[ CAT 02 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 417,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 385,
+                                                    lineNumber: 415,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1798,7 +1942,7 @@ function ServicesPage() {
                                                     children: "Stationery & Consumables"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 386,
+                                                    lineNumber: 419,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1806,19 +1950,19 @@ function ServicesPage() {
                                                     children: "High-volume paper supplies, toner cartridges, filing systems, and priority delivery supply contracts."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 387,
+                                                    lineNumber: 420,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 384,
+                                            lineNumber: 414,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 380,
+                                    lineNumber: 410,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1834,29 +1978,46 @@ function ServicesPage() {
                                                 className: "mini-card-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 394,
+                                                lineNumber: 427,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 393,
+                                            lineNumber: 426,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mini-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mini-card-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-armchair"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 397,
-                                                        columnNumber: 49
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "mini-card-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-armchair"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 431,
+                                                                columnNumber: 57
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 431,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400",
+                                                            children: "[ CAT 03 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 432,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 397,
+                                                    lineNumber: 430,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1864,7 +2025,7 @@ function ServicesPage() {
                                                     children: "Office & School Furniture"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 398,
+                                                    lineNumber: 434,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1872,19 +2033,19 @@ function ServicesPage() {
                                                     children: "Ergonomic executive chairs, modular workstations, durable school desks, and laboratory workbenches."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 399,
+                                                    lineNumber: 435,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 396,
+                                            lineNumber: 429,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 392,
+                                    lineNumber: 425,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1900,29 +2061,46 @@ function ServicesPage() {
                                                 className: "mini-card-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 406,
+                                                lineNumber: 442,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 405,
+                                            lineNumber: 441,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mini-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mini-card-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-hard-hat"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 409,
-                                                        columnNumber: 49
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "mini-card-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-hard-hat"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 446,
+                                                                columnNumber: 57
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 446,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400",
+                                                            children: "[ CAT 04 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 447,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 409,
+                                                    lineNumber: 445,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1930,7 +2108,7 @@ function ServicesPage() {
                                                     children: "PPE & Safety Equipment"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 410,
+                                                    lineNumber: 449,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1938,19 +2116,19 @@ function ServicesPage() {
                                                     children: "Industrial hard hats, high-visibility vest systems, steel-toe boots, and chemical handling gear meeting EIZ/Labour standards."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 411,
+                                                    lineNumber: 450,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 408,
+                                            lineNumber: 444,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 404,
+                                    lineNumber: 440,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1966,29 +2144,46 @@ function ServicesPage() {
                                                 className: "mini-card-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 418,
+                                                lineNumber: 457,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 417,
+                                            lineNumber: 456,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mini-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mini-card-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-bricks"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 421,
-                                                        columnNumber: 49
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "mini-card-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-bricks"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 461,
+                                                                columnNumber: 57
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 461,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400",
+                                                            children: "[ CAT 05 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 462,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 421,
+                                                    lineNumber: 460,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1996,7 +2191,7 @@ function ServicesPage() {
                                                     children: "Construction Materials"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 422,
+                                                    lineNumber: 464,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2004,19 +2199,19 @@ function ServicesPage() {
                                                     children: "High-tensile rebar, premium grade cement, high-purity aggregates, blocks, and timber with direct site drop-off."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 423,
+                                                    lineNumber: 465,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 420,
+                                            lineNumber: 459,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 416,
+                                    lineNumber: 455,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2032,29 +2227,46 @@ function ServicesPage() {
                                                 className: "mini-card-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 430,
+                                                lineNumber: 472,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 429,
+                                            lineNumber: 471,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mini-card-body",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mini-card-icon",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: "ti ti-hammer"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/services/page.js",
-                                                        lineNumber: 433,
-                                                        columnNumber: 49
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center justify-between mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "mini-card-icon !mb-0",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: "ti ti-hammer"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/services/page.js",
+                                                                lineNumber: 476,
+                                                                columnNumber: 57
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 476,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400",
+                                                            children: "[ CAT 06 ]"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/services/page.js",
+                                                            lineNumber: 477,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 433,
+                                                    lineNumber: 475,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -2062,7 +2274,7 @@ function ServicesPage() {
                                                     children: "General Hardware & Tools"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 434,
+                                                    lineNumber: 479,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2070,36 +2282,36 @@ function ServicesPage() {
                                                     children: "Precision toolkits, industrial-grade fasteners, electrical fittings, and heavy-duty workshop power tools."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 435,
+                                                    lineNumber: 480,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 432,
+                                            lineNumber: 474,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 428,
+                                    lineNumber: 470,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 366,
+                            lineNumber: 393,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/services/page.js",
-                    lineNumber: 353,
+                    lineNumber: 380,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/services/page.js",
-                lineNumber: 352,
+                lineNumber: 379,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2112,20 +2324,10 @@ function ServicesPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge green",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-shield-heart",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/services/page.js",
-                                            lineNumber: 447,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Health, Safety & Environment"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 06 / RESPONSIBILITY & PROTOCOLS ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 446,
+                                    lineNumber: 491,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2136,14 +2338,14 @@ function ServicesPage() {
                                             children: "Commitment"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 450,
+                                            lineNumber: 495,
                                             columnNumber: 19
                                         }, this),
                                         " to Safety & Standards"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 449,
+                                    lineNumber: 494,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2151,13 +2353,13 @@ function ServicesPage() {
                                     children: "The wellbeing of our workforce, clients, and the communities we operate in is non-negotiable."
                                 }, void 0, false, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 452,
+                                    lineNumber: 497,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 445,
+                            lineNumber: 490,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2173,43 +2375,43 @@ function ServicesPage() {
                                         className: "hs-banner-img"
                                     }, void 0, false, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 459,
+                                        lineNumber: 504,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "hs-banner-overlay",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "hs-banner-tag",
+                                            className: "hs-banner-tag font-mono text-xs uppercase tracking-widest",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
                                                     className: "ti ti-certificate",
                                                     "aria-hidden": "true"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 468,
+                                                    lineNumber: 513,
                                                     columnNumber: 19
                                                 }, this),
                                                 " Zero Incident Target"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 467,
+                                            lineNumber: 512,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 466,
+                                        lineNumber: 511,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/services/page.js",
-                                lineNumber: 458,
+                                lineNumber: 503,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 457,
+                            lineNumber: 502,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2225,12 +2427,12 @@ function ServicesPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 477,
+                                                lineNumber: 522,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 476,
+                                            lineNumber: 521,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2238,7 +2440,7 @@ function ServicesPage() {
                                             children: "Environmental Sustainability"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 479,
+                                            lineNumber: 524,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2246,13 +2448,13 @@ function ServicesPage() {
                                             children: "We conduct our business in an environmentally responsible manner. From responsibly sourcing timber and aggregates to managing site energy and recycling construction debris, we reduce our ecological footprint across every project in Zambia."
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 480,
+                                            lineNumber: 525,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 475,
+                                    lineNumber: 520,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2265,12 +2467,12 @@ function ServicesPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 487,
+                                                lineNumber: 532,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 486,
+                                            lineNumber: 531,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2278,7 +2480,7 @@ function ServicesPage() {
                                             children: "Health & Safety Compliance"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 489,
+                                            lineNumber: 534,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2286,19 +2488,19 @@ function ServicesPage() {
                                             children: "All construction sites, machinery handling, and warehouse workflows strictly adhere to the Workers’ Compensation Act, EIZ engineering safety codes, and national labor regulations. Daily safety briefings and mandatory PPE ensure accident-free sites."
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 490,
+                                            lineNumber: 535,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 485,
+                                    lineNumber: 530,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 474,
+                            lineNumber: 519,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2312,7 +2514,7 @@ function ServicesPage() {
                                             "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 498,
+                                            lineNumber: 543,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2321,26 +2523,26 @@ function ServicesPage() {
                                                     children: "Regular Site Audits"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 500,
+                                                    lineNumber: 545,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Inspected before and during all work phases"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 501,
+                                                    lineNumber: 546,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 499,
+                                            lineNumber: 544,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 497,
+                                    lineNumber: 542,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2351,7 +2553,7 @@ function ServicesPage() {
                                             "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 506,
+                                            lineNumber: 551,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2360,26 +2562,26 @@ function ServicesPage() {
                                                     children: "Continuous Training"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 508,
+                                                    lineNumber: 553,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Safety certifications for all technical staff"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 509,
+                                                    lineNumber: 554,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 507,
+                                            lineNumber: 552,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 505,
+                                    lineNumber: 550,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2390,7 +2592,7 @@ function ServicesPage() {
                                             "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 514,
+                                            lineNumber: 559,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2399,26 +2601,26 @@ function ServicesPage() {
                                                     children: "100% PPE Compliance"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 516,
+                                                    lineNumber: 561,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Full safety gear mandatory on all active sites"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 517,
+                                                    lineNumber: 562,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 515,
+                                            lineNumber: 560,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 513,
+                                    lineNumber: 558,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2429,7 +2631,7 @@ function ServicesPage() {
                                             "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 522,
+                                            lineNumber: 567,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2438,43 +2640,43 @@ function ServicesPage() {
                                                     children: "ZEMA Compliant"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 524,
+                                                    lineNumber: 569,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Responsible waste disposal & water protection"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/services/page.js",
-                                                    lineNumber: 525,
+                                                    lineNumber: 570,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/services/page.js",
-                                            lineNumber: 523,
+                                            lineNumber: 568,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/services/page.js",
-                                    lineNumber: 521,
+                                    lineNumber: 566,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/services/page.js",
-                            lineNumber: 496,
+                            lineNumber: 541,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/services/page.js",
-                    lineNumber: 444,
+                    lineNumber: 489,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/services/page.js",
-                lineNumber: 443,
+                lineNumber: 488,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2489,7 +2691,7 @@ function ServicesPage() {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/app/services/page.js",
-                                lineNumber: 536,
+                                lineNumber: 581,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2497,10 +2699,10 @@ function ServicesPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "section-badge light",
-                                        children: "Request a Quotation"
+                                        children: "[ 07 / ENGAGEMENT ]"
                                     }, void 0, false, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 538,
+                                        lineNumber: 583,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2511,13 +2713,13 @@ function ServicesPage() {
                                                 children: "Project Scope?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 540,
+                                                lineNumber: 585,
                                                 columnNumber: 39
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 539,
+                                        lineNumber: 584,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2525,13 +2727,13 @@ function ServicesPage() {
                                         children: "Our estimation and engineering team will provide a tailored quote and timeline for your construction or supply requirements."
                                     }, void 0, false, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 542,
+                                        lineNumber: 587,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/services/page.js",
-                                lineNumber: 537,
+                                lineNumber: 582,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2546,20 +2748,20 @@ function ServicesPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 548,
+                                                lineNumber: 593,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Get a Fast Quote"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 549,
+                                                lineNumber: 594,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 547,
+                                        lineNumber: 592,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -2571,42 +2773,42 @@ function ServicesPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 552,
+                                                lineNumber: 597,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Green Energy Solutions"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/services/page.js",
-                                                lineNumber: 553,
+                                                lineNumber: 598,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/services/page.js",
-                                        lineNumber: 551,
+                                        lineNumber: 596,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/services/page.js",
-                                lineNumber: 546,
+                                lineNumber: 591,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/services/page.js",
-                        lineNumber: 535,
+                        lineNumber: 580,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/services/page.js",
-                    lineNumber: 534,
+                    lineNumber: 579,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/services/page.js",
-                lineNumber: 533,
+                lineNumber: 578,
                 columnNumber: 7
             }, this)
         ]

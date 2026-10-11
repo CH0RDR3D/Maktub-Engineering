@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function InteractiveMesh() {
   const canvasRef = useRef(null);
@@ -27,28 +28,37 @@ export default function InteractiveMesh() {
       lastMoved: 0
     };
 
-    let isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    let isDark = document.documentElement.getAttribute('data-theme')
+      ? document.documentElement.getAttribute('data-theme') !== 'light'
+      : mql.matches;
 
-    // Theme observer
-    const themeObserver = new MutationObserver(() => {
-      isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    });
+    // Theme observer & OS system change listener
+    const updateTheme = () => {
+      const currentAttr = document.documentElement.getAttribute('data-theme');
+      isDark = currentAttr ? currentAttr !== 'light' : mql.matches;
+    };
+
+    const themeObserver = new MutationObserver(updateTheme);
     themeObserver.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['data-theme']
     });
+    mql.addEventListener('change', updateTheme);
 
     // Particle nodes configuration
     let nodes = [];
     let pulses = [];
     let shockwaves = [];
     let orbs = [];
+    let galaxyParticles = [];
 
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
     const nodeCount = isMobile ? 24 : 48;
     const maxConnectionDistance = isMobile ? 110 : 140;
     const maxPulses = isMobile ? 8 : 16;
     const orbCount = isMobile ? 2 : 4;
+    const galaxyCount = isMobile ? 70 : 150;
 
     function initOrbs() {
       orbs = [];
@@ -62,6 +72,42 @@ export default function InteractiveMesh() {
           radius: Math.random() * 80 + (isMobile ? 100 : 160),
           isGold: isGold,
           pulse: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    function initGalaxyParticles() {
+      galaxyParticles = [];
+      for (let i = 0; i < galaxyCount; i++) {
+        const sizeTier = Math.random();
+        let radius, isLuminous;
+        if (sizeTier > 0.92) {
+          radius = Math.random() * 1.2 + 2.0; // prominent focal star
+          isLuminous = true;
+        } else if (sizeTier > 0.65) {
+          radius = Math.random() * 0.8 + 1.1; // medium star
+          isLuminous = false;
+        } else {
+          radius = Math.random() * 0.5 + 0.4; // fine distant star
+          isLuminous = false;
+        }
+
+        const colorType = Math.floor(Math.random() * 4); // 0: gold, 1: diamond white, 2: aurora emerald, 3: solar amber
+
+        galaxyParticles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * (Math.random() * 0.35 + 0.08),
+          vy: (Math.random() - 0.5) * (Math.random() * 0.35 + 0.08),
+          waveVx: 0,
+          waveVy: 0,
+          radius: radius,
+          isLuminous: isLuminous,
+          colorType: colorType,
+          baseAlpha: Math.random() * 0.45 + 0.25,
+          twinklePhase: Math.random() * Math.PI * 2,
+          twinkleSpeed: Math.random() * 0.03 + 0.015,
+          waveSparkle: 0
         });
       }
     }
@@ -101,6 +147,7 @@ export default function InteractiveMesh() {
       }
 
       initOrbs();
+      initGalaxyParticles();
     }
 
     resize();
@@ -173,7 +220,7 @@ export default function InteractiveMesh() {
       // Color scheme based on active theme
       const nodeColor = isDark ? '245, 166, 35' : '217, 119, 6'; // gold / amber
       const altNodeColor = isDark ? '37, 99, 235' : '27, 65, 146'; // navy / blue
-      const lineColor = isDark ? '245, 166, 35' : '15, 23, 42';
+      const lineColor = isDark ? '245, 166, 35' : '217, 119, 6';
 
       // 1. Draw background bokeh orbs
       orbs.forEach(orb => {
@@ -217,6 +264,102 @@ export default function InteractiveMesh() {
         ctx.fillStyle = grad;
         ctx.beginPath();
         ctx.arc(orb.x, orb.y, orb.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // 1b. Floating Star Galaxy Particles (Harmonic Wave Reactivity, No Attraction/Repulsion)
+      galaxyParticles.forEach(p => {
+        // Natural cosmic drift + wave offsets
+        p.x += p.vx + p.waveVx;
+        p.y += p.vy + p.waveVy;
+
+        // Wave momentum damping
+        p.waveVx *= 0.94;
+        p.waveVy *= 0.94;
+        p.waveSparkle *= 0.94;
+
+        // Screen boundary wrapping
+        if (p.x < -10) p.x = width + 10;
+        else if (p.x > width + 10) p.x = -10;
+        if (p.y < -10) p.y = height + 10;
+        else if (p.y > height + 10) p.y = -10;
+
+        // Transverse mouse wave reaction (strictly perpendicular to radius: NO attraction, NO repulsion)
+        if (mouse.active && mouse.x > -100 && mouse.y > -100) {
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+
+          if (dist < mouse.radius && dist > 0) {
+            const intensity = 1 - dist / mouse.radius;
+            const wavePhase = Math.sin(dist * 0.04 - currentTime * 0.005);
+
+            // Perpendicular tangent vector (wave ripple crest)
+            const perpX = -dy / dist;
+            const perpY = dx / dist;
+
+            p.waveVx += perpX * wavePhase * intensity * 0.45;
+            p.waveVy += perpY * wavePhase * intensity * 0.45;
+            p.waveSparkle = Math.max(p.waveSparkle, intensity * 0.65);
+          }
+        }
+
+        // Transverse shockwave reaction (ripple shimmer)
+        for (let s = 0; s < shockwaves.length; s++) {
+          const sw = shockwaves[s];
+          const dx = p.x - sw.x;
+          const dy = p.y - sw.y;
+          const dist = Math.hypot(dx, dy);
+          const ringDist = Math.abs(dist - sw.radius);
+
+          if (ringDist < 35 && dist > 0) {
+            const ringIntensity = (1 - ringDist / 35) * sw.alpha;
+            const wavePhase = Math.sin(ringDist * 0.18 - currentTime * 0.008);
+            const perpX = -dy / dist;
+            const perpY = dx / dist;
+
+            p.waveVx += perpX * wavePhase * ringIntensity * 0.75;
+            p.waveVy += perpY * wavePhase * ringIntensity * 0.75;
+            p.waveSparkle = Math.max(p.waveSparkle, ringIntensity * 0.95);
+          }
+        }
+
+        // Dynamic star twinkle luminosity
+        p.twinklePhase += p.twinkleSpeed;
+        const twinkle = (Math.sin(p.twinklePhase) + 1) * 0.5;
+        const currentAlpha = Math.min(1, p.baseAlpha * (0.55 + twinkle * 0.45) + p.waveSparkle);
+
+        // Randomized color palette (Gold, Diamond White, Emerald Aurora, Warm Amber)
+        let r, g, b;
+        if (isDark) {
+          if (p.colorType === 0) { r = 245; g = 166; b = 35; } // Brand Gold
+          else if (p.colorType === 1) { r = 255; g = 255; b = 255; } // Diamond Starlight
+          else if (p.colorType === 2) { r = 52; g = 211; b = 153; } // Emerald Aurora
+          else { r = 251; g = 191; b = 36; } // Warm Solar Amber
+        } else {
+          if (p.colorType === 0) { r = 217; g = 119; b = 6; } // Amber
+          else if (p.colorType === 1) { r = 30; g = 58; b = 138; } // Slate Navy
+          else if (p.colorType === 2) { r = 5; g = 150; b = 105; } // Clean Emerald
+          else { r = 180; g = 83; b = 9; } // Deep Gold
+        }
+
+        // Draw soft glow corona for luminous stars or wave-sparkled stars
+        if (p.isLuminous || p.waveSparkle > 0.2) {
+          const haloRadius = p.radius * (p.isLuminous ? 3.0 : 2.2);
+          const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, haloRadius);
+          glow.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${currentAlpha * 0.6})`);
+          glow.addColorStop(0.5, `rgba(${r}, ${g}, ${b}, ${currentAlpha * 0.2})`);
+          glow.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+          ctx.fillStyle = glow;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, haloRadius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Star core
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${currentAlpha})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fill();
       });
 

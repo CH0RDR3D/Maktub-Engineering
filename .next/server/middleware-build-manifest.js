@@ -7,16 +7,16 @@ globalThis.__BUILD_MANIFEST = {
     "static/chunks/0cz1d0mv5g_q7.js"
   ],
   "lowPriorityFiles": [
-    "static/ZEpCHMccV6IDbuse0DYdS/_buildManifest.js",
-    "static/ZEpCHMccV6IDbuse0DYdS/_ssgManifest.js",
-    "static/ZEpCHMccV6IDbuse0DYdS/_clientMiddlewareManifest.js"
+    "static/81hgeJQWXm4_Z5H5gmH-h/_buildManifest.js",
+    "static/81hgeJQWXm4_Z5H5gmH-h/_ssgManifest.js",
+    "static/81hgeJQWXm4_Z5H5gmH-h/_clientMiddlewareManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/3s6nzrbk-8mnv.js",
-    "static/chunks/19mx3mg6lkumu.js",
+    "static/chunks/2mmpezlrfmbu5.js",
     "static/chunks/227kwhsrjlnp4.js",
-    "static/chunks/2gefo9ja1l2mo.js",
-    "static/chunks/turbopack-1w_es4eco71c8.js"
+    "static/chunks/2hbx0u5pc3csk.js",
+    "static/chunks/turbopack-0d--32_zeszj-.js"
   ],
   "rootMainFilesTree": {},
   "pagesChunkGroupBootstrapParams": {},

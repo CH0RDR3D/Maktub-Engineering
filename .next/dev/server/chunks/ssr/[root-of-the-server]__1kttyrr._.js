@@ -119,18 +119,15 @@ function CredentialsPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "page-hero-badge reveal",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                        className: "ti ti-certificate",
-                                        "aria-hidden": "true"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/credentials/page.js",
-                                        lineNumber: 92,
-                                        columnNumber: 13
-                                    }, this),
-                                    " Accreditations & Compliance"
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-mono",
+                                    children: "[ 01 / REGULATORY AUDIT ]"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/credentials/page.js",
+                                    lineNumber: 92,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/app/credentials/page.js",
                                 lineNumber: 91,
                                 columnNumber: 11
@@ -182,18 +179,8 @@ function CredentialsPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-shield-check",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/credentials/page.js",
-                                            lineNumber: 108,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Regulatory Bodies"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 02 / STATUTORY ACCREDITATIONS ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/credentials/page.js",
                                     lineNumber: 107,
                                     columnNumber: 13
@@ -238,16 +225,37 @@ function CredentialsPage() {
                                             className: "credential-card-top",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "credential-icon-bubble",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                        className: cred.icon,
-                                                        "aria-hidden": "true"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 123,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    className: "flex items-center gap-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "credential-icon-bubble",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: cred.icon,
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/credentials/page.js",
+                                                                lineNumber: 124,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/credentials/page.js",
+                                                            lineNumber: 123,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400",
+                                                            children: [
+                                                                "[ REG 0",
+                                                                idx + 1,
+                                                                " ]"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/credentials/page.js",
+                                                            lineNumber: 126,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/credentials/page.js",
                                                     lineNumber: 122,
                                                     columnNumber: 19
@@ -260,14 +268,14 @@ function CredentialsPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/credentials/page.js",
-                                                            lineNumber: 126,
+                                                            lineNumber: 129,
                                                             columnNumber: 21
                                                         }, this),
                                                         cred.status
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/credentials/page.js",
-                                                    lineNumber: 125,
+                                                    lineNumber: 128,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -284,7 +292,7 @@ function CredentialsPage() {
                                                     children: cred.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/credentials/page.js",
-                                                    lineNumber: 132,
+                                                    lineNumber: 135,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -292,13 +300,13 @@ function CredentialsPage() {
                                                     children: cred.detail
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/credentials/page.js",
-                                                    lineNumber: 133,
+                                                    lineNumber: 136,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/credentials/page.js",
-                                            lineNumber: 131,
+                                            lineNumber: 134,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -315,14 +323,14 @@ function CredentialsPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 145,
+                                                        lineNumber: 148,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: cred.pdfLabel || 'View Document'
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 146,
+                                                        lineNumber: 149,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
@@ -330,13 +338,13 @@ function CredentialsPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 147,
+                                                        lineNumber: 150,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/credentials/page.js",
-                                                lineNumber: 138,
+                                                lineNumber: 141,
                                                 columnNumber: 21
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "credential-verified-tag",
@@ -346,25 +354,25 @@ function CredentialsPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 151,
+                                                        lineNumber: 154,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Verified On Record"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 152,
+                                                        lineNumber: 155,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/credentials/page.js",
-                                                lineNumber: 150,
+                                                lineNumber: 153,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/credentials/page.js",
-                                            lineNumber: 136,
+                                            lineNumber: 139,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -403,23 +411,31 @@ function CredentialsPage() {
                                     "aria-hidden": "true"
                                 }, void 0, false, {
                                     fileName: "[project]/app/credentials/page.js",
-                                    lineNumber: 167,
+                                    lineNumber: 170,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/credentials/page.js",
-                                lineNumber: 166,
+                                lineNumber: 169,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "verification-info-text",
                                 children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] font-mono uppercase tracking-[0.2em] text-amber-500 mb-2 block",
+                                        children: "[ 03 / TENDER COMPLIANCE ]"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/credentials/page.js",
+                                        lineNumber: 173,
+                                        columnNumber: 15
+                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: "verification-title",
                                         children: "Need Formal Tender Documentation?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/credentials/page.js",
-                                        lineNumber: 170,
+                                        lineNumber: 174,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -427,7 +443,7 @@ function CredentialsPage() {
                                         children: "If your procurement department requires certified true copies of our NCC certificate, EIZ practicing license, ZRA tax clearance, or CEEC citizen-ownership profile for tender evaluation, our compliance office will furnish them immediately."
                                     }, void 0, false, {
                                         fileName: "[project]/app/credentials/page.js",
-                                        lineNumber: 171,
+                                        lineNumber: 175,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -442,20 +458,20 @@ function CredentialsPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 176,
+                                                        lineNumber: 180,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Request Full Tender Dossier"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 177,
+                                                        lineNumber: 181,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/credentials/page.js",
-                                                lineNumber: 175,
+                                                lineNumber: 179,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -467,48 +483,48 @@ function CredentialsPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 180,
+                                                        lineNumber: 184,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Call Compliance Officer"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/credentials/page.js",
-                                                        lineNumber: 181,
+                                                        lineNumber: 185,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/credentials/page.js",
-                                                lineNumber: 179,
+                                                lineNumber: 183,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/credentials/page.js",
-                                        lineNumber: 174,
+                                        lineNumber: 178,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/credentials/page.js",
-                                lineNumber: 169,
+                                lineNumber: 172,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/credentials/page.js",
-                        lineNumber: 165,
+                        lineNumber: 168,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/credentials/page.js",
-                    lineNumber: 164,
+                    lineNumber: 167,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/credentials/page.js",
-                lineNumber: 163,
+                lineNumber: 166,
                 columnNumber: 7
             }, this)
         ]

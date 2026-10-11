@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className="page-hero-bg" aria-hidden="true" />
         <div className="section-inner page-hero-inner">
           <div className="page-hero-badge reveal">
-            <i className="ti ti-headset" aria-hidden="true" /> Reach Out
+            <span className="font-mono">[ 01 / COMMUNICATIONS ]</span>
           </div>
           <h1 className="page-hero-title reveal">
             Let&apos;s Build Something <span>Great Together</span>
@@ -32,7 +32,7 @@ export default function ContactPage() {
             {/* Left Column: Direct Info & Locations */}
             <div className="contact-info-col reveal-left">
               <span className="section-badge">
-                <i className="ti ti-map-pin-2" aria-hidden="true" /> Branch Information
+                [ 02 / LIAISON &amp; INQUIRY ]
               </span>
               <h2 className="contact-col-title">
                 Connect Directly With <span>Our Team</span>
@@ -48,7 +48,10 @@ export default function ContactPage() {
                     <i className="ti ti-phone-call" aria-hidden="true" />
                   </div>
                   <div className="contact-card-detail">
-                    <div className="contact-card-label">Direct Lines</div>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="contact-card-label !mb-0">Direct Lines</div>
+                      <span className="text-[10px] font-mono text-neutral-400">[ CH 01 ]</span>
+                    </div>
                     <div className="contact-card-value">
                       <a href="tel:+260978294747">+260-978-294-747</a>
                     </div>
@@ -64,7 +67,10 @@ export default function ContactPage() {
                     <i className="ti ti-mail" aria-hidden="true" />
                   </div>
                   <div className="contact-card-detail">
-                    <div className="contact-card-label">Official Email</div>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="contact-card-label !mb-0">Official Email</div>
+                      <span className="text-[10px] font-mono text-neutral-400">[ CH 02 ]</span>
+                    </div>
                     <div className="contact-card-value">
                       <a href="mailto:info@maktubengineering.com">info@maktubengineering.com</a>
                     </div>
@@ -80,7 +86,10 @@ export default function ContactPage() {
                     <i className="ti ti-building" aria-hidden="true" />
                   </div>
                   <div className="contact-card-detail">
-                    <div className="contact-card-label">Main Branch — Lusaka HQ</div>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="contact-card-label !mb-0">Main Branch — Lusaka HQ</div>
+                      <span className="text-[10px] font-mono text-neutral-400">[ HQ 01 ]</span>
+                    </div>
                     <div className="contact-card-value-text">
                       Woodgate House ZSIC, Floor 6, Room 1<br />
                       Next to Stanbic, Cairo Road, Lusaka, Zambia
@@ -94,7 +103,10 @@ export default function ContactPage() {
                     <i className="ti ti-map-pin" aria-hidden="true" />
                   </div>
                   <div className="contact-card-detail">
-                    <div className="contact-card-label">Muchinga Province Branch</div>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="contact-card-label !mb-0">Muchinga Province Branch</div>
+                      <span className="text-[10px] font-mono text-neutral-400">[ REG 02 ]</span>
+                    </div>
                     <div className="contact-card-value-text">
                       Chalabesa Kanchibiya Area<br />
                       Muchinga District, Muchinga Province, Zambia

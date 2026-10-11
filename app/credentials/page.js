@@ -89,7 +89,7 @@ export default function CredentialsPage() {
         <div className="page-hero-bg" aria-hidden="true" />
         <div className="section-inner page-hero-inner">
           <div className="page-hero-badge reveal">
-            <i className="ti ti-certificate" aria-hidden="true" /> Accreditations &amp; Compliance
+            <span className="font-mono">[ 01 / REGULATORY AUDIT ]</span>
           </div>
           <h1 className="page-hero-title reveal">
             Registered &amp; <span>Fully Compliant</span>
@@ -105,7 +105,7 @@ export default function CredentialsPage() {
         <div className="section-inner">
           <div className="section-header-center reveal">
             <span className="section-badge">
-              <i className="ti ti-shield-check" aria-hidden="true" /> Regulatory Bodies
+              [ 02 / STATUTORY ACCREDITATIONS ]
             </span>
             <h2 className="section-title">
               Official <span>Certifications &amp; Licenses</span>
@@ -119,8 +119,11 @@ export default function CredentialsPage() {
             {CREDENTIALS.map((cred, idx) => (
               <div key={idx} className="credential-card reveal">
                 <div className="credential-card-top">
-                  <div className="credential-icon-bubble">
-                    <i className={cred.icon} aria-hidden="true" />
+                  <div className="flex items-center gap-3">
+                    <div className="credential-icon-bubble">
+                      <i className={cred.icon} aria-hidden="true" />
+                    </div>
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400">[ REG 0{idx + 1} ]</span>
                   </div>
                   <span className={`credential-status-tag ${cred.statusType}`}>
                     <i className="ti ti-circle-check" aria-hidden="true" />
@@ -167,6 +170,7 @@ export default function CredentialsPage() {
               <i className="ti ti-building-arch" aria-hidden="true" />
             </div>
             <div className="verification-info-text">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-amber-500 mb-2 block">[ 03 / TENDER COMPLIANCE ]</span>
               <h3 className="verification-title">Need Formal Tender Documentation?</h3>
               <p className="verification-desc">
                 If your procurement department requires certified true copies of our NCC certificate, EIZ practicing license, ZRA tax clearance, or CEEC citizen-ownership profile for tender evaluation, our compliance office will furnish them immediately.

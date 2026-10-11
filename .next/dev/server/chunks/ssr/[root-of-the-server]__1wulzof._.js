@@ -99,18 +99,15 @@ function AboutPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "page-hero-badge reveal",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                        className: "ti ti-info-circle",
-                                        "aria-hidden": "true"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/about/page.js",
-                                        lineNumber: 72,
-                                        columnNumber: 13
-                                    }, this),
-                                    " About Our Organization"
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-mono",
+                                    children: "[ about MAKTUB Engineering ]"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/about/page.js",
+                                    lineNumber: 72,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/app/about/page.js",
                                 lineNumber: 71,
                                 columnNumber: 11
@@ -177,7 +174,7 @@ function AboutPage() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "about-pill-tag",
-                                                children: "Established January 2020"
+                                                children: "[ EST. JAN 2020 / ZAMBIA ]"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/about/page.js",
                                                 lineNumber: 91,
@@ -244,18 +241,8 @@ function AboutPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "section-badge",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-building",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/about/page.js",
-                                                lineNumber: 106,
-                                                columnNumber: 17
-                                            }, this),
-                                            " Corporate Overview"
-                                        ]
-                                    }, void 0, true, {
+                                        children: "[ 02 / CORPORATE OVERVIEW ]"
+                                    }, void 0, false, {
                                         fileName: "[project]/app/about/page.js",
                                         lineNumber: 105,
                                         columnNumber: 15
@@ -317,12 +304,20 @@ function AboutPage() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1",
+                                                                children: "[ 01 / MISSION ]"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/about/page.js",
+                                                                lineNumber: 125,
+                                                                columnNumber: 21
+                                                            }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                                 className: "mv-card-title",
                                                                 children: "Our Mission"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 125,
+                                                                lineNumber: 126,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -330,7 +325,7 @@ function AboutPage() {
                                                                 children: "To be a premier, dependable partner in construction, engineering, and supply industries by delivering high-caliber services tailored to client requirements."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 126,
+                                                                lineNumber: 127,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
@@ -355,22 +350,30 @@ function AboutPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.js",
-                                                            lineNumber: 134,
+                                                            lineNumber: 135,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/about/page.js",
-                                                        lineNumber: 133,
+                                                        lineNumber: 134,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "text-[10px] font-mono uppercase tracking-[0.2em] text-amber-500/80 mb-1",
+                                                                children: "[ 02 / VISION ]"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/about/page.js",
+                                                                lineNumber: 138,
+                                                                columnNumber: 21
+                                                            }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                                 className: "mv-card-title",
                                                                 children: "Our Vision"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 137,
+                                                                lineNumber: 139,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -378,19 +381,19 @@ function AboutPage() {
                                                                 children: "To be a leading provider of construction, engineering innovations, and general supplies throughout Southern Africa."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 138,
+                                                                lineNumber: 140,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/about/page.js",
-                                                        lineNumber: 136,
+                                                        lineNumber: 137,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/about/page.js",
-                                                lineNumber: 132,
+                                                lineNumber: 133,
                                                 columnNumber: 17
                                             }, this)
                                         ]
@@ -431,20 +434,10 @@ function AboutPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-heart-handshake",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/about/page.js",
-                                            lineNumber: 154,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Our Guiding Principles"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 03 / PRINCIPLES & GOVERNANCE ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 153,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -455,13 +448,13 @@ function AboutPage() {
                                             children: "Define Us"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 157,
+                                            lineNumber: 159,
                                             columnNumber: 27
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 156,
+                                    lineNumber: 158,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -469,13 +462,13 @@ function AboutPage() {
                                     children: "Every project we undertake is anchored in four foundational pillars of professional conduct."
                                 }, void 0, false, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 159,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/about/page.js",
-                            lineNumber: 152,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -485,18 +478,35 @@ function AboutPage() {
                                     className: "value-item-card reveal",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "value-icon gold",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-star",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/about/page.js",
-                                                lineNumber: 167,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
+                                            className: "flex items-center justify-between mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "value-icon gold !mb-0",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                        className: "ti ti-star",
+                                                        "aria-hidden": "true"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/about/page.js",
+                                                        lineNumber: 170,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 169,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[11px] font-mono text-neutral-400 font-semibold",
+                                                    children: "[ 01 ]"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 172,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 166,
+                                            lineNumber: 168,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -504,7 +514,7 @@ function AboutPage() {
                                             children: "Quality"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 169,
+                                            lineNumber: 174,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -512,31 +522,48 @@ function AboutPage() {
                                             children: "We never compromise on materials, structural integrity, or standards. Quality is the benchmark of every deliverable."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 170,
+                                            lineNumber: 175,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 165,
+                                    lineNumber: 167,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "value-item-card reveal",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "value-icon blue",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-bulb",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/about/page.js",
-                                                lineNumber: 177,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
+                                            className: "flex items-center justify-between mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "value-icon blue !mb-0",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                        className: "ti ti-bulb",
+                                                        "aria-hidden": "true"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/about/page.js",
+                                                        lineNumber: 183,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 182,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[11px] font-mono text-neutral-400 font-semibold",
+                                                    children: "[ 02 ]"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 185,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 176,
+                                            lineNumber: 181,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -544,7 +571,7 @@ function AboutPage() {
                                             children: "Innovation"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 179,
+                                            lineNumber: 187,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -552,31 +579,48 @@ function AboutPage() {
                                             children: "Adopting smart engineering practices, green technologies, and modern supply chain workflows for optimal efficiency."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 180,
+                                            lineNumber: 188,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 175,
+                                    lineNumber: 180,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "value-item-card reveal",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "value-icon green",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-shield-check",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/about/page.js",
-                                                lineNumber: 187,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
+                                            className: "flex items-center justify-between mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "value-icon green !mb-0",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                        className: "ti ti-shield-check",
+                                                        "aria-hidden": "true"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/about/page.js",
+                                                        lineNumber: 196,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 195,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[11px] font-mono text-neutral-400 font-semibold",
+                                                    children: "[ 03 ]"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 198,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 186,
+                                            lineNumber: 194,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -584,7 +628,7 @@ function AboutPage() {
                                             children: "Integrity"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 189,
+                                            lineNumber: 200,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -592,31 +636,48 @@ function AboutPage() {
                                             children: "Transparent operations, ethical compliance, clear contracts, and honest pricing across all client partnerships."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 190,
+                                            lineNumber: 201,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 185,
+                                    lineNumber: 193,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "value-item-card reveal",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "value-icon purple",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-users",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/about/page.js",
-                                                lineNumber: 197,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
+                                            className: "flex items-center justify-between mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "value-icon purple !mb-0",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                        className: "ti ti-users",
+                                                        "aria-hidden": "true"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/about/page.js",
+                                                        lineNumber: 209,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 208,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[11px] font-mono text-neutral-400 font-semibold",
+                                                    children: "[ 04 ]"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 211,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 196,
+                                            lineNumber: 207,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -624,7 +685,7 @@ function AboutPage() {
                                             children: "Teamwork"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 199,
+                                            lineNumber: 213,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -632,30 +693,30 @@ function AboutPage() {
                                             children: "Collaborating closely with clients, subcontractors, engineers, and community stakeholders for shared success."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 200,
+                                            lineNumber: 214,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 195,
+                                    lineNumber: 206,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/about/page.js",
-                            lineNumber: 164,
+                            lineNumber: 166,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/about/page.js",
-                    lineNumber: 151,
+                    lineNumber: 153,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/about/page.js",
-                lineNumber: 150,
+                lineNumber: 152,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -668,20 +729,10 @@ function AboutPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-history",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/about/page.js",
-                                            lineNumber: 213,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Growth & Milestones"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 04 / MILESTONES & ACCREDITATION ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 212,
+                                    lineNumber: 226,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -692,13 +743,13 @@ function AboutPage() {
                                             children: "Journey"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 216,
+                                            lineNumber: 230,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 215,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -706,13 +757,13 @@ function AboutPage() {
                                     children: "A track record of continuous regulatory compliance, capability expansion, and customer satisfaction."
                                 }, void 0, false, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 218,
+                                    lineNumber: 232,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/about/page.js",
-                            lineNumber: 211,
+                            lineNumber: 225,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -728,31 +779,52 @@ function AboutPage() {
                                                     children: item.dot
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 227,
+                                                    lineNumber: 241,
                                                     columnNumber: 19
                                                 }, this),
                                                 idx < TIMELINE_EVENTS.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "timeline-connector-line"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 228,
+                                                    lineNumber: 242,
                                                     columnNumber: 56
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 226,
+                                            lineNumber: 240,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "timeline-card",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "timeline-date",
-                                                    children: item.year
-                                                }, void 0, false, {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex items-center justify-between mb-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "timeline-date",
+                                                            children: item.year
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/about/page.js",
+                                                            lineNumber: 246,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-[10px] font-mono text-neutral-400 uppercase tracking-widest",
+                                                            children: [
+                                                                "[ 0",
+                                                                idx + 1,
+                                                                " ]"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/about/page.js",
+                                                            lineNumber: 247,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 231,
+                                                    lineNumber: 245,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -760,7 +832,7 @@ function AboutPage() {
                                                     children: item.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 232,
+                                                    lineNumber: 249,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -768,35 +840,35 @@ function AboutPage() {
                                                     children: item.desc
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 233,
+                                                    lineNumber: 250,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 230,
+                                            lineNumber: 244,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 225,
+                                    lineNumber: 239,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.js",
-                            lineNumber: 223,
+                            lineNumber: 237,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/about/page.js",
-                    lineNumber: 210,
+                    lineNumber: 224,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/about/page.js",
-                lineNumber: 209,
+                lineNumber: 223,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -809,20 +881,10 @@ function AboutPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "section-badge",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                            className: "ti ti-users-group",
-                                            "aria-hidden": "true"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/about/page.js",
-                                            lineNumber: 246,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Leadership"
-                                    ]
-                                }, void 0, true, {
+                                    children: "[ 05 / EXECUTIVE GOVERNANCE ]"
+                                }, void 0, false, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 245,
+                                    lineNumber: 262,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -833,14 +895,14 @@ function AboutPage() {
                                             children: "Visionaries"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 249,
+                                            lineNumber: 266,
                                             columnNumber: 19
                                         }, this),
                                         " Behind Maktub"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 248,
+                                    lineNumber: 265,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -848,13 +910,13 @@ function AboutPage() {
                                     children: "Experienced leaders steering engineering excellence, supply chain innovation, and client success across Zambia."
                                 }, void 0, false, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 251,
+                                    lineNumber: 268,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/about/page.js",
-                            lineNumber: 244,
+                            lineNumber: 261,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -873,7 +935,7 @@ function AboutPage() {
                                                     className: "leader-photo"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 260,
+                                                    lineNumber: 277,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -883,29 +945,41 @@ function AboutPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/about/page.js",
-                                                        lineNumber: 268,
+                                                        lineNumber: 285,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 267,
+                                                    lineNumber: 284,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 259,
+                                            lineNumber: 276,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "leader-info",
                                             children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1",
+                                                    children: [
+                                                        "[ EXEC 0",
+                                                        idx + 1,
+                                                        " ]"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/app/about/page.js",
+                                                    lineNumber: 290,
+                                                    columnNumber: 19
+                                                }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     className: "leader-name",
                                                     children: leader.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 273,
+                                                    lineNumber: 291,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -913,7 +987,7 @@ function AboutPage() {
                                                     children: leader.role
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 274,
+                                                    lineNumber: 292,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -921,7 +995,7 @@ function AboutPage() {
                                                     children: leader.bio
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 275,
+                                                    lineNumber: 293,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -938,12 +1012,12 @@ function AboutPage() {
                                                                 "aria-hidden": "true"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 285,
+                                                                lineNumber: 303,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.js",
-                                                            lineNumber: 278,
+                                                            lineNumber: 296,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -957,12 +1031,12 @@ function AboutPage() {
                                                                 "aria-hidden": "true"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 294,
+                                                                lineNumber: 312,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.js",
-                                                            lineNumber: 287,
+                                                            lineNumber: 305,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -974,46 +1048,46 @@ function AboutPage() {
                                                                 "aria-hidden": "true"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/about/page.js",
-                                                                lineNumber: 301,
+                                                                lineNumber: 319,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.js",
-                                                            lineNumber: 296,
+                                                            lineNumber: 314,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/about/page.js",
-                                                    lineNumber: 277,
+                                                    lineNumber: 295,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.js",
-                                            lineNumber: 272,
+                                            lineNumber: 289,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/about/page.js",
-                                    lineNumber: 258,
+                                    lineNumber: 275,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.js",
-                            lineNumber: 256,
+                            lineNumber: 273,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/about/page.js",
-                    lineNumber: 243,
+                    lineNumber: 260,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/about/page.js",
-                lineNumber: 242,
+                lineNumber: 259,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1028,7 +1102,7 @@ function AboutPage() {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/app/about/page.js",
-                                lineNumber: 315,
+                                lineNumber: 333,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1036,10 +1110,10 @@ function AboutPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "section-badge light",
-                                        children: "Work With Us"
+                                        children: "[ 06 / COLLABORATION ]"
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.js",
-                                        lineNumber: 317,
+                                        lineNumber: 335,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1050,13 +1124,13 @@ function AboutPage() {
                                                 children: "Certified Leader?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/about/page.js",
-                                                lineNumber: 319,
+                                                lineNumber: 337,
                                                 columnNumber: 41
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/about/page.js",
-                                        lineNumber: 318,
+                                        lineNumber: 336,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1064,13 +1138,13 @@ function AboutPage() {
                                         children: "Contact our Lusaka headquarters or Muchinga regional office to schedule a consultation."
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.js",
-                                        lineNumber: 321,
+                                        lineNumber: 339,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/about/page.js",
-                                lineNumber: 316,
+                                lineNumber: 334,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1085,20 +1159,20 @@ function AboutPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/about/page.js",
-                                                lineNumber: 327,
+                                                lineNumber: 345,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Contact Leadership"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/about/page.js",
-                                                lineNumber: 328,
+                                                lineNumber: 346,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/about/page.js",
-                                        lineNumber: 326,
+                                        lineNumber: 344,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1110,42 +1184,42 @@ function AboutPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/about/page.js",
-                                                lineNumber: 331,
+                                                lineNumber: 349,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Review Credentials"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/about/page.js",
-                                                lineNumber: 332,
+                                                lineNumber: 350,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/about/page.js",
-                                        lineNumber: 330,
+                                        lineNumber: 348,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/about/page.js",
-                                lineNumber: 325,
+                                lineNumber: 343,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/about/page.js",
-                        lineNumber: 314,
+                        lineNumber: 332,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/about/page.js",
-                    lineNumber: 313,
+                    lineNumber: 331,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/about/page.js",
-                lineNumber: 312,
+                lineNumber: 330,
                 columnNumber: 7
             }, this)
         ]

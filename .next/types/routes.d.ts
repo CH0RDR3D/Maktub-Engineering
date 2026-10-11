@@ -4,7 +4,7 @@
 type AppRoutes = never
 type PageRoutes = never
 type LayoutRoutes = "/"
-type RedirectRoutes = "/" | "/certs" | "/greenenergy"
+type RedirectRoutes = "/" | "/certs" | "/green" | "/greenenergy"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
 
@@ -12,6 +12,7 @@ type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRo
 interface ParamMap {
   "/": {}
   "/certs": {}
+  "/green": {}
   "/greenenergy": {}
 }
 

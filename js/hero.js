@@ -6,7 +6,7 @@
 const HERO_CONFIG = {
   // List of video background sources. If 1 is provided, it loops. If multiple, they cycle.
   videos: [
-    'resources/hero1.mp4',
+    'resources/0930.webm',
     'resources/hero2.mp4',
     'resources/hero3.mp4'
   ],

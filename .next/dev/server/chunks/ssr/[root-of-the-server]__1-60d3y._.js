@@ -45,18 +45,15 @@ function ContactPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "page-hero-badge reveal",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                        className: "ti ti-headset",
-                                        "aria-hidden": "true"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/contact/page.js",
-                                        lineNumber: 17,
-                                        columnNumber: 13
-                                    }, this),
-                                    " Reach Out"
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-mono",
+                                    children: "[ 01 / COMMUNICATIONS ]"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/contact/page.js",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/app/contact/page.js",
                                 lineNumber: 16,
                                 columnNumber: 11
@@ -110,18 +107,8 @@ function ContactPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "section-badge",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-map-pin-2",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/contact/page.js",
-                                                lineNumber: 35,
-                                                columnNumber: 17
-                                            }, this),
-                                            " Branch Information"
-                                        ]
-                                    }, void 0, true, {
+                                        children: "[ 02 / LIAISON & INQUIRY ]"
+                                    }, void 0, false, {
                                         fileName: "[project]/app/contact/page.js",
                                         lineNumber: 34,
                                         columnNumber: 15
@@ -176,9 +163,26 @@ function ContactPage() {
                                                         className: "contact-card-detail",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "contact-card-label",
-                                                                children: "Direct Lines"
-                                                            }, void 0, false, {
+                                                                className: "flex items-center justify-between mb-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "contact-card-label !mb-0",
+                                                                        children: "Direct Lines"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 52,
+                                                                        columnNumber: 23
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "text-[10px] font-mono text-neutral-400",
+                                                                        children: "[ CH 01 ]"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 53,
+                                                                        columnNumber: 23
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/app/contact/page.js",
                                                                 lineNumber: 51,
                                                                 columnNumber: 21
@@ -190,12 +194,12 @@ function ContactPage() {
                                                                     children: "+260-978-294-747"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/contact/page.js",
-                                                                    lineNumber: 53,
+                                                                    lineNumber: 56,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 52,
+                                                                lineNumber: 55,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -205,12 +209,12 @@ function ContactPage() {
                                                                     children: "+260-966-363-525"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/contact/page.js",
-                                                                    lineNumber: 56,
+                                                                    lineNumber: 59,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 55,
+                                                                lineNumber: 58,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
@@ -235,23 +239,40 @@ function ContactPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/contact/page.js",
-                                                            lineNumber: 64,
+                                                            lineNumber: 67,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 63,
+                                                        lineNumber: 66,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "contact-card-detail",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "contact-card-label",
-                                                                children: "Official Email"
-                                                            }, void 0, false, {
+                                                                className: "flex items-center justify-between mb-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "contact-card-label !mb-0",
+                                                                        children: "Official Email"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 71,
+                                                                        columnNumber: 23
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "text-[10px] font-mono text-neutral-400",
+                                                                        children: "[ CH 02 ]"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 72,
+                                                                        columnNumber: 23
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 67,
+                                                                lineNumber: 70,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -261,12 +282,12 @@ function ContactPage() {
                                                                     children: "info@maktubengineering.com"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/contact/page.js",
-                                                                    lineNumber: 69,
+                                                                    lineNumber: 75,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 68,
+                                                                lineNumber: 74,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -276,24 +297,24 @@ function ContactPage() {
                                                                     children: "muyundaclive8@gmail.com"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/contact/page.js",
-                                                                    lineNumber: 72,
+                                                                    lineNumber: 78,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 71,
+                                                                lineNumber: 77,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 66,
+                                                        lineNumber: 69,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/contact/page.js",
-                                                lineNumber: 62,
+                                                lineNumber: 65,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -306,23 +327,40 @@ function ContactPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/contact/page.js",
-                                                            lineNumber: 80,
+                                                            lineNumber: 86,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 79,
+                                                        lineNumber: 85,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "contact-card-detail",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "contact-card-label",
-                                                                children: "Main Branch — Lusaka HQ"
-                                                            }, void 0, false, {
+                                                                className: "flex items-center justify-between mb-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "contact-card-label !mb-0",
+                                                                        children: "Main Branch — Lusaka HQ"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 90,
+                                                                        columnNumber: 23
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "text-[10px] font-mono text-neutral-400",
+                                                                        children: "[ HQ 01 ]"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 91,
+                                                                        columnNumber: 23
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 83,
+                                                                lineNumber: 89,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -331,26 +369,26 @@ function ContactPage() {
                                                                     "Woodgate House ZSIC, Floor 6, Room 1",
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                         fileName: "[project]/app/contact/page.js",
-                                                                        lineNumber: 85,
+                                                                        lineNumber: 94,
                                                                         columnNumber: 59
                                                                     }, this),
                                                                     "Next to Stanbic, Cairo Road, Lusaka, Zambia"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 84,
+                                                                lineNumber: 93,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 82,
+                                                        lineNumber: 88,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/contact/page.js",
-                                                lineNumber: 78,
+                                                lineNumber: 84,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -363,23 +401,40 @@ function ContactPage() {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/contact/page.js",
-                                                            lineNumber: 94,
+                                                            lineNumber: 103,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 93,
+                                                        lineNumber: 102,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "contact-card-detail",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "contact-card-label",
-                                                                children: "Muchinga Province Branch"
-                                                            }, void 0, false, {
+                                                                className: "flex items-center justify-between mb-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "contact-card-label !mb-0",
+                                                                        children: "Muchinga Province Branch"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 107,
+                                                                        columnNumber: 23
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "text-[10px] font-mono text-neutral-400",
+                                                                        children: "[ REG 02 ]"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/contact/page.js",
+                                                                        lineNumber: 108,
+                                                                        columnNumber: 23
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 97,
+                                                                lineNumber: 106,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -388,26 +443,26 @@ function ContactPage() {
                                                                     "Chalabesa Kanchibiya Area",
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                         fileName: "[project]/app/contact/page.js",
-                                                                        lineNumber: 99,
+                                                                        lineNumber: 111,
                                                                         columnNumber: 48
                                                                     }, this),
                                                                     "Muchinga District, Muchinga Province, Zambia"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 98,
+                                                                lineNumber: 110,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 96,
+                                                        lineNumber: 105,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/contact/page.js",
-                                                lineNumber: 92,
+                                                lineNumber: 101,
                                                 columnNumber: 17
                                             }, this)
                                         ]
@@ -430,20 +485,20 @@ function ContactPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 114,
+                                                        lineNumber: 126,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Chat on WhatsApp"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 115,
+                                                        lineNumber: 127,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/contact/page.js",
-                                                lineNumber: 108,
+                                                lineNumber: 120,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -457,7 +512,7 @@ function ContactPage() {
                                                         "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 124,
+                                                        lineNumber: 136,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -466,32 +521,32 @@ function ContactPage() {
                                                                 children: "Woodgate House, Cairo Road, Lusaka"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 126,
+                                                                lineNumber: 138,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
                                                                 children: "Open in Google Maps →"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.js",
-                                                                lineNumber: 127,
+                                                                lineNumber: 139,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/contact/page.js",
-                                                        lineNumber: 125,
+                                                        lineNumber: 137,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/contact/page.js",
-                                                lineNumber: 118,
+                                                lineNumber: 130,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/contact/page.js",
-                                        lineNumber: 107,
+                                        lineNumber: 119,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -504,12 +559,12 @@ function ContactPage() {
                                 className: "contact-form-col reveal-right",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ContactForm$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/app/contact/page.js",
-                                    lineNumber: 135,
+                                    lineNumber: 147,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/contact/page.js",
-                                lineNumber: 134,
+                                lineNumber: 146,
                                 columnNumber: 13
                             }, this)
                         ]

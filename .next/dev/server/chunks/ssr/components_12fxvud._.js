@@ -13,83 +13,292 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
+// ── DATA DEFINITIONS ────────────────────────────────────────────────────────
+const HERO_IMAGES = [
+    {
+        src: '/images/hero/hero1.webp',
+        alt: 'Civil Engineering and Structural Construction in Lusaka, Zambia'
+    },
+    {
+        src: '/images/hero/hero2.webp',
+        alt: 'Heavy Plant Machinery, Earthworks, and Equipment Supply Operations'
+    },
+    {
+        src: '/images/hero/hero3.webp',
+        alt: 'Institutional and Commercial Infrastructure Development'
+    },
+    {
+        src: '/images/hero/hero4.webp',
+        alt: 'Pioneering Sustainable Engineering and Infrastructure Works'
+    }
+];
+const HERO_VIDEOS = [
+    {
+        src: '/resources/hero1.mp4',
+        poster: '/images/hero/hero1.webp',
+        title: 'Civil Construction & Earthworks'
+    },
+    {
+        src: '/resources/hero2.mp4',
+        poster: '/images/hero/hero2.webp',
+        title: 'Heavy Plant Machinery & Supply Operations'
+    },
+    {
+        src: '/resources/hero3.mp4',
+        poster: '/images/hero/hero3.webp',
+        title: 'Precision Structural Building'
+    }
+];
 const HERO_TEXTS = [
     {
         badge: 'Est. January 2020 · Lusaka, Zambia',
         title: 'Empowering Your Vision By Helping You To',
         highlight: 'Build Stronger Structures.',
-        sub: 'Integrated engineering solutions, dependable supply services, and civil construction for public and private sector clients across Zambia.'
+        sub: 'Integrated engineering solutions, dependable supply services, and civil construction for public and private sector clients across Zambia.',
+        chips: [
+            {
+                icon: 'ti ti-shield-check',
+                text: 'NCC Grade 5 Registered'
+            },
+            {
+                icon: 'ti ti-building',
+                text: 'EIZ Class C2 Licensed'
+            },
+            {
+                icon: 'ti ti-map-pin',
+                text: 'Nationwide Delivery'
+            }
+        ]
     },
     {
         badge: 'Zambian-Owned & Operated',
         title: 'Delivering Reliable & High-Quality',
         highlight: 'General Supplies Nationwide.',
-        sub: 'From high-grade construction materials to essential office IT equipment, furniture, and certified PPE supplies.'
+        sub: 'From high-grade construction materials to essential office IT equipment, furniture, and certified PPE supplies.',
+        chips: [
+            {
+                icon: 'ti ti-truck-delivery',
+                text: '10 Provincial Coverage'
+            },
+            {
+                icon: 'ti ti-package',
+                text: 'Institutional Logistics'
+            },
+            {
+                icon: 'ti ti-certificate',
+                text: 'CEEC Citizen Certified'
+            }
+        ]
     },
     {
         badge: 'Fully Compliant & Certified',
         title: 'Pioneering Sustainable',
         highlight: 'Civil Engineering & Infrastructure.',
-        sub: 'EIZ and NCC Grade 5 certified construction, road networks, earthworks, and institutional renovations built to last.'
+        sub: 'EIZ and NCC Grade 5 certified construction, road networks, earthworks, and institutional renovations built to last.',
+        chips: [
+            {
+                icon: 'ti ti-road',
+                text: 'Roads & Earthworks'
+            },
+            {
+                icon: 'ti ti-checkup-list',
+                text: 'Rigorous QA Standards'
+            },
+            {
+                icon: 'ti ti-helmet',
+                text: 'Zero Lost-Time HSE'
+            }
+        ]
     },
     {
         badge: 'Approved Defence & Public Vendor',
         title: 'A Dependable, Forward-Thinking',
         highlight: 'Partner For Your Next Project.',
-        sub: 'Full compliance with PACRA, ZRA, ZPPA, NAPSA, and Workers’ Compensation regulatory frameworks.'
+        sub: 'Full compliance with PACRA, ZRA, ZPPA, NAPSA, and Workers’ Compensation regulatory frameworks.',
+        chips: [
+            {
+                icon: 'ti ti-badge-ad',
+                text: 'Ministry Cleared Vendor'
+            },
+            {
+                icon: 'ti ti-file-text',
+                text: 'ZPPA Registered'
+            },
+            {
+                icon: 'ti ti-clock-check',
+                text: 'Rapid Tender Execution'
+            }
+        ]
     }
 ];
-const HERO_VIDEOS = [
-    '/resources/hero1.mp4',
-    '/resources/hero2.mp4',
-    '/resources/hero3.mp4'
-];
+// Configuration constants
+const SLIDE_DURATION = 8000; // 8 seconds visible per media asset (equal viewing time)
+const EXIT_TRANSITION_MS = 420; // Text exit slide duration before next entrance
 function HeroSection() {
-    const [currentTextIdx, setCurrentTextIdx] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [textVisible, setTextVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
-    const [currentVideoIdx, setCurrentVideoIdx] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const videoRef1 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const videoRef2 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const [activeVideoSlot, setActiveVideoSlot] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
-    // Cycling texts
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const textTimer = setInterval(()=>{
-            setTextVisible(false);
-            setTimeout(()=>{
-                setCurrentTextIdx((prev)=>(prev + 1) % HERO_TEXTS.length);
-                setTextVisible(true);
-            }, 450);
-        }, 7000);
-        return ()=>clearInterval(textTimer);
-    }, []);
-    // Video cycle on ended
-    const handleVideoEnded = ()=>{
-        const nextIdx = (currentVideoIdx + 1) % HERO_VIDEOS.length;
-        setCurrentVideoIdx(nextIdx);
-        if (activeVideoSlot === 1) {
-            if (videoRef2.current) {
-                videoRef2.current.src = HERO_VIDEOS[nextIdx];
-                videoRef2.current.playbackRate = 0.7;
-                videoRef2.current.play().catch(()=>{});
-            }
-            setActiveVideoSlot(2);
+    const heroContainerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Synchronized State Machine Counter
+    // Even steps (0, 2, 4...) -> Image
+    // Odd steps (1, 3, 5...)  -> Video
+    const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isExitingText, setIsExitingText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Visibility & Viewport Performance Tracking
+    const [isTabActive, setIsTabActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [isInViewport, setIsInViewport] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    // Video Refs & Timestamp Memory System (Keep mounted in memory without restarting)
+    const videoRefs = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])([]);
+    const videoTimestamps = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(HERO_VIDEOS.map(()=>0));
+    // Compute Active Slide Indices from Step
+    const currentMediaType = step % 2 === 0 ? 'image' : 'video';
+    const currentImageIdx = Math.floor(step / 2) % HERO_IMAGES.length;
+    const currentVideoIdx = Math.floor(step / 2) % HERO_VIDEOS.length;
+    const currentTextIdx = step % HERO_TEXTS.length;
+    // Alternating Text Direction:
+    // Step 0 (1st slide) -> 'from-left'
+    // Step 1 (2nd slide) -> 'from-right'
+    // Step 2 (3rd slide) -> 'from-left'
+    // Step 3 (4th slide) -> 'from-right' ...
+    const textDirectionClass = step % 2 === 0 ? 'hero-slide-enter-left' : 'hero-slide-enter-right';
+    // ── PRELOAD NEXT MEDIA ASSET ──────────────────────────────────────────────
+    const preloadNextAsset = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])((nextStep)=>{
+        const nextMediaType = nextStep % 2 === 0 ? 'image' : 'video';
+        if (nextMediaType === 'image') {
+            const nextImageIndex = Math.floor(nextStep / 2) % HERO_IMAGES.length;
+            const img = new window.Image();
+            img.src = HERO_IMAGES[nextImageIndex].src;
         } else {
-            if (videoRef1.current) {
-                videoRef1.current.src = HERO_VIDEOS[nextIdx];
-                videoRef1.current.playbackRate = 0.7;
-                videoRef1.current.play().catch(()=>{});
+            const nextVideoIndex = Math.floor(nextStep / 2) % HERO_VIDEOS.length;
+            const videoEl = videoRefs.current[nextVideoIndex];
+            if (videoEl && videoEl.readyState < 2) {
+                // Prompt browser to buffer headers & initial frame
+                videoEl.load();
             }
-            setActiveVideoSlot(1);
-        }
-    };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (videoRef1.current) {
-            videoRef1.current.playbackRate = 0.7;
-            videoRef1.current.play().catch(()=>{});
         }
     }, []);
-    const activeText = HERO_TEXTS[currentTextIdx];
+    // ── VIDEO PLAYBACK & MEMORY MANAGEMENT ────────────────────────────────────
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const shouldPlayVideo = currentMediaType === 'video' && isTabActive && isInViewport;
+        HERO_VIDEOS.forEach((_, idx)=>{
+            const videoEl = videoRefs.current[idx];
+            if (!videoEl) return;
+            if (idx === currentVideoIdx && shouldPlayVideo) {
+                // Restore timestamp memory so video does NOT restart from 0
+                const savedTime = videoTimestamps.current[idx];
+                if (savedTime > 0 && Math.abs(videoEl.currentTime - savedTime) > 0.5) {
+                    try {
+                        videoEl.currentTime = savedTime;
+                    } catch (_) {}
+                }
+                videoEl.playbackRate = 0.85;
+                const playPromise = videoEl.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(()=>{
+                    // Browser autoplay policy caught smoothly
+                    });
+                }
+            } else {
+                // Inactive video: save timestamp and pause immediately to halt decoding
+                if (!videoEl.paused) {
+                    videoTimestamps.current[idx] = videoEl.currentTime;
+                    videoEl.pause();
+                }
+            }
+        });
+    }, [
+        currentMediaType,
+        currentVideoIdx,
+        isTabActive,
+        isInViewport
+    ]);
+    // Periodic Timestamp Sync for Active Video
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (currentMediaType !== 'video') return;
+        const syncInterval = setInterval(()=>{
+            const activeVideoEl = videoRefs.current[currentVideoIdx];
+            if (activeVideoEl && !activeVideoEl.paused) {
+                videoTimestamps.current[currentVideoIdx] = activeVideoEl.currentTime;
+            }
+        }, 1000);
+        return ()=>clearInterval(syncInterval);
+    }, [
+        currentMediaType,
+        currentVideoIdx
+    ]);
+    // ── DUAL QUEUE SYNCHRONIZED TIMER ENGINE ──────────────────────────────────
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Only advance when tab is active and hero is in viewport
+        if (!isTabActive || !isInViewport) return;
+        // Trigger preloading 3.5s before the transition
+        const preloadTimer = setTimeout(()=>{
+            preloadNextAsset(step + 1);
+        }, SLIDE_DURATION - 3500);
+        // Trigger text exit animation 420ms before step transition
+        const exitTimer = setTimeout(()=>{
+            setIsExitingText(true);
+        }, SLIDE_DURATION - EXIT_TRANSITION_MS);
+        // Advance to next synchronized step after full SLIDE_DURATION
+        const advanceTimer = setTimeout(()=>{
+            setStep((prev)=>prev + 1);
+            setIsExitingText(false);
+        }, SLIDE_DURATION);
+        return ()=>{
+            clearTimeout(preloadTimer);
+            clearTimeout(exitTimer);
+            clearTimeout(advanceTimer);
+        };
+    }, [
+        step,
+        isTabActive,
+        isInViewport,
+        preloadNextAsset
+    ]);
+    // ── TAB VISIBILITY MANAGEMENT ─────────────────────────────────────────────
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const handleVisibilityChange = ()=>{
+            if (document.hidden) {
+                setIsTabActive(false);
+                // Pause all playing videos when tab is hidden
+                videoRefs.current.forEach((el, idx)=>{
+                    if (el && !el.paused) {
+                        videoTimestamps.current[idx] = el.currentTime;
+                        el.pause();
+                    }
+                });
+            } else {
+                setIsTabActive(true);
+            }
+        };
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        return ()=>document.removeEventListener('visibilitychange', handleVisibilityChange);
+    }, []);
+    // ── INTERSECTION OBSERVER (PAUSE OFFSCREEN) ───────────────────────────────
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const container = heroContainerRef.current;
+        if (!container || typeof IntersectionObserver === 'undefined') return;
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                const visible = entry.isIntersecting;
+                setIsInViewport(visible);
+                if (!visible) {
+                    // Hero left viewport: pause all video playback immediately
+                    videoRefs.current.forEach((el, idx)=>{
+                        if (el && !el.paused) {
+                            videoTimestamps.current[idx] = el.currentTime;
+                            el.pause();
+                        }
+                    });
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+        observer.observe(container);
+        return ()=>observer.disconnect();
+    }, []);
+    const activeText = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>HERO_TEXTS[currentTextIdx], [
+        currentTextIdx
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        ref: heroContainerRef,
         className: "hero-section",
         "aria-label": "Hero Introduction",
         children: [
@@ -102,269 +311,250 @@ function HeroSection() {
                         className: "hero-grid-overlay"
                     }, void 0, false, {
                         fileName: "[project]/components/HeroSection.js",
-                        lineNumber: 99,
+                        lineNumber: 282,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "hero-gradient-overlay"
                     }, void 0, false, {
                         fileName: "[project]/components/HeroSection.js",
-                        lineNumber: 100,
+                        lineNumber: 283,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                        ref: videoRef1,
-                        className: `hero-video ${activeVideoSlot === 1 ? 'is-active' : ''}`,
-                        src: HERO_VIDEOS[0],
-                        poster: "/images/hero/hero1.webp",
-                        autoPlay: true,
-                        muted: true,
-                        playsInline: true,
-                        controlsList: "nodownload nofullscreen noremoteplayback",
-                        disablePictureInPicture: true,
-                        disableRemotePlayback: true,
-                        onContextMenu: (e)=>e.preventDefault(),
-                        onEnded: handleVideoEnded
-                    }, void 0, false, {
-                        fileName: "[project]/components/HeroSection.js",
-                        lineNumber: 102,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                        ref: videoRef2,
-                        className: `hero-video ${activeVideoSlot === 2 ? 'is-active' : ''}`,
-                        poster: "/images/hero/hero2.webp",
-                        muted: true,
-                        playsInline: true,
-                        controlsList: "nodownload nofullscreen noremoteplayback",
-                        disablePictureInPicture: true,
-                        disableRemotePlayback: true,
-                        onContextMenu: (e)=>e.preventDefault(),
-                        onEnded: handleVideoEnded
-                    }, void 0, false, {
-                        fileName: "[project]/components/HeroSection.js",
-                        lineNumber: 116,
-                        columnNumber: 9
-                    }, this)
+                    HERO_IMAGES.map((img, idx)=>{
+                        const isImageActive = currentMediaType === 'image' && currentImageIdx === idx;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: img.src,
+                            alt: img.alt,
+                            className: `hero-bg-image ${isImageActive ? 'is-active' : ''}`,
+                            loading: idx === 0 ? 'eager' : 'lazy',
+                            decoding: "async",
+                            draggable: "false"
+                        }, img.src, false, {
+                            fileName: "[project]/components/HeroSection.js",
+                            lineNumber: 289,
+                            columnNumber: 13
+                        }, this);
+                    }),
+                    HERO_VIDEOS.map((vid, idx)=>{
+                        const isVideoActive = currentMediaType === 'video' && currentVideoIdx === idx;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                            ref: (el)=>{
+                                videoRefs.current[idx] = el;
+                            },
+                            src: vid.src,
+                            poster: vid.poster,
+                            title: vid.title,
+                            className: `hero-bg-video ${isVideoActive ? 'is-active' : ''}`,
+                            muted: true,
+                            playsInline: true,
+                            loop: true,
+                            preload: "auto",
+                            controlsList: "nodownload nofullscreen noremoteplayback",
+                            disablePictureInPicture: true,
+                            disableRemotePlayback: true,
+                            tabIndex: -1,
+                            onContextMenu: (e)=>e.preventDefault()
+                        }, vid.src, false, {
+                            fileName: "[project]/components/HeroSection.js",
+                            lineNumber: 305,
+                            columnNumber: 13
+                        }, this);
+                    })
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/HeroSection.js",
-                lineNumber: 94,
+                lineNumber: 277,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "section-inner hero-inner",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hero-content-box",
+                        className: "hero-slide-wrapper",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `hero-badge-pill ${textVisible ? 'fade-in' : 'fade-out'}`,
+                                className: `hero-badge-pill hero-badge-centered hero-anim-item hero-anim-badge ${isExitingText ? 'hero-slide-exiting' : ''}`,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
                                         className: "ti ti-sparkles",
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 134,
+                                        lineNumber: 336,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: activeText.badge
                                     }, void 0, false, {
                                         fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 135,
+                                        lineNumber: 337,
                                         columnNumber: 13
                                     }, this)
                                 ]
-                            }, void 0, true, {
+                            }, `badge-${step}`, true, {
                                 fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 133,
+                                lineNumber: 330,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: `hero-title-main ${textVisible ? 'fade-in' : 'fade-out'}`,
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `hero-bilateral-layout ${textDirectionClass} ${isExitingText ? 'hero-slide-exiting' : ''}`,
                                 children: [
-                                    activeText.title,
-                                    ' ',
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "hero-highlight-gradient",
-                                        children: activeText.highlight
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "hero-heading-block hero-anim-item hero-anim-heading",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                                className: "hero-title-main",
+                                                children: [
+                                                    activeText.title,
+                                                    ' ',
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "hero-highlight-gradient",
+                                                        children: activeText.highlight
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/HeroSection.js",
+                                                        lineNumber: 350,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/HeroSection.js",
+                                                lineNumber: 348,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "hero-subtitle",
+                                                children: activeText.sub
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/HeroSection.js",
+                                                lineNumber: 352,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "hero-trust-chips",
+                                                children: activeText.chips.map((chip, cIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "hero-trust-chip",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                                className: chip.icon,
+                                                                "aria-hidden": "true"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/HeroSection.js",
+                                                                lineNumber: 360,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                children: chip.text
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/HeroSection.js",
+                                                                lineNumber: 361,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, cIdx, true, {
+                                                        fileName: "[project]/components/HeroSection.js",
+                                                        lineNumber: 359,
+                                                        columnNumber: 19
+                                                    }, this))
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/HeroSection.js",
+                                                lineNumber: 357,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/HeroSection.js",
+                                        lineNumber: 347,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "hero-action-block hero-anim-item hero-anim-actions",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "hero-cta-group",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: "/contact",
+                                                    className: "btn-hero-primary",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                            className: "ti ti-mail",
+                                                            "aria-hidden": "true"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/HeroSection.js",
+                                                            lineNumber: 371,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: "Get In Touch"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/HeroSection.js",
+                                                            lineNumber: 372,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/HeroSection.js",
+                                                    lineNumber: 370,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: "/services",
+                                                    className: "btn-hero-outline",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                            className: "ti ti-tools",
+                                                            "aria-hidden": "true"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/HeroSection.js",
+                                                            lineNumber: 375,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: "Explore Services"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/HeroSection.js",
+                                                            lineNumber: 376,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/HeroSection.js",
+                                                    lineNumber: 374,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/HeroSection.js",
+                                            lineNumber: 369,
+                                            columnNumber: 15
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 140,
+                                        lineNumber: 368,
                                         columnNumber: 13
                                     }, this)
                                 ]
-                            }, void 0, true, {
+                            }, step, true, {
                                 fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 138,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: `hero-subtitle ${textVisible ? 'fade-in' : 'fade-out'}`,
-                                children: activeText.sub
-                            }, void 0, false, {
-                                fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 143,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "hero-cta-group",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                        href: "/contact",
-                                        className: "btn-hero-primary",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-mail",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 149,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "Get In Touch"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 150,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 148,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                        href: "/services",
-                                        className: "btn-hero-outline",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-tools",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 153,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "Explore Services"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 154,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 152,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 147,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "hero-trust-chips",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "hero-trust-chip",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-shield-check",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 161,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "NCC Grade 5 Registered"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 162,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 160,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "hero-trust-chip",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-building",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 165,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "EIZ Class C2 Licensed"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 166,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 164,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "hero-trust-chip",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                                className: "ti ti-map-pin",
-                                                "aria-hidden": "true"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 169,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "Nationwide Delivery"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/HeroSection.js",
-                                                lineNumber: 170,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/HeroSection.js",
-                                        lineNumber: 168,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 159,
+                                lineNumber: 340,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/HeroSection.js",
-                        lineNumber: 132,
+                        lineNumber: 328,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: "#stats-overview",
                         className: "hero-scroll-indicator",
-                        "aria-label": "Scroll to explore",
+                        "aria-label": "Scroll to explore Maktub Engineering",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Scroll for More"
                             }, void 0, false, {
                                 fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 177,
+                                lineNumber: 389,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
@@ -372,25 +562,25 @@ function HeroSection() {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/components/HeroSection.js",
-                                lineNumber: 178,
+                                lineNumber: 390,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/HeroSection.js",
-                        lineNumber: 176,
+                        lineNumber: 384,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/HeroSection.js",
-                lineNumber: 131,
+                lineNumber: 327,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/HeroSection.js",
-        lineNumber: 92,
+        lineNumber: 271,
         columnNumber: 5
     }, this);
 }

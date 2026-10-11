@@ -79,15 +79,16 @@ export default function ContactForm() {
   return (
     <form className="contact-form-box" onSubmit={handleSubmit} noValidate>
       <div className="contact-form-header">
+        <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-neutral-400 mb-1">[ DIRECT DISPATCH ]</div>
         <h3 className="contact-form-title">Send Us a Message</h3>
         <p className="contact-form-subtitle">
-          Fill in your details below and we will get back to you promptly.
+          Fill in your project specifications below and our engineering team will get back to you promptly.
         </p>
       </div>
 
       <div className="form-group">
         <label className="form-label" htmlFor="cf-name">
-          Full Name <span className="req">*</span>
+          [ FULL NAME ] <span className="req">*</span>
         </label>
         <div className="input-with-icon">
           <i className="ti ti-user" aria-hidden="true" />
@@ -108,7 +109,7 @@ export default function ContactForm() {
       <div className="form-row-2">
         <div className="form-group">
           <label className="form-label" htmlFor="cf-email">
-            Email Address <span className="req">*</span>
+            [ CORPORATE EMAIL ] <span className="req">*</span>
           </label>
           <div className="input-with-icon">
             <i className="ti ti-mail" aria-hidden="true" />
@@ -128,7 +129,7 @@ export default function ContactForm() {
 
         <div className="form-group">
           <label className="form-label" htmlFor="cf-phone">
-            Phone / WhatsApp Number
+            [ PHONE / WHATSAPP ]
           </label>
           <div className="input-with-icon">
             <i className="ti ti-phone" aria-hidden="true" />
@@ -148,7 +149,7 @@ export default function ContactForm() {
 
       <div className="form-group">
         <label className="form-label" htmlFor="cf-service">
-          Service of Interest
+          [ DISCIPLINE OF INTEREST ]
         </label>
         <div className="input-with-icon">
           <i className="ti ti-category" aria-hidden="true" />
@@ -189,7 +190,7 @@ export default function ContactForm() {
 
       <div className="form-group">
         <label className="form-label" htmlFor="cf-message">
-          Project Details / Message <span className="req">*</span>
+          [ PROJECT BRIEF &amp; REQUIREMENTS ] <span className="req">*</span>
         </label>
         <div className="input-with-icon textarea-icon">
           <i className="ti ti-message-dots" aria-hidden="true" />
@@ -229,18 +230,18 @@ export default function ContactForm() {
         {loading ? (
           <>
             <span className="spinner-sm" aria-hidden="true" />
-            <span>Sending Message...</span>
+            <span>Transmitting Inquiry...</span>
           </>
         ) : (
           <>
             <i className="ti ti-send" aria-hidden="true" />
-            <span>Send Message &amp; Chat</span>
+            <span>Transmit Inquiry &amp; WhatsApp</span>
           </>
         )}
       </button>
 
       <p className="form-note">
-        <i className="ti ti-shield-lock" aria-hidden="true" /> We respect your privacy. Standard response time is under 24 hours on business days.
+        <i className="ti ti-shield-lock" aria-hidden="true" /> Confidential &amp; statutory compliance. Guaranteed response within 24 business hours.
       </p>
     </form>
   );

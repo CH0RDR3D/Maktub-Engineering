@@ -1,0 +1,215 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Bespoke luxury editorial styling for Green Energy Division */
+.font-editorial-heading {
+  font-family: var(--font-heading), 'Times New Roman', serif;
+}
+
+.font-editorial-display {
+  font-family: var(--font-display), var(--font-main), sans-serif;
+}
+
+/* ── 1. AMBIENT SOLAR AURA & GLOWS ────────────────────────────────────────── */
+.green-hero-ambient {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  animation: solarBreathe 12s ease-in-out infinite alternate;
+}
+
+@keyframes solarBreathe {
+  0% {
+    transform: scale(0.92) translate3d(0, 0, 0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.08) translate3d(20px, -15px, 0);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(0.96) translate3d(-15px, 10px, 0);
+    opacity: 0.4;
+  }
+}
+
+/* ── 2. HERO SLIDE KEN BURNS & ENTRANCE ANIMATIONS ───────────────────────── */
+.green-ken-burns {
+  animation: greenKenBurnsZoom 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes greenKenBurnsZoom {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.06) translate3d(-1%, -1%, 0);
+  }
+  100% {
+    transform: scale(1.1) translate3d(1%, 0, 0);
+  }
+}
+
+.green-anim-fadeInUp {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  animation: greenFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.green-anim-slideInLeft {
+  opacity: 0;
+  transform: translate3d(-28px, 0, 0);
+  animation: greenSlideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes greenFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes greenSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-28px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ── 3. FLOATING TECHNICAL COORDINATES & BEACONS ─────────────────────────── */
+.green-float-beacon {
+  animation: greenFloat 6s ease-in-out infinite;
+}
+
+@keyframes greenFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+.green-pulse-dot {
+  position: relative;
+}
+
+.green-pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.6;
+  animation: greenPulsePing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes greenPulsePing {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* ── 4. GREEN SOLUTIONS CAROUSEL ENGINE ──────────────────────────────────── */
+.green-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0 32px 0;
+  contain: layout;
+}
+
+.green-carousel-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: greenMarquee 42s linear infinite;
+  will-change: transform;
+}
+
+.green-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.green-carousel-track.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes greenMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.green-carousel-card {
+  position: relative;
+  width: 340px;
+  flex: 0 0 340px;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+@media (max-width: 640px) {
+  .green-carousel-card {
+    width: 290px;
+    flex: 0 0 290px;
+  }
+}
+
+.green-carousel-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ── 5. EDITORIAL CARD HOVER & SHIMMER EFFECTS ───────────────────────────── */
+.ge-editorial-card {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ge-editorial-card:hover {
+  transform: translateY(-4px);
+}
+
+.ge-editorial-card .ge-card-img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ge-editorial-card:hover .ge-card-img {
+  transform: scale(1.05);
+}
+
+/* Micro-accent underline animation */
+.ge-accent-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ge-accent-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #10b981;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ge-accent-link:hover::after {
+  width: 100%;
+}

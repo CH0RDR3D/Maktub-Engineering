@@ -55,115 +55,95 @@ const sectors = [
 
 export default function GreenCollections() {
   return (
-    <section id="sectors" className="py-24 sm:py-32 lg:py-40 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto border-t border-[#141c18]/15 dark:border-white/15">
-      {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-24 gap-6">
-        <div className="space-y-4">
-          <div className="flex items-center space-x-3 text-xs uppercase tracking-[0.25em] font-mono text-[#141c18]/60 dark:text-white/60">
-            <span>[ 02 / SECTORS ]</span>
-            <span>&bull;</span>
-            <span>STRATEGIC ECONOMIC INFRASTRUCTURE</span>
-          </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light uppercase tracking-tight text-[#141c18] dark:text-white font-editorial-display">
-            Core Solution <span className="italic font-editorial-heading text-[#059669] dark:text-[#34d399]">Divisions</span>
-          </h2>
-        </div>
-        <p className="max-w-md text-sm text-[#141c18]/70 dark:text-white/70 leading-relaxed font-light">
-          Engineered for Zambia&apos;s demanding industrial conditions. Each division combines Tier-1 global equipment with rigorous local execution to ensure uninterrupted operations.
-        </p>
-      </div>
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+      {/* Featured + Supporting Divisions Layout */}
+      {sectors.map((item, index) => {
+        const isFeatured = index === 0;
 
-      {/* Asymmetric 4-Card Editorial Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-        {sectors.map((item, index) => {
-          const colSpan =
-            index === 0
-              ? 'lg:col-span-7'
-              : index === 1
-              ? 'lg:col-span-5 lg:mt-16'
-              : index === 2
-              ? 'lg:col-span-5'
-              : 'lg:col-span-7 lg:-mt-12';
+        return (
+          <article
+            key={item.id}
+            className={`group relative flex flex-col transition-all duration-500 ${
+              isFeatured ? 'lg:col-span-12' : 'lg:col-span-4'
+            }`}
+          >
+            {/* Image */}
+            <div className="relative w-full overflow-hidden bg-[#ded9cd]/30 dark:bg-white/5 border border-[#141c18]/15 dark:border-white/15">
+              <div
+                className={`relative w-full overflow-hidden ${
+                  isFeatured ? 'aspect-[21/9]' : 'aspect-[4/3]'
+                }`}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes={
+                    isFeatured
+                      ? '100vw'
+                      : '(max-width: 1024px) 100vw, 33vw'
+                  }
+                  className="object-cover object-center grayscale-[15%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                  unoptimized
+                />
 
-          return (
-            <article
-              key={item.id}
-              className={`group relative flex flex-col ${colSpan} transition-all duration-500`}
-            >
-              {/* Image Frame with Zoom Effect */}
-              <div className="relative w-full overflow-hidden bg-[#ded9cd]/30 dark:bg-white/5 border border-[#141c18]/15 dark:border-white/15">
-                <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 60vw"
-                    className="object-cover object-center grayscale-[15%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                    unoptimized
-                  />
-                  {/* Subtle Gradient Hover Overlay */}
-                  <div className="absolute inset-0 bg-[#0e1411]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[#0e1411]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                  {/* Floating Tag */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="inline-block px-3 py-1 text-[10px] font-mono uppercase tracking-[0.2em] bg-[#faf9f5]/90 dark:bg-[#141c18]/90 text-[#141c18] dark:text-white backdrop-blur-sm border border-[#141c18]/10 dark:border-white/10">
-                      {item.tag}
-                    </span>
-                  </div>
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-block px-3 py-1 text-[10px] font-mono uppercase tracking-[0.2em] bg-[#faf9f5]/90 dark:bg-[#141c18]/90 text-[#141c18] dark:text-white border border-[#141c18]/10 dark:border-white/10">
+                    {item.tag}
+                  </span>
+                </div>
 
-                  {/* Corner Index */}
-                  <div className="absolute bottom-4 right-4 z-10 text-[11px] font-mono text-white bg-black/60 px-2.5 py-1 backdrop-blur-sm border border-white/15">
-                    [{item.id}]
-                  </div>
+                <div className="absolute right-4 top-4 z-10 text-[11px] font-mono text-white bg-black/60 px-2.5 py-1 backdrop-blur-sm border border-white/15">
+                  [{item.id}]
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className={`pt-6 pb-2 ${isFeatured ? 'max-w-4xl' : ''}`}>
+              <div className="flex items-center justify-between border-b border-[#141c18]/10 dark:border-white/10 pb-3">
+                <div className="text-xs uppercase font-mono tracking-[0.2em] text-[#141c18]/60 dark:text-white/60">
+                  {item.subtitle}
+                </div>
+
+                <div className="text-xs uppercase font-mono tracking-[0.18em] text-[#059669] dark:text-[#34d399] font-medium">
+                  {item.scale}
                 </div>
               </div>
 
-              {/* Card Meta Content */}
-              <div className="pt-6 pb-2 space-y-3">
-                <div className="flex items-center justify-between border-b border-[#141c18]/10 dark:border-white/10 pb-3">
-                  <div className="text-xs uppercase font-mono tracking-[0.2em] text-[#141c18]/60 dark:text-white/60">
-                    {item.subtitle}
-                  </div>
-                  <div className="text-xs uppercase font-mono tracking-[0.18em] text-[#059669] dark:text-[#34d399] font-medium">
-                    {item.scale}
-                  </div>
-                </div>
+              <div className="flex items-baseline justify-between pt-4 gap-6">
+                <h3
+                  className={`font-light uppercase tracking-tight text-[#141c18] dark:text-white group-hover:text-[#059669] dark:group-hover:text-[#34d399] transition-colors duration-300 font-editorial-display ${
+                    isFeatured
+                      ? 'text-3xl sm:text-4xl lg:text-5xl'
+                      : 'text-2xl sm:text-3xl'
+                  }`}
+                >
+                  {item.title}
+                </h3>
 
-                <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-2xl sm:text-3xl font-light uppercase tracking-tight text-[#141c18] dark:text-white group-hover:text-[#059669] dark:group-hover:text-[#34d399] transition-colors duration-300 font-editorial-display">
-                    {item.title}
-                  </h3>
-                  <a
-                    href="#green-solutions-catalog"
-                    className="text-xl text-[#141c18] dark:text-white transform translate-x-0 group-hover:translate-x-2 transition-transform duration-300 focus:outline-none"
-                    aria-label={`Explore ${item.title}`}
-                  >
-                    &rarr;
-                  </a>
-                </div>
-
-                <p className="text-xs sm:text-sm text-[#141c18]/70 dark:text-white/70 leading-relaxed font-light">
-                  {item.description}
-                </p>
+                <a
+                  href={`#${item.anchor}`}
+                  className="text-xl text-[#141c18] dark:text-white transform translate-x-0 group-hover:translate-x-2 transition-transform duration-300"
+                  aria-label={`View ${item.title}`}
+                >
+                  →
+                </a>
               </div>
-            </article>
-          );
-        })}
-      </div>
 
-      {/* Bottom Editorial Callout */}
-      <div className="mt-20 pt-10 border-t border-[#141c18]/15 dark:border-white/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-xs uppercase tracking-[0.22em] font-mono text-[#141c18]/70 dark:text-white/70">
-        <div>
-          <span>ZAMBIA &bull; REGIONAL SADC / COMESA EPC CAPABILITY</span>
-        </div>
-        <a
-          href="#green-solutions-catalog"
-          className="inline-flex items-center space-x-2 hover:text-[#059669] dark:hover:text-[#34d399] transition-colors group"
-        >
-          <span>VIEW ALL 20 ENERGY SOLUTIONS</span>
-          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </a>
-      </div>
-    </section>
+              <p
+                className={`mt-3 text-[#141c18]/70 dark:text-white/60 leading-relaxed ${
+                  isFeatured ? 'text-base max-w-3xl' : 'text-sm'
+                }`}
+              >
+                {item.description}
+              </p>
+            </div>
+          </article>
+        );
+      })}
+    </div>
   );
 }

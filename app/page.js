@@ -203,18 +203,23 @@ export default function HomePage() {
       </section>
 
       {/* 6. GREEN ENERGY BANNER TEASER */}
-      <section className="py-24 sm:py-32 lg:py-36 border-b border-[#141c18]/15 dark:border-white/15 bg-[#141c18] dark:bg-[#0c120f] text-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
-            backgroundSize: '80px 80px',
-          }}
-          aria-hidden="true"
-        />
+      <section className="relative min-h-[80vh] border-b border-[#141c18]/15 dark:border-white/15 overflow-hidden bg-[#141c18] text-white">
 
-        <div className="section-inner max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/resources/green-energy/top-view-paper-with-green-energy-message.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#0a0f0d]/65" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 section-inner max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-32 lg:py-36">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8 space-y-6">
               <div className="inline-flex items-center space-x-3 text-xs uppercase tracking-[0.3em] font-mono text-[#34d399]">
@@ -294,3 +299,4 @@ export default function HomePage() {
     </div>
   );
 }
+

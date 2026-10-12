@@ -6,7 +6,7 @@ import Image from 'next/image';
 const HERO_SLIDES = [
   {
     id: 'commercial-solar',
-    tabLabel: '01 Commercial Solar',
+    tabLabel: 'Commercial Solar',
     sectorBadge: 'C&I Rooftop & Ground PV',
     headline: 'Commercial Solar PV & Industrial Microgrids',
     location: 'LUSAKA INDUSTRIAL AREA · 15°25′18″S 28°17′00″E',
@@ -17,7 +17,7 @@ const HERO_SLIDES = [
   },
   {
     id: 'agricultural-pumping',
-    tabLabel: '02 Agri-Solar Pumping',
+    tabLabel: 'Agri-Solar Pumping',
     sectorBadge: 'Productive Agro-Power Systems',
     headline: 'High-Yield Centre Pivot Solar Irrigation',
     location: 'CHISAMBA FARMING BLOCK · 14°58′00″S 28°15′00″E',
@@ -28,7 +28,7 @@ const HERO_SLIDES = [
   },
   {
     id: 'mining-microgrids',
-    tabLabel: '03 Mining Microgrids',
+    tabLabel: 'Mining Microgrids',
     sectorBadge: 'Heavy Industry & Extraction',
     headline: 'Multi-Megawatt Smelter & Mine Hybrid Microgrids',
     location: 'COPPERBELT PROVINCE · 12°48′00″S 28°14′00″E',
@@ -39,7 +39,7 @@ const HERO_SLIDES = [
   },
   {
     id: 'hybrid-renewables',
-    tabLabel: '04 Wind & Hybrids',
+    tabLabel: 'Wind & Hybrids',
     sectorBadge: 'Utility Hybrid Generation',
     headline: 'Wind, Solar & BESS Regional Generation Facilities',
     location: 'SOUTHERN PROVINCE · 16°30′00″S 27°00′00″E',
@@ -172,9 +172,8 @@ export default function GreenHero() {
             return (
               <div
                 key={slide.id}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                }`}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                  }`}
               >
                 <Image
                   src={slide.image}
@@ -182,9 +181,8 @@ export default function GreenHero() {
                   fill
                   priority={sIdx === 0}
                   sizes="(max-width: 1400px) 100vw, 1400px"
-                  className={`object-cover object-center grayscale-[10%] contrast-[105%] ${
-                    isActive ? 'green-ken-burns' : ''
-                  }`}
+                  className={`object-cover object-center grayscale-[10%] contrast-[105%] ${isActive ? 'green-ken-burns' : ''
+                    }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0e1411]/85 via-[#0e1411]/30 to-transparent" />
               </div>
@@ -221,11 +219,10 @@ export default function GreenHero() {
                 key={slide.id}
                 type="button"
                 onClick={() => setActiveSlideIdx(sIdx)}
-                className={`px-3 py-1.5 transition-all text-[11px] flex items-center gap-2 ${
-                  activeSlideIdx === sIdx
+                className={`px-3 py-1.5 transition-all text-[11px] flex items-center gap-2 ${activeSlideIdx === sIdx
                     ? 'bg-[#10b981] text-[#0e1411] font-bold shadow-sm'
                     : 'bg-white/5 text-white/70 hover:bg-white/15 hover:text-white'
-                }`}
+                  }`}
               >
                 <span className={`w-1.5 h-1.5 rounded-full ${activeSlideIdx === sIdx ? 'bg-[#0e1411]' : 'bg-white/40'}`} />
                 <span>{slide.tabLabel}</span>

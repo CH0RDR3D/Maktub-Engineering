@@ -20,17 +20,25 @@ export default function GreenEnergyAssessmentForm({
     message: ''
   });
 
-  useEffect(() => {
-    if (defaultLoadEstimate) {
-      setFormData((prev) => ({ ...prev, loadEstimate: defaultLoadEstimate }));
-    }
-    if (defaultSector) {
-      setFormData((prev) => ({ ...prev, sector: defaultSector }));
-    }
-    if (defaultSolution) {
-      setFormData((prev) => ({ ...prev, solution: defaultSolution }));
-    }
-  }, [defaultLoadEstimate, defaultSector, defaultSolution]);
+  const [prevProps, setPrevProps] = useState({
+    defaultSolution,
+    defaultSector,
+    defaultLoadEstimate
+  });
+
+  if (
+    prevProps.defaultSolution !== defaultSolution ||
+    prevProps.defaultSector !== defaultSector ||
+    prevProps.defaultLoadEstimate !== defaultLoadEstimate
+  ) {
+    setPrevProps({ defaultSolution, defaultSector, defaultLoadEstimate });
+    setFormData((prev) => ({
+      ...prev,
+      ...(defaultSolution ? { solution: defaultSolution } : {}),
+      ...(defaultSector ? { sector: defaultSector } : {}),
+      ...(defaultLoadEstimate ? { loadEstimate: defaultLoadEstimate } : {})
+    }));
+  }
 
   const [status, setStatus] = useState({ type: '', message: '' });
   const [loading, setLoading] = useState(false);

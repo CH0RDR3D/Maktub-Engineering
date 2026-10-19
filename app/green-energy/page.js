@@ -1,6 +1,5 @@
 import './green-energy.css';
 import GreenHero from '../../components/green/GreenHero';
-import GreenSolutionsCarousel from '../../components/green/GreenSolutionsCarousel';
 import GreenCollections from '../../components/green/GreenCollections';
 import GreenAbout from '../../components/green/GreenAbout';
 import GreenProducts from '../../components/green/GreenProducts';
@@ -24,35 +23,40 @@ export const metadata = {
 
 export default function GreenEnergyPage() {
   return (
-    <div className="green-energy-editorial-root w-full bg-[#faf9f5] dark:bg-[#090d16] text-[#141c18] dark:text-[#f8fafc] overflow-x-hidden font-sans">
-      {/* 1. HERO SECTION */}
+    <div className="green-energy-editorial-root w-full bg-[#faf9f5] dark:bg-[#090d16] text-[#141c18] dark:text-[#f8fafc] overflow-x-clip font-sans relative">
+      {/* 1. AUTOSLIDING STICKY HERO (Stuck in position behind the page) */}
       <GreenHero />
 
-      {/* 2. CLEAN ENERGY FLEET CAROUSEL (Infinite animated marquee of 10 solution assets) */}
-      {/* <GreenSolutionsCarousel /> */}
+      {/* 2. HOVERING CONTENT CURTAIN (Slides & hovers directly over the stuck hero image) */}
+      <div className="relative z-10 bg-[#faf9f5] dark:bg-[#090d16] rounded-t-[32px] sm:rounded-t-[48px] shadow-[0_-25px_60px_rgba(0,0,0,0.38)] border-t border-[#141c18]/15 dark:border-white/10">
+        {/* Subtle indicator handle at top of curtain */}
+        <div className="flex justify-center pt-3 pb-1" aria-hidden="true">
+          <div className="w-12 h-1.5 rounded-full bg-[#141c18]/25 dark:bg-white/20" />
+        </div>
 
-      {/* 3. FEATURED SOLUTION SECTORS (4 visual-first editorial cards with authentic field imagery) */}
-      <GreenCollections />
+        {/* 3. FEATURED SOLUTION SECTORS (4 visual-first editorial cards with authentic field imagery) */}
+        <GreenCollections />
 
-      {/* 3. ABOUT MAKTUB GREEN DIVISION (Split layout, site engineering imagery, EIZ/NCC credentials) */}
-      <GreenAbout />
+        {/* 4. ABOUT MAKTUB GREEN DIVISION (Split layout, site engineering imagery, EIZ/NCC credentials) */}
+        <GreenAbout />
 
-      {/* 4. FEATURED SOLUTIONS & TURNKEY PACKAGES (Responsive grid with category filter tabs) */}
-      <GreenProducts />
+        {/* 5. FEATURED SOLUTIONS & TURNKEY PACKAGES (Responsive grid with category filter tabs) */}
+        <GreenProducts />
 
-      {/* 5. IMAGE SHOWCASE BANNER (Edge-to-edge renewable farm visual with quote overlay & technical coordinates) */}
-      <GreenShowcaseBanner />
+        {/* 6. IMAGE SHOWCASE BANNER (Edge-to-edge renewable farm visual with quote overlay & technical coordinates) */}
+        <GreenShowcaseBanner />
 
-      {/* 6. FEATURED BENEFITS & THE MAKTUB STANDARD (4 minimalist framed icon cards with hairline borders) */}
-      <GreenBenefits />
+        {/* 7. FEATURED BENEFITS & THE MAKTUB STANDARD (4 minimalist framed icon cards with hairline borders) */}
+        <GreenBenefits />
 
-      {/* 7. INTERACTIVE TECHNICAL SUITE (Tabbed Solar Calculator, 8-Stage Delivery Model, Regulatory & Assessment) */}
-      <div className="border-t border-[#141c18]/15 dark:border-white/15">
-        <GreenEnergyClientHub />
+        {/* 8. INTERACTIVE TECHNICAL SUITE (Tabbed Solar Calculator, 8-Stage Delivery Model, Regulatory & Assessment) */}
+        <div className="border-t border-[#141c18]/15 dark:border-white/15">
+          <GreenEnergyClientHub />
+        </div>
+
+        {/* 9. REGIONAL ENERGY INTELLIGENCE DISPATCH (Newsletter dispatch) */}
+        <GreenNewsletter />
       </div>
-
-      {/* 8. REGIONAL ENERGY INTELLIGENCE DISPATCH (Newsletter dispatch) */}
-      <GreenNewsletter />
     </div>
   );
 }

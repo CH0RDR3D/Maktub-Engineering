@@ -1,263 +1,390 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
 const HERO_SLIDES = [
   {
-    id: 'commercial-solar',
-    tabLabel: 'Commercial Solar',
-    sectorBadge: 'C&I Rooftop & Ground PV',
-    headline: 'Commercial Solar PV & Industrial Microgrids',
-    location: 'LUSAKA INDUSTRIAL AREA · 15°25′18″S 28°17′00″E',
-    statusBadge: 'ZESCO GRID READY // ERB COMPLIANT',
+    id: 'solar-bess',
+    image: '/resources/green-energy/man-working-environment-project.webp',
+    alt: 'Maktub solar field engineer inspecting renewable infrastructure',
+    badge: 'Solar PV · BESS Storage · Microgrids · EPC Delivery',
+    tag: 'Solar PV & BESS Storage',
+    titleLine1: 'Powering a',
+    titleAccent: 'Cleaner, Resilient',
+    titleLine3: '& Productive Future.',
+    description:
+      'Integrated renewable energy and sustainable infrastructure — engineered for commercial enterprises, mines, agriculture, and communities across Zambia and Southern Africa.',
+    telemetry: [
+      { label: 'Array', value: '1,842 kWp Active', dot: true, color: 'bg-emerald-400' },
+      { label: 'Irradiance', value: '984 W/m²', color: 'bg-amber-400' },
+      { label: 'ZESCO', value: '50.02 Hz', color: 'bg-emerald-400' },
+      { label: 'CO₂ Offset', value: '14.8 T/day', color: 'bg-sky-400' },
+    ],
+    stats: [
+      { value: '20+', label: 'Turnkey Solutions' },
+      { value: '8', label: 'Delivery Stages' },
+      { value: '6+', label: 'Key Sectors' },
+      { value: '100%', label: 'ERB Compliant' },
+    ],
+  },
+  {
+    id: 'commercial-industrial',
     image: '/resources/green-energy/60056.webp',
-    metricVal: '75%',
-    metricLabel: 'Peak Tariff Reduction',
+    alt: 'Large-scale commercial and industrial solar PV installation in Zambia',
+    badge: 'Commercial & Industrial Solar · High-Yield Generation',
+    tag: 'Commercial & Industrial',
+    titleLine1: 'Decarbonizing',
+    titleAccent: 'Commercial Scale',
+    titleLine3: '& Industrial Capacity.',
+    description:
+      'Turnkey rooftop and ground-mounted solar installations for factories, corporate headquarters, and commercial centers across Zambia and SADC.',
+    telemetry: [
+      { label: 'Grid Tariff Cut', value: 'Up to 75%', dot: true, color: 'bg-emerald-400' },
+      { label: 'Daily Yield', value: '9,250 kWh/day', color: 'bg-amber-400' },
+      { label: 'Tier-1 BNEF', value: '100% Certified', color: 'bg-emerald-400' },
+      { label: 'Payback Est.', value: '3.8 Years', color: 'bg-sky-400' },
+    ],
+    stats: [
+      { value: '75%', label: 'Max Tariff Cut' },
+      { value: '3.8 Yrs', label: 'Est. Payback' },
+      { value: '25 Yrs', label: 'Asset Warranty' },
+      { value: '0 ZMW', label: 'Peak Diesel Burn' },
+    ],
   },
   {
-    id: 'agricultural-pumping',
-    tabLabel: 'Agri-Solar Pumping',
-    sectorBadge: 'Productive Agro-Power Systems',
-    headline: 'High-Yield Centre Pivot Solar Irrigation',
-    location: 'CHISAMBA FARMING BLOCK · 14°58′00″S 28°15′00″E',
-    statusBadge: 'ZERO DIESEL DEPENDENCY // 24/7 PRODUCTIVITY',
-    image: '/resources/green-energy/agrosolar.webp',
-    metricVal: '150kW',
-    metricLabel: 'Direct VFD Irrigation Pumping',
-  },
-  {
-    id: 'mining-microgrids',
-    tabLabel: 'Mining Microgrids',
-    sectorBadge: 'Heavy Industry & Extraction',
-    headline: 'Multi-Megawatt Smelter & Mine Hybrid Microgrids',
-    location: 'COPPERBELT PROVINCE · 12°48′00″S 28°14′00″E',
-    statusBadge: '<20MS DOWNTIME SHIELD // HIGH AVAILABILITY',
-    image: '/resources/equipment.webp',
-    metricVal: '99.98%',
-    metricLabel: 'Power Continuity Uptime',
-  },
-  {
-    id: 'hybrid-renewables',
-    tabLabel: 'Wind & Hybrids',
-    sectorBadge: 'Utility Hybrid Generation',
-    headline: 'Wind, Solar & BESS Regional Generation Facilities',
-    location: 'SOUTHERN PROVINCE · 16°30′00″S 27°00′00″E',
-    statusBadge: 'DECENTRALIZED GENERATION // 100% CLEAN',
+    id: 'mining-hybrid',
     image: '/resources/green-energy/windmills-field.webp',
-    metricVal: '50MWh',
-    metricLabel: 'BESS Utility Storage Bank',
+    alt: 'Wind and solar hybrid renewable energy generation facility',
+    badge: 'Hybrid Power Plants · Zero-Downtime Mining Resilience',
+    tag: 'Mining & Utility Hybrid',
+    titleLine1: 'Engineering',
+    titleAccent: 'Hybrid Microgrids',
+    titleLine3: '& Mission-Critical Baselines.',
+    description:
+      'Multi-megawatt hybrid solar, wind, and storage infrastructures built to shield extractive and heavy industry operations from grid intermittency.',
+    telemetry: [
+      { label: 'Uptime SLA', value: '99.98% Guaranteed', dot: true, color: 'bg-emerald-400' },
+      { label: 'Storage Scale', value: '12.4 MWh BESS', color: 'bg-amber-400' },
+      { label: 'Sub-Cycle Sync', value: '< 20 ms Transfer', color: 'bg-emerald-400' },
+      { label: 'Diesel Burn', value: '-82% Reduced', color: 'bg-sky-400' },
+    ],
+    stats: [
+      { value: '99.98%', label: 'Uptime Reliability' },
+      { value: '<20ms', label: 'Sub-Cycle Transfer' },
+      { value: '50 MWh', label: 'Storage Scale' },
+      { value: 'NCC 5', label: 'Govt Accredited' },
+    ],
+  },
+  {
+    id: 'agricultural-solar',
+    image: '/resources/green-energy/agrosolar.webp',
+    alt: 'High-capacity agricultural solar pumping and farm microgrid',
+    badge: 'Agricultural Solar · Irrigation Pumping · Rural Energy',
+    tag: 'Agricultural Solar Systems',
+    titleLine1: 'Empowering',
+    titleAccent: 'Agro-Production',
+    titleLine3: '& Food Security.',
+    description:
+      'Direct-drive solar pumps, centre-pivot irrigation power, and cold-storage microgrids driving agricultural yield throughout Chisamba, Mkushi, and Southern Province.',
+    telemetry: [
+      { label: 'Flow Rate', value: '280 m³/hr Peak', dot: true, color: 'bg-emerald-400' },
+      { label: 'Pump Drive', value: 'Direct VFD Solar', color: 'bg-amber-400' },
+      { label: 'Diesel Cost', value: 'Zero Dependency', color: 'bg-emerald-400' },
+      { label: 'Irrigated Land', value: '450+ Hectares', color: 'bg-sky-400' },
+    ],
+    stats: [
+      { value: '280 m³/h', label: 'Peak Water Flow' },
+      { value: '450+ Ha', label: 'Irrigated Area' },
+      { value: '0 Litres', label: 'Diesel Consumed' },
+      { value: '100%', label: 'Off-Grid Autonomy' },
+    ],
   },
 ];
 
+const SLIDE_DURATION = 6000; // 6 seconds per slide
+
 export default function GreenHero() {
-  const [activeSlideIdx, setActiveSlideIdx] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const containerRef = useRef(null);
 
-  // Auto-advance hero slides every 6.5s unless hovered
+  // Pinned/stuck parallax scroll transform
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end start'],
+  });
+
+  // As the following section slides over the hero, hero content gently fades and moves
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 0.75], ['0px', '-45px']);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
+
+  // Autosliding timer
   useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(() => {
-      setActiveSlideIdx((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 6500);
-    return () => clearInterval(interval);
-  }, [isHovered]);
+    if (isPaused) return;
 
-  const activeSlide = HERO_SLIDES[activeSlideIdx];
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, SLIDE_DURATION);
+
+    return () => clearInterval(timer);
+  }, [isPaused, currentSlide]);
+
+  const slide = HERO_SLIDES[currentSlide];
+
+  const handleManualSlide = (index) => {
+    setCurrentSlide(index);
+    setIsPaused(true);
+    // Resume auto-slide after 8s idle
+    const resumeTimer = setTimeout(() => setIsPaused(false), 8000);
+    return () => clearTimeout(resumeTimer);
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    setIsPaused(true);
+    setTimeout(() => setIsPaused(false), 8000);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    setIsPaused(true);
+    setTimeout(() => setIsPaused(false), 8000);
+  };
 
   return (
     <section
-      className="relative min-h-[94vh] w-full flex flex-col justify-between pt-24 sm:pt-32 pb-12 lg:pb-16 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      ref={containerRef}
+      className="sticky top-0 w-full h-[100svh] min-h-[660px] flex flex-col justify-end overflow-hidden bg-[#060a08] z-0"
+      aria-label="Green Energy Hero Showcase"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
-      {/* ── AMBIENT SOLAR AURA GLOWS ── */}
-      <div
-        className="green-hero-ambient -top-24 -left-20 w-[550px] h-[550px] bg-gradient-to-br from-[#10b981]/20 via-[#059669]/10 to-transparent"
-        aria-hidden="true"
-      />
-      <div
-        className="green-hero-ambient top-1/3 -right-24 w-[480px] h-[480px] bg-gradient-to-bl from-[#f59e0b]/15 via-[#10b981]/10 to-transparent"
-        aria-hidden="true"
-      />
+      {/* ── STUCK BACKGROUND IMAGE GALLERY (Cross-fading Auto-Slider) ── */}
+      <motion.div className="absolute inset-0 z-0 pointer-events-none" style={{ scale: bgScale }}>
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={slide.id}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            {/* Deep cinematic overlay gradient for maximum text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#060d09] via-[#060d09]/75 to-[#060d09]/40" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(16,185,129,0.12),transparent)]" />
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
 
-      {/* Top Editorial Index Row */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[#141c18]/15 dark:border-white/15 pb-6 gap-4 relative z-10">
-        <div className="flex items-center space-x-3 text-[11px] sm:text-xs uppercase tracking-[0.28em] font-mono text-[#141c18]/70 dark:text-white/70">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#10b981] green-pulse-dot" />
-          <span>[ 01 / PROLOGUE ]</span>
-          <span className="hidden sm:inline text-[#141c18]/30 dark:text-white/30">&mdash;</span>
-          <span className="hidden sm:inline">GREEN ENERGY &amp; SUSTAINABLE INFRASTRUCTURE</span>
-        </div>
-        <div className="flex items-center gap-3 text-[11px] sm:text-xs uppercase tracking-[0.25em] font-mono text-[#141c18]/60 dark:text-white/60">
-          <span className="hidden md:inline">MAKTUB ENGINEERING &bull; DIVISION VOL. 2026</span>
-          <span className="px-2 py-0.5 border border-[#10b981]/30 bg-[#10b981]/10 text-[#059669] dark:text-[#34d399] font-medium">
-            LIVE SYSTEM
+      {/* ── LIVE SYSTEM BADGE (Top-Left) ── */}
+      <div className="absolute top-24 sm:top-28 left-6 sm:left-10 lg:left-14 z-20 flex items-center gap-2.5 text-[10px] font-mono uppercase tracking-[0.3em] text-white/80 pointer-events-auto">
+        <span className="w-2 h-2 rounded-full bg-emerald-400 green-pulse-dot" />
+        <span className="font-semibold text-white">Green Energy Division</span>
+        <span className="px-2 py-0.5 border border-emerald-500/40 bg-emerald-500/20 text-emerald-300 font-bold tracking-widest text-[9px]">
+          LIVE
+        </span>
+      </div>
+
+      {/* ── SECTION INDEX & SLIDE CONTROLS (Top-Right) ── */}
+      <div className="absolute top-24 sm:top-28 right-6 sm:right-10 lg:right-14 z-20 flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/70 pointer-events-auto">
+        <span className="hidden md:inline text-white/60">
+          [ 01 / PROLOGUE ] — MAKTUB · VOL. 2026
+        </span>
+        <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15">
+          <button
+            type="button"
+            onClick={handlePrev}
+            className="text-white/70 hover:text-white p-1 transition-colors"
+            aria-label="Previous slide"
+          >
+            <i className="ti ti-chevron-left text-xs" />
+          </button>
+          <span className="text-emerald-400 font-bold tracking-wider">
+            0{currentSlide + 1} / 0{HERO_SLIDES.length}
           </span>
+          <button
+            type="button"
+            onClick={handleNext}
+            className="text-white/70 hover:text-white p-1 transition-colors"
+            aria-label="Next slide"
+          >
+            <i className="ti ti-chevron-right text-xs" />
+          </button>
+          <button
+            type="button"
+            onClick={() => setIsPaused((prev) => !prev)}
+            className="text-white/70 hover:text-emerald-400 pl-1 ml-1 border-l border-white/15 transition-colors"
+            aria-label={isPaused ? 'Resume auto-sliding' : 'Pause auto-sliding'}
+          >
+            <i className={`ti ${isPaused ? 'ti-player-play' : 'ti-player-pause'} text-xs`} />
+          </button>
         </div>
       </div>
 
-      {/* Main Editorial Headline & Asymmetric Layout */}
-      <div className="my-auto py-10 lg:py-14 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-          {/* Headline Column */}
-          <div className="lg:col-span-8 space-y-6 green-anim-slideInLeft">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] font-mono uppercase tracking-[0.22em] bg-[#10b981]/10 text-[#059669] dark:text-[#34d399] border border-[#10b981]/25 backdrop-blur-sm">
-              <i className="ti ti-bolt text-xs animate-pulse" aria-hidden="true" />
-              <span>Clean Energy &bull; Solar PV &bull; BESS Storage &bull; Microgrids</span>
-            </div>
+      {/* ── MAIN HERO CONTENT (Parallaxes & Fades when Scrolled) ── */}
+      <motion.div
+        style={{ opacity: contentOpacity, y: contentY }}
+        className="relative z-10 max-w-[1400px] mx-auto w-full px-6 sm:px-10 lg:px-14 pb-12 sm:pb-16 lg:pb-20 pt-28 pointer-events-auto"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end">
+          {/* Left: Dynamic Headline Block */}
+          <div className="lg:col-span-8 space-y-6">
+            {/* Eyebrow badge */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`badge-${slide.id}`}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.45 }}
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 text-[11px] font-mono uppercase tracking-[0.22em] bg-emerald-950/70 text-emerald-300 border border-emerald-500/35 backdrop-blur-md font-medium"
+              >
+                <i className="ti ti-bolt text-xs text-emerald-400" aria-hidden="true" />
+                <span>{slide.badge}</span>
+              </motion.div>
+            </AnimatePresence>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-[-0.04em] text-[#141c18] dark:text-white leading-[0.94] uppercase font-editorial-display">
-              POWERING A <br />
-              <span className="italic font-light serif font-editorial-heading text-[#059669] dark:text-[#34d399]">
-                Cleaner, More Resilient
-              </span>
-              <br />
-              &amp; PRODUCTIVE FUTURE.
-            </h1>
+            {/* H1 Heading */}
+            <AnimatePresence mode="wait">
+              <motion.h1
+                key={`title-${slide.id}`}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-light tracking-[-0.035em] text-white leading-[0.95] uppercase font-editorial-display"
+              >
+                {slide.titleLine1}{' '}
+                <br />
+                <span className="italic font-light font-editorial-heading text-emerald-400">
+                  {slide.titleAccent}
+                </span>{' '}
+                <br className="hidden sm:inline" />
+                {slide.titleLine3}
+              </motion.h1>
+            </AnimatePresence>
 
-            {/* Simulated Live Grid Telemetry Strip */}
-            <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono uppercase tracking-wider text-[#141c18]/70 dark:text-white/70 border-t border-[#141c18]/10 dark:border-white/10 max-w-2xl">
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-ping" />
-                <span>ARRAY: <strong>1,842 kWp ACTIVE</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-[#f59e0b]">&bull;</span>
-                <span>IRRADIANCE: <strong>984 W/m²</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-[#10b981]">&bull;</span>
-                <span>ZESCO SYNC: <strong>50.02 Hz</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-[#3b82f6]">&bull;</span>
-                <span>CO2 OFFSET: <strong>14.8 T/DAY</strong></span>
-              </div>
-            </div>
+            {/* Live Telemetry Strip */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`telemetry-${slide.id}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono uppercase tracking-wider text-white/75 border-t border-white/15 pt-4 max-w-2xl"
+              >
+                {slide.telemetry.map((t, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    {t.dot ? (
+                      <span className={`w-1.5 h-1.5 rounded-full ${t.color} animate-ping`} />
+                    ) : (
+                      <span className="text-emerald-400">•</span>
+                    )}
+                    <span>
+                      {t.label}: <strong className="text-white font-semibold">{t.value}</strong>
+                    </span>
+                  </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Supporting Text & CTAs (Asymmetric Right Column) */}
-          <div className="lg:col-span-4 space-y-6 lg:pl-4 green-anim-fadeInUp">
-            <p className="text-sm sm:text-base leading-relaxed text-[#141c18]/80 dark:text-white/80 font-light tracking-wide">
-              Maktub Engineering &amp; General Supply Limited provides integrated renewable energy and sustainable infrastructure solutions designed to help commercial enterprises, mines, agriculture, and communities eliminate power downtime and reduce overhead costs across Zambia and Southern Africa.
-            </p>
-
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-3.5 pt-1">
-              <a
-                href="#green-solutions-carousel"
-                className="group relative inline-flex items-center justify-between px-8 py-4 bg-[#141c18] dark:bg-white text-white dark:text-[#0e1411] text-xs uppercase tracking-[0.25em] overflow-hidden transition-all duration-300 hover:bg-[#059669] dark:hover:bg-[#34d399]"
+          {/* Right: Description & Action Buttons */}
+          <div className="lg:col-span-4 space-y-6 lg:pl-2">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={`desc-${slide.id}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.45 }}
+                className="text-sm sm:text-base leading-relaxed text-white/85 font-light"
               >
-                <span className="relative z-10 font-medium">Clean Energy Fleet</span>
-                <i className="ti ti-arrow-right relative z-10 text-sm transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-                <span className="absolute inset-0 bg-[#059669] dark:bg-[#34d399] translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0" />
-              </a>
+                {slide.description}
+              </motion.p>
+            </AnimatePresence>
 
-              <a
+            <div className="flex flex-col gap-3 pt-1">
+              <motion.a
+                href="#green-solutions-catalog"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative inline-flex items-center justify-between px-7 py-4 bg-emerald-400 hover:bg-emerald-300 text-[#060d09] text-xs uppercase tracking-[0.25em] font-bold overflow-hidden transition-all duration-300 shadow-lg"
+              >
+                <span>Explore Solutions</span>
+                <i className="ti ti-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+              </motion.a>
+
+              <motion.a
                 href="#green-energy-quote"
-                className="inline-flex items-center justify-center px-8 py-4 border border-[#141c18]/30 dark:border-white/30 text-[#141c18] dark:text-white text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 hover:border-[#10b981] hover:bg-[#10b981]/10 hover:text-[#059669] dark:hover:text-[#34d399]"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center px-7 py-4 border border-white/30 text-white text-xs uppercase tracking-[0.25em] font-semibold transition-all duration-300 hover:border-emerald-400 hover:bg-emerald-500/15 hover:text-emerald-300 backdrop-blur-sm"
               >
                 Request Technical Assessment
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── DYNAMIC MULTI-SLIDE HERO VISUAL CONTAINER ── */}
-      <div className="relative w-full mt-2 group overflow-hidden border border-[#141c18]/15 dark:border-white/15 bg-[#ded9cd]/20 dark:bg-white/5 relative z-10">
-        <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden">
-          {HERO_SLIDES.map((slide, sIdx) => {
-            const isActive = sIdx === activeSlideIdx;
-            return (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                  }`}
-              >
-                <Image
-                  src={slide.image}
-                  alt={slide.headline}
-                  fill
-                  priority={sIdx === 0}
-                  sizes="(max-width: 1400px) 100vw, 1400px"
-                  className={`object-cover object-center grayscale-[10%] contrast-[105%] ${isActive ? 'green-ken-burns' : ''
-                    }`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e1411]/85 via-[#0e1411]/30 to-transparent" />
-              </div>
-            );
-          })}
-
-          {/* Dynamic Corner Badges & Location Overlay */}
-          <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-col sm:flex-row justify-between items-start sm:items-end text-white gap-4">
-            <div className="space-y-1.5 max-w-xl">
-              <span className="text-[10px] uppercase font-mono tracking-[0.3em] text-[#34d399] block font-medium">
-                {activeSlide.location}
-              </span>
-              <p className="text-lg sm:text-2xl font-light tracking-wide uppercase font-editorial-display leading-tight">
-                {activeSlide.headline}
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <div className="text-[11px] font-mono uppercase tracking-[0.25em] text-white/90 bg-black/60 backdrop-blur-md px-4 py-2 border border-white/20">
-                {activeSlide.statusBadge}
-              </div>
-              <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#34d399] bg-[#059669]/30 backdrop-blur-md px-3.5 py-2 border border-[#10b981]/40 font-semibold">
-                {activeSlide.metricVal} {activeSlide.metricLabel}
-              </div>
+              </motion.a>
             </div>
           </div>
         </div>
 
-        {/* Interactive Slide Selector Tabs Bar */}
-        <div className="bg-[#141c18] dark:bg-[#070b12] border-t border-white/10 px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2 text-xs font-mono uppercase tracking-wider text-white/70">
-          <div className="flex items-center gap-2 overflow-x-auto py-1 scrollbar-none">
-            {HERO_SLIDES.map((slide, sIdx) => (
-              <button
-                key={slide.id}
-                type="button"
-                onClick={() => setActiveSlideIdx(sIdx)}
-                className={`px-3 py-1.5 transition-all text-[11px] flex items-center gap-2 ${activeSlideIdx === sIdx
-                    ? 'bg-[#10b981] text-[#0e1411] font-bold shadow-sm'
-                    : 'bg-white/5 text-white/70 hover:bg-white/15 hover:text-white'
-                  }`}
-              >
-                <span className={`w-1.5 h-1.5 rounded-full ${activeSlideIdx === sIdx ? 'bg-[#0e1411]' : 'bg-white/40'}`} />
-                <span>{slide.tabLabel}</span>
-              </button>
-            ))}
-          </div>
+        {/* ── SLIDE TIMELINE NAVIGATOR (Autoslide Progress Bars) ── */}
+        <div className="mt-10 sm:mt-12 pt-6 border-t border-white/15">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            {HERO_SLIDES.map((s, idx) => {
+              const isActive = idx === currentSlide;
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  onClick={() => handleManualSlide(idx)}
+                  className="text-left group transition-all duration-300 relative pb-2"
+                >
+                  {/* Progress Line */}
+                  <div className="w-full h-1 bg-white/15 rounded-full overflow-hidden mb-2.5">
+                    {isActive ? (
+                      <motion.div
+                        key={`bar-${currentSlide}-${isPaused}`}
+                        initial={{ width: '0%' }}
+                        animate={{ width: isPaused ? '100%' : '100%' }}
+                        transition={{
+                          duration: isPaused ? 0.3 : SLIDE_DURATION / 1000,
+                          ease: 'linear',
+                        }}
+                        className="h-full bg-emerald-400"
+                      />
+                    ) : (
+                      <div className="h-full w-0 group-hover:w-full bg-white/40 transition-all duration-300" />
+                    )}
+                  </div>
 
-          <div className="hidden md:flex items-center gap-2 text-[10px] text-white/50 tracking-widest">
-            <span>ROTATION: 6.5S AUTO</span>
-            <span className="w-1 h-1 rounded-full bg-[#10b981]" />
-            <span>PAUSED ON HOVER</span>
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span
+                      className={`text-sm sm:text-base font-light font-editorial-display transition-colors ${
+                        isActive ? 'text-emerald-400 font-medium' : 'text-white/80 group-hover:text-white'
+                      }`}
+                    >
+                      0{idx + 1} — {s.tag}
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
-      </div>
-
-      {/* Bottom Editorial Metrics Strip */}
-      <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 border-b border-[#141c18]/15 dark:border-white/15 pb-8 text-xs uppercase tracking-[0.2em] font-mono text-[#141c18]/70 dark:text-white/70 relative z-10">
-        <div className="hover:text-[#059669] dark:hover:text-[#34d399] transition-colors">
-          <span className="text-2xl sm:text-3xl font-light text-[#141c18] dark:text-white block font-editorial-display">20</span>
-          <span>Energy Solutions</span>
-        </div>
-        <div className="hover:text-[#059669] dark:hover:text-[#34d399] transition-colors">
-          <span className="text-2xl sm:text-3xl font-light text-[#141c18] dark:text-white block font-editorial-display">8</span>
-          <span>Delivery Stages</span>
-        </div>
-        <div className="hover:text-[#059669] dark:hover:text-[#34d399] transition-colors">
-          <span className="text-2xl sm:text-3xl font-light text-[#141c18] dark:text-white block font-editorial-display">6+</span>
-          <span>Key Economic Sectors</span>
-        </div>
-        <div className="hover:text-[#059669] dark:hover:text-[#34d399] transition-colors">
-          <span className="text-2xl sm:text-3xl font-light text-[#141c18] dark:text-white block font-editorial-display">100%</span>
-          <span>ERB &amp; ZESCO Compliant</span>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
-

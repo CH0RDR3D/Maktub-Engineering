@@ -188,7 +188,7 @@ export default function GreenEnergyClientHub() {
       {/* ── TAB SWITCHER SEGMENTED BAR ── */}
       <div className="flex justify-center mb-12 sm:mb-16">
         <div
-          className="inline-flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#ded9cd]/40 dark:bg-white/5 border border-[#141c18]/15 dark:border-white/15 rounded-full backdrop-blur-md max-w-full overflow-x-auto"
+          className="inline-flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#e8e4d8] dark:bg-white/10 border border-[#141c18]/15 dark:border-white/15 rounded-full backdrop-blur-md max-w-full overflow-x-auto shadow-sm"
           role="tablist"
           aria-label="Green Energy Technical Tools"
         >
@@ -201,14 +201,14 @@ export default function GreenEnergyClientHub() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => handleTabChange(tab.id)}
-                className={`inline-flex items-center space-x-2.5 px-4 sm:px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-[0.18em] transition-all duration-300 ${
+                className={`inline-flex items-center space-x-2.5 px-4 sm:px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-[0.18em] transition-all duration-300 border ${
                   isActive
                     ? tab.isQuote
-                      ? 'bg-gradient-to-r from-[#d97706] to-[#f5a623] text-black font-semibold shadow-md'
-                      : 'bg-[#141c18] dark:bg-white text-white dark:text-[#0e1411] font-semibold shadow-md'
+                      ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white border-amber-600 font-semibold shadow-md'
+                      : 'bg-[#141c18] dark:bg-white text-white dark:text-[#0e1411] border-[#141c18] dark:border-white font-semibold shadow-md'
                     : tab.isQuote
-                    ? 'text-[#d97706] hover:bg-[#d97706]/10'
-                    : 'text-[#141c18]/70 dark:text-white/70 hover:text-[#141c18] dark:hover:text-white hover:bg-[#141c18]/5 dark:hover:bg-white/5'
+                    ? 'bg-transparent text-amber-700 dark:text-amber-400 border-transparent hover:bg-amber-500/10 font-semibold'
+                    : 'bg-transparent text-[#141c18]/85 dark:text-white/85 border-transparent hover:text-[#059669] dark:hover:text-emerald-400 hover:bg-black/5 dark:hover:bg-white/10 font-medium'
                 }`}
               >
                 <i className={`${tab.icon} text-sm`} aria-hidden="true" />

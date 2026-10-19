@@ -37,9 +37,11 @@ export default function Navbar() {
   }, [pathname]);
 
   // Close mobile menu on route change
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setMenuOpen(false);
-  }, [pathname]);
+  }
 
   // Prevent background scroll when mobile menu is open
   useEffect(() => {

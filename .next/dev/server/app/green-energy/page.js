@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/green-energy/page.js")
 R.c("server/chunks/ssr/node_modules_next_dist_1hl2cgi._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__16gvxwu._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__02l8k-j._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_1ivs2qn._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_compiled_0d323sd._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_server_route-modules_app-page_0qo_rmc._.js")

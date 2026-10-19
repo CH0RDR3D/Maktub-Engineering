@@ -120,8 +120,19 @@ export default function RootLayout({ children }) {
                 var mql = window.matchMedia('(prefers-color-scheme: dark)');
                 var theme = mql.matches ? 'dark' : 'light';
                 document.documentElement.setAttribute('data-theme', theme);
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
                 mql.addEventListener('change', function(e) {
-                  document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                  var nextTheme = e.matches ? 'dark' : 'light';
+                  document.documentElement.setAttribute('data-theme', nextTheme);
+                  if (nextTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
                 });
               } catch(e){}
             })();`

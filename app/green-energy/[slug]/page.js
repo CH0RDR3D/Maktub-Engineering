@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   GREEN_ENERGY_SOLUTIONS,
-  GREEN_ENERGY_SECTORS
+  GREEN_ENERGY_SECTORS,
+  getSolutionImage
 } from '../../../lib/greenEnergyData';
 import GreenEnergyAssessmentForm from '../../../components/GreenEnergyAssessmentForm';
 
@@ -23,6 +25,8 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const solutionImage = getSolutionImage(solution);
+
   return {
     title: `${solution.title} | Green Energy Solutions`,
     description: `${solution.tagline} ${solution.overview.slice(0, 140)}...`,
@@ -31,7 +35,8 @@ export async function generateMetadata({ params }) {
     },
     openGraph: {
       title: `${solution.title} | Maktub Engineering`,
-      description: solution.tagline
+      description: solution.tagline,
+      images: [solutionImage]
     }
   };
 }
@@ -44,6 +49,7 @@ export default async function GreenEnergyDetailPage({ params }) {
     notFound();
   }
 
+  const heroImage = getSolutionImage(solution);
   const sectorObj = GREEN_ENERGY_SECTORS.find((sec) => sec.id === solution.sector);
 
   // Find related solutions in the same sector or adjacent
@@ -76,23 +82,39 @@ export default async function GreenEnergyDetailPage({ params }) {
         </div>
       </div>
 
-      {/* 2. DETAIL HERO HEADER */}
-      <section className="ge-detail-hero">
-        <div className="section-inner ge-detail-hero-inner">
-          <div className="ge-detail-hero-badge reveal">
+      {/* 2. DETAIL HERO HEADER WITH CONTINUOUS CARD BACKGROUND */}
+      <section className="ge-detail-hero relative overflow-hidden bg-[#060d09] py-20 sm:py-28 text-white text-center">
+        {/* Full-bleed background image from the card */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <Image
+            src={heroImage}
+            alt={`${solution.title} — Maktub Green Energy`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Deep cinematic layered gradients for contrast & consistency */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#060d09] via-[#060d09]/80 to-[#060d09]/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#060d09]/80 via-transparent to-[#060d09]/95" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(16,185,129,0.15),transparent)]" />
+        </div>
+
+        <div className="section-inner ge-detail-hero-inner relative z-10 max-w-[960px] mx-auto px-6">
+          <div className="ge-detail-hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 backdrop-blur-md text-xs font-mono uppercase tracking-[0.2em] mb-6">
             <i className={solution.icon} aria-hidden="true" />
             <span>Solution #{String(solution.num).padStart(2, '0')} • {solution.badge}</span>
           </div>
 
-          <h1 className="ge-detail-hero-title reveal">
+          <h1 className="ge-detail-hero-title text-3xl sm:text-5xl lg:text-6xl font-light uppercase tracking-tight text-white font-editorial-display leading-tight mb-4">
             {solution.title}
           </h1>
 
-          <p className="ge-detail-hero-tagline reveal">
+          <p className="ge-detail-hero-tagline text-base sm:text-lg text-white/85 max-w-2xl mx-auto font-light leading-relaxed mb-8">
             {solution.tagline}
           </p>
 
-          <div className="ge-detail-hero-actions reveal">
+          <div className="ge-detail-hero-actions flex flex-wrap gap-4 justify-center items-center">
             <a href="#assessment-form" className="btn-green-primary">
               <i className="ti ti-calculator" aria-hidden="true" />
               <span>Request Technical Proposal</span>

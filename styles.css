@@ -5522,10 +5522,12 @@ textarea {
 }
 
 .ge-detail-hero {
-  padding: 60px 0;
-  background: linear-gradient(135deg, rgba(6, 78, 59, 0.85) 0%, rgba(4, 120, 87, 0.85) 100%);
+  position: relative;
+  padding: 80px 0;
+  background: #060d09;
   color: #FFFFFF;
   text-align: center;
+  overflow: hidden;
 }
 
 .ge-detail-hero-inner {

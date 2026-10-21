@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "0190079ac5902d62701ec6574a8da0b5",
-    "previewModeSigningKey": "dd4e44aaf4f3b2e94a878c1f95e61b8f14bce8129dee51320260d938a6534ea4",
-    "previewModeEncryptionKey": "7a7dea8458e0525b9aaa8345e624701523a6752f1ef000aaa97afa81422a1a26"
-  }
-}
+{"version":4,"routes":{"/green-energy/commercial-industrial-solar":{},"/green-energy/battery-storage-bess":{},"/green-energy/hybrid-power-systems":{},"/green-energy/solar-minigrids-rural":{},"/green-energy/government-public-sector":{},"/green-energy/mining-heavy-industry":{},"/green-energy/solar-agriculture":{},"/green-energy/energy-efficient-infrastructure":{},"/green-energy/smart-energy-management":{},"/green-energy/net-metering":{},"/green-energy/renewable-project-development":{},"/green-energy/epc-turnkey-delivery":{},"/green-energy/energy-as-a-service":{},"/green-energy/electric-mobility-ev":{},"/green-energy/solar-street-lighting":{},"/green-energy/solar-water-wastewater":{},"/green-energy/telecom-clean-energy":{},"/green-energy/carbon-sustainability":{},"/green-energy/energy-auditing-advisory":{},"/green-energy/operations-maintenance":{}},"dynamicRoutes":{"/green-energy/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/green-energy/[slug]","routeRegex":"^\\/green\\-energy\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"d4ff26242c547f436aa95e728b3b18ff","previewModeSigningKey":"2c0c384c34d3227b78775e8c2c25eee6baba033618266e8c45ac3ea64f48c6dd","previewModeEncryptionKey":"80c769c67241837c362344f28debb3869626b96bafcb86a70d23499bde8ed4b9"}}

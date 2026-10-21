@@ -1,13 +1,15 @@
-'use client';
+﻿'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+// ── DATA ────────────────────────────────────────────────────────────────────
 
 const HERO_SLIDES = [
   {
     id: 'solar-bess',
-    image: '/resources/green-energy/man-working-environment-project.webp',
+    image: '/resources/green-energy/CleanEnergy.webp',
     alt: 'Maktub solar field engineer inspecting renewable infrastructure',
     badge: 'Solar PV · BESS Storage · Microgrids · EPC Delivery',
     tag: 'Solar PV & BESS Storage',
@@ -22,16 +24,10 @@ const HERO_SLIDES = [
       { label: 'ZESCO', value: '50.02 Hz', color: 'bg-emerald-400' },
       { label: 'CO₂ Offset', value: '14.8 T/day', color: 'bg-sky-400' },
     ],
-    stats: [
-      { value: '20+', label: 'Turnkey Solutions' },
-      { value: '8', label: 'Delivery Stages' },
-      { value: '6+', label: 'Key Sectors' },
-      { value: '100%', label: 'ERB Compliant' },
-    ],
   },
   {
     id: 'commercial-industrial',
-    image: '/resources/green-energy/60056.webp',
+    image: '/resources/green-energy/renewables_wind-discord.webp',
     alt: 'Large-scale commercial and industrial solar PV installation in Zambia',
     badge: 'Commercial & Industrial Solar · High-Yield Generation',
     tag: 'Commercial & Industrial',
@@ -46,16 +42,10 @@ const HERO_SLIDES = [
       { label: 'Tier-1 BNEF', value: '100% Certified', color: 'bg-emerald-400' },
       { label: 'Payback Est.', value: '3.8 Years', color: 'bg-sky-400' },
     ],
-    stats: [
-      { value: '75%', label: 'Max Tariff Cut' },
-      { value: '3.8 Yrs', label: 'Est. Payback' },
-      { value: '25 Yrs', label: 'Asset Warranty' },
-      { value: '0 ZMW', label: 'Peak Diesel Burn' },
-    ],
   },
   {
     id: 'mining-hybrid',
-    image: '/resources/green-energy/windmills-field.webp',
+    image: '/resources/green-energy/Africa-Energy.jpg',
     alt: 'Wind and solar hybrid renewable energy generation facility',
     badge: 'Hybrid Power Plants · Zero-Downtime Mining Resilience',
     tag: 'Mining & Utility Hybrid',
@@ -70,16 +60,10 @@ const HERO_SLIDES = [
       { label: 'Sub-Cycle Sync', value: '< 20 ms Transfer', color: 'bg-emerald-400' },
       { label: 'Diesel Burn', value: '-82% Reduced', color: 'bg-sky-400' },
     ],
-    stats: [
-      { value: '99.98%', label: 'Uptime Reliability' },
-      { value: '<20ms', label: 'Sub-Cycle Transfer' },
-      { value: '50 MWh', label: 'Storage Scale' },
-      { value: 'NCC 5', label: 'Govt Accredited' },
-    ],
   },
   {
     id: 'agricultural-solar',
-    image: '/resources/green-energy/agrosolar.webp',
+    image: '/resources/green-energy/agrosolari-2.webp',
     alt: 'High-capacity agricultural solar pumping and farm microgrid',
     badge: 'Agricultural Solar · Irrigation Pumping · Rural Energy',
     tag: 'Agricultural Solar Systems',
@@ -94,65 +78,86 @@ const HERO_SLIDES = [
       { label: 'Diesel Cost', value: 'Zero Dependency', color: 'bg-emerald-400' },
       { label: 'Irrigated Land', value: '450+ Hectares', color: 'bg-sky-400' },
     ],
-    stats: [
-      { value: '280 m³/h', label: 'Peak Water Flow' },
-      { value: '450+ Ha', label: 'Irrigated Area' },
-      { value: '0 Litres', label: 'Diesel Consumed' },
-      { value: '100%', label: 'Off-Grid Autonomy' },
-    ],
   },
 ];
 
-const SLIDE_DURATION = 6000; // 6 seconds per slide
+const SLIDE_DURATION = 7000;
+const EXIT_TRANSITION_MS = 420;
 
 export default function GreenHero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef(null);
+  const [step, setStep] = useState(0);
+  const [isExitingText, setIsExitingText] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isTabActive, setIsTabActive] = useState(true);
+  const [isInViewport, setIsInViewport] = useState(true);
 
-  // Pinned/stuck parallax scroll transform
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
   });
-
-  // As the following section slides over the hero, hero content gently fades and moves
   const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.75], ['0px', '-45px']);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
 
-  // Autosliding timer
+  const currentSlide = step % HERO_SLIDES.length;
+  const textDirectionClass = step % 2 === 0 ? 'gh-enter-left' : 'gh-enter-right';
+  const activeSlide = HERO_SLIDES[currentSlide];
+
+  const preloadNext = useCallback((nextStep) => {
+    const nextIdx = nextStep % HERO_SLIDES.length;
+    const img = new window.Image();
+    img.src = HERO_SLIDES[nextIdx].image;
+  }, []);
+
+  // ── SYNCHRONIZED TIMER ENGINE ──────────────────────────────────────────────
   useEffect(() => {
-    if (isPaused) return;
-
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    if (isPaused || !isTabActive || !isInViewport) return;
+    const preloadTimer = setTimeout(() => preloadNext(step + 1), SLIDE_DURATION - 2500);
+    const exitTimer = setTimeout(() => setIsExitingText(true), SLIDE_DURATION - EXIT_TRANSITION_MS);
+    const advanceTimer = setTimeout(() => {
+      setStep((prev) => prev + 1);
+      setIsExitingText(false);
     }, SLIDE_DURATION);
+    return () => {
+      clearTimeout(preloadTimer);
+      clearTimeout(exitTimer);
+      clearTimeout(advanceTimer);
+    };
+  }, [step, isPaused, isTabActive, isInViewport, preloadNext]);
 
-    return () => clearInterval(timer);
-  }, [isPaused, currentSlide]);
+  // ── TAB VISIBILITY GUARD ───────────────────────────────────────────────────
+  useEffect(() => {
+    const handleVisibility = () => setIsTabActive(!document.hidden);
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => document.removeEventListener('visibilitychange', handleVisibility);
+  }, []);
 
-  const slide = HERO_SLIDES[currentSlide];
+  // ── INTERSECTION OBSERVER ──────────────────────────────────────────────────
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInViewport(entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
-  const handleManualSlide = (index) => {
-    setCurrentSlide(index);
-    setIsPaused(true);
-    // Resume auto-slide after 8s idle
-    const resumeTimer = setTimeout(() => setIsPaused(false), 8000);
-    return () => clearTimeout(resumeTimer);
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+  // ── MANUAL CONTROLS ────────────────────────────────────────────────────────
+  const goTo = useCallback((idx) => {
+    setIsExitingText(true);
+    setTimeout(() => {
+      setStep(idx);
+      setIsExitingText(false);
+    }, EXIT_TRANSITION_MS);
     setIsPaused(true);
     setTimeout(() => setIsPaused(false), 8000);
-  };
+  }, []);
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-    setIsPaused(true);
-    setTimeout(() => setIsPaused(false), 8000);
-  };
+  const handlePrev = () => goTo((currentSlide - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+  const handleNext = () => goTo((currentSlide + 1) % HERO_SLIDES.length);
 
   return (
     <section
@@ -162,172 +167,94 @@ export default function GreenHero() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* ── STUCK BACKGROUND IMAGE GALLERY (Cross-fading Auto-Slider) ── */}
+      {/* ── BACKGROUND: pre-rendered images, CSS crossfade + Ken Burns ── */}
       <motion.div className="absolute inset-0 z-0 pointer-events-none" style={{ scale: bgScale }}>
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={slide.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute inset-0"
+        {HERO_SLIDES.map((s, idx) => (
+          <div
+            key={s.id}
+            className={`gh-bg-image${idx === currentSlide ? ' is-active' : ''}`}
           >
             <Image
-              src={slide.image}
-              alt={slide.alt}
+              src={s.image}
+              alt={s.alt}
               fill
-              priority
+              priority={idx === 0}
               sizes="100vw"
               className="object-cover object-center"
             />
-            {/* Deep cinematic overlay gradient for maximum text contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#060d09] via-[#060d09]/75 to-[#060d09]/40" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(16,185,129,0.12),transparent)]" />
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060d09] via-[#060d09]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#060d09]/70 via-[#060d09]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#060d09]/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(16,185,129,0.10),transparent)]" />
       </motion.div>
 
-      {/* ── LIVE SYSTEM BADGE (Top-Left) ── */}
-      <div className="absolute top-24 sm:top-28 left-6 sm:left-10 lg:left-14 z-20 flex items-center gap-2.5 text-[10px] font-mono uppercase tracking-[0.3em] text-white/80 pointer-events-auto">
-        <span className="w-2 h-2 rounded-full bg-emerald-400 green-pulse-dot" />
-        <span className="font-semibold text-white">Green Energy Division</span>
-        <span className="px-2 py-0.5 border border-emerald-500/40 bg-emerald-500/20 text-emerald-300 font-bold tracking-widest text-[9px]">
-          LIVE
-        </span>
-      </div>
-
-      {/* ── SECTION INDEX & SLIDE CONTROLS (Top-Right) ── */}
-      <div className="absolute top-24 sm:top-28 right-6 sm:right-10 lg:right-14 z-20 flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/70 pointer-events-auto">
-        <span className="hidden md:inline text-white/60">
-          [ 01 / PROLOGUE ] — MAKTUB · VOL. 2026
-        </span>
-        <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15">
-          <button
-            type="button"
-            onClick={handlePrev}
-            className="text-white/70 hover:text-white p-1 transition-colors"
-            aria-label="Previous slide"
-          >
-            <i className="ti ti-chevron-left text-xs" />
-          </button>
-          <span className="text-emerald-400 font-bold tracking-wider">
-            0{currentSlide + 1} / 0{HERO_SLIDES.length}
-          </span>
-          <button
-            type="button"
-            onClick={handleNext}
-            className="text-white/70 hover:text-white p-1 transition-colors"
-            aria-label="Next slide"
-          >
-            <i className="ti ti-chevron-right text-xs" />
-          </button>
-          <button
-            type="button"
-            onClick={() => setIsPaused((prev) => !prev)}
-            className="text-white/70 hover:text-emerald-400 pl-1 ml-1 border-l border-white/15 transition-colors"
-            aria-label={isPaused ? 'Resume auto-sliding' : 'Pause auto-sliding'}
-          >
-            <i className={`ti ${isPaused ? 'ti-player-play' : 'ti-player-pause'} text-xs`} />
-          </button>
-        </div>
-      </div>
-
-      {/* ── MAIN HERO CONTENT (Parallaxes & Fades when Scrolled) ── */}
+      {/* ── MAIN CONTENT ── */}
       <motion.div
         style={{ opacity: contentOpacity, y: contentY }}
         className="relative z-10 max-w-[1400px] mx-auto w-full px-6 sm:px-10 lg:px-14 pb-12 sm:pb-16 lg:pb-20 pt-28 pointer-events-auto"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end">
-          {/* Left: Dynamic Headline Block */}
-          <div className="lg:col-span-8 space-y-6">
-            {/* Eyebrow badge */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`badge-${slide.id}`}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.45 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 text-[11px] font-mono uppercase tracking-[0.22em] bg-emerald-950/70 text-emerald-300 border border-emerald-500/35 backdrop-blur-md font-medium"
-              >
-                <i className="ti ti-bolt text-xs text-emerald-400" aria-hidden="true" />
-                <span>{slide.badge}</span>
-              </motion.div>
-            </AnimatePresence>
+        {/* Eyebrow badge */}
+        <div
+          key={`badge-${step}`}
+          className={`gh-badge-wrap gh-anim-item gh-anim-badge${isExitingText ? ' gh-exiting' : ''}`}
+        >
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 text-[11px] font-mono uppercase tracking-[0.22em] bg-emerald-950/70 text-emerald-300 border border-emerald-500/35 backdrop-blur-md font-medium mb-6">
+            <i className="ti ti-bolt text-xs text-emerald-400" aria-hidden="true" />
+            <span>{activeSlide.badge}</span>
+          </div>
+        </div>
 
-            {/* H1 Heading */}
-            <AnimatePresence mode="wait">
-              <motion.h1
-                key={`title-${slide.id}`}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-light tracking-[-0.035em] text-white leading-[0.95] uppercase font-editorial-display"
-              >
-                {slide.titleLine1}{' '}
-                <br />
-                <span className="italic font-light font-editorial-heading text-emerald-400">
-                  {slide.titleAccent}
-                </span>{' '}
-                <br className="hidden sm:inline" />
-                {slide.titleLine3}
-              </motion.h1>
-            </AnimatePresence>
+        {/* Bilateral layout — direction alternates per slide */}
+        <div
+          key={step}
+          className={`gh-bilateral-layout ${textDirectionClass}${isExitingText ? ' gh-exiting' : ''}`}
+        >
+          {/* Heading block */}
+          <div className="gh-heading-block gh-anim-item gh-anim-heading">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-light tracking-[-0.035em] text-white leading-[0.95] uppercase font-editorial-display mb-5">
+              {activeSlide.titleLine1}{' '}
+              <br />
+              <span className="italic font-light font-editorial-heading text-emerald-400">
+                {activeSlide.titleAccent}
+              </span>{' '}
+              <br className="hidden sm:inline" />
+              {activeSlide.titleLine3}
+            </h1>
 
-            {/* Live Telemetry Strip */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`telemetry-${slide.id}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono uppercase tracking-wider text-white/75 border-t border-white/15 pt-4 max-w-2xl"
-              >
-                {slide.telemetry.map((t, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    {t.dot ? (
-                      <span className={`w-1.5 h-1.5 rounded-full ${t.color} animate-ping`} />
-                    ) : (
-                      <span className="text-emerald-400">•</span>
-                    )}
-                    <span>
-                      {t.label}: <strong className="text-white font-semibold">{t.value}</strong>
-                    </span>
-                  </div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
+            {/* Live telemetry strip */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono uppercase tracking-wider text-white/75 border-t border-white/15 pt-4 max-w-2xl gh-anim-item">
+              {activeSlide.telemetry.map((t, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  {t.dot ? (
+                    <span className={`w-1.5 h-1.5 rounded-full ${t.color} animate-ping`} />
+                  ) : (
+                    <span className="text-emerald-400">•</span>
+                  )}
+                  <span>
+                    {t.label}: <strong className="text-white font-semibold">{t.value}</strong>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right: Description & Action Buttons */}
-          <div className="lg:col-span-4 space-y-6 lg:pl-2">
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={`desc-${slide.id}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.45 }}
-                className="text-sm sm:text-base leading-relaxed text-white/85 font-light"
-              >
-                {slide.description}
-              </motion.p>
-            </AnimatePresence>
-
-            <div className="flex flex-col gap-3 pt-1">
+          {/* Action block — opposite side */}
+          <div className="gh-action-block gh-anim-item gh-anim-actions">
+            <p className="text-sm sm:text-base leading-relaxed text-white/85 font-light mb-6">
+              {activeSlide.description}
+            </p>
+            <div className="gh-cta-group">
               <motion.a
                 href="#green-solutions-catalog"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center justify-between px-7 py-4 bg-emerald-400 hover:bg-emerald-300 text-[#060d09] text-xs uppercase tracking-[0.25em] font-bold overflow-hidden transition-all duration-300 shadow-lg"
+                className="group inline-flex items-center justify-between px-7 py-4 bg-emerald-400 hover:bg-emerald-300 text-[#060d09] text-xs uppercase tracking-[0.25em] font-bold transition-all duration-300 shadow-lg"
               >
                 <span>Explore Solutions</span>
-                <i className="ti ti-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                <i className="ti ti-arrow-right text-sm ml-3 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
               </motion.a>
-
               <motion.a
                 href="#green-energy-quote"
                 whileHover={{ scale: 1.02 }}
@@ -340,7 +267,7 @@ export default function GreenHero() {
           </div>
         </div>
 
-        {/* ── SLIDE TIMELINE NAVIGATOR (Autoslide Progress Bars) ── */}
+        {/* ── SLIDE TIMELINE NAVIGATOR ── */}
         <div className="mt-10 sm:mt-12 pt-6 border-t border-white/15">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
             {HERO_SLIDES.map((s, idx) => {
@@ -349,16 +276,15 @@ export default function GreenHero() {
                 <button
                   key={s.id}
                   type="button"
-                  onClick={() => handleManualSlide(idx)}
+                  onClick={() => goTo(idx)}
                   className="text-left group transition-all duration-300 relative pb-2"
                 >
-                  {/* Progress Line */}
-                  <div className="w-full h-1 bg-white/15 rounded-full overflow-hidden mb-2.5">
+                  <div className="w-full h-[3px] bg-white/15 rounded-full overflow-hidden mb-2.5">
                     {isActive ? (
                       <motion.div
-                        key={`bar-${currentSlide}-${isPaused}`}
+                        key={`bar-${step}-${isPaused}`}
                         initial={{ width: '0%' }}
-                        animate={{ width: isPaused ? '100%' : '100%' }}
+                        animate={{ width: '100%' }}
                         transition={{
                           duration: isPaused ? 0.3 : SLIDE_DURATION / 1000,
                           ease: 'linear',
@@ -369,22 +295,39 @@ export default function GreenHero() {
                       <div className="h-full w-0 group-hover:w-full bg-white/40 transition-all duration-300" />
                     )}
                   </div>
-
-                  <div className="flex items-baseline justify-between gap-2">
-                    <span
-                      className={`text-sm sm:text-base font-light font-editorial-display transition-colors ${
-                        isActive ? 'text-emerald-400 font-medium' : 'text-white/80 group-hover:text-white'
-                      }`}
-                    >
-                      0{idx + 1} — {s.tag}
-                    </span>
-                  </div>
+                  <span
+                    className={`text-sm sm:text-base font-light font-editorial-display transition-colors ${
+                      isActive ? 'text-emerald-400 font-medium' : 'text-white/80 group-hover:text-white'
+                    }`}
+                  >
+                    0{idx + 1} — {s.tag}
+                  </span>
                 </button>
               );
             })}
           </div>
         </div>
       </motion.div>
+
+      {/* ── PREV / NEXT ARROWS ── */}
+      <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4 sm:px-6 z-20 pointer-events-none">
+        <button
+          type="button"
+          onClick={handlePrev}
+          className="pointer-events-auto w-10 h-10 flex items-center justify-center rounded-full bg-black/40 border border-white/15 backdrop-blur-md text-white/70 hover:text-white hover:border-emerald-400/60 transition-all duration-200"
+          aria-label="Previous slide"
+        >
+          <i className="ti ti-chevron-left text-sm" />
+        </button>
+        <button
+          type="button"
+          onClick={handleNext}
+          className="pointer-events-auto w-10 h-10 flex items-center justify-center rounded-full bg-black/40 border border-white/15 backdrop-blur-md text-white/70 hover:text-white hover:border-emerald-400/60 transition-all duration-200"
+          aria-label="Next slide"
+        >
+          <i className="ti ti-chevron-right text-sm" />
+        </button>
+      </div>
     </section>
   );
 }

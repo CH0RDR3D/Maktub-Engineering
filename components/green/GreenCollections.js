@@ -20,9 +20,9 @@ const sectors = [
     description:
       'Turnkey rooftop and ground-mounted solar PV for factories, warehouses, and corporate campuses. Engineered to cut grid tariffs and eliminate diesel burn.',
     scale: '20 kW – 20 MW+',
-    image: '/resources/green-energy/60056.webp',
+    image: '/resources/green-energy/renewableenergy.avif',
     tag: 'C&I Solar',
-    anchor: '#green-solutions-catalog',
+    anchor: '/green-energy/commercial-industrial-solar',
     featured: true,
   },
   {
@@ -32,9 +32,9 @@ const sectors = [
     description:
       'Multi-megawatt hybrid power plants for extractive operations across the Copperbelt and Southern Africa.',
     scale: '1 MW – 100 MW+',
-    image: '/resources/green-energy/soalrengineers.webp',
+    image: '/resources/green-energy/renewables_africa-discord002.webp',
     tag: 'Mining & Industry',
-    anchor: '#green-solutions-catalog',
+    anchor: '/green-energy/mining-heavy-industry',
   },
   {
     id: '03',
@@ -43,9 +43,9 @@ const sectors = [
     description:
       'High-capacity solar pumping for centre pivots, drip irrigation, cold storage, and rural farm microgrids.',
     scale: '5.5 kW – 150 kW+',
-    image: '/resources/green-energy/agrosolar.webp',
+    image: '/resources/green-energy/residentialsoalr.webp',
     tag: 'Agriculture',
-    anchor: '#green-solutions-catalog',
+    anchor: '/green-energy/solar-agriculture',
   },
   {
     id: '04',
@@ -54,9 +54,9 @@ const sectors = [
     description:
       'Solar mini-grids and productive-use energy systems bringing reliable power to underserved communities.',
     scale: '5 kW – 500 kW+',
-    image: '/resources/green-energy/communitysolared.webp',
+    image: '/resources/green-energy/ruralsolar.webp',
     tag: 'Off-Grid',
-    anchor: '#green-solutions-catalog',
+    anchor: '/green-energy/solar-minigrids-rural',
   },
 ];
 

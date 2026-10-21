@@ -21,7 +21,7 @@ export default function GreenShowcaseBanner() {
       {/* Parallax background */}
       <motion.div className="absolute inset-0 z-0" style={{ y: imgY }}>
         <Image
-          src="/resources/green-energy/windmills-field.webp"
+          src="/resources/green-energy/green-africa-map-renewables-discord001.webp"
           alt="Large-scale wind and solar farm — Maktub Green Energy"
           fill
           sizes="100vw"

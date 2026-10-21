@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GREEN_ENERGY_SOLUTIONS } from '../../lib/greenEnergyData';
+import { GREEN_ENERGY_SOLUTIONS, getSolutionImage } from '../../lib/greenEnergyData';
 
 const categories = [
   { id: 'all', label: 'All' },
@@ -14,43 +14,6 @@ const categories = [
   { id: 'communities-offgrid', label: 'Off-Grid' },
   { id: 'epc-advisory', label: 'EPC & Advisory' },
 ];
-
-const SOLUTION_IMAGE_MAP = {
-  'commercial-industrial': '/resources/green-energy/60056.webp',
-  mining: '/resources/equipment.webp',
-  agriculture: '/resources/green-energy/agrosolar.webp',
-  'communities-offgrid': '/resources/green-energy/africalightbulb.webp',
-  'epc-advisory': '/resources/green-energy/man-working-environment-project.webp',
-  'government-public': '/resources/green-energy/man-working-environment-project.webp',
-  telecommunications: '/resources/green-energy/windmills-field.webp',
-};
-
-const SPECIFIC_SOLUTION_IMAGE_MAP = {
-  'commercial-industrial-solar': '/resources/green-energy/60056.webp',
-  'battery-storage-bess': '/resources/green-energy/solarstand.webp',
-  'hybrid-power-systems': '/resources/green-energy/windmills-field.webp',
-  'agricultural-solar': '/resources/green-energy/agrosolar.webp',
-  'mining-microgrids': '/resources/equipment.webp',
-  'energy-efficient-infrastructure': '/resources/green-energy/eco light bulb.webp',
-  'smart-energy-management': '/resources/green-energy/solar grahic.webp',
-  'operations-maintenance': '/resources/green-energy/soalrengineers.webp',
-  'energy-auditing-advisory': '/resources/green-energy/man-working-environment-project.webp',
-  'solar-minigrids-rural': '/resources/green-energy/ruralsolar.webp',
-  'solar-street-lighting': '/resources/green-energy/communitysolared.webp',
-  'solar-water-wastewater': '/resources/green-energy/womanwitsolar.webp',
-  'renewable-project-development': '/resources/green-energy/top-view-paper-with-green-energy-message.webp',
-  'epc-turnkey-delivery': '/resources/green-energy/soalrengineers.webp',
-  'carbon-sustainability': '/resources/green-energy/savetheworld.webp',
-  'telecom-clean-energy': '/resources/green-energy/windmills-field.webp',
-};
-
-function getSolutionImage(item) {
-  return (
-    SPECIFIC_SOLUTION_IMAGE_MAP[item.id] ||
-    SOLUTION_IMAGE_MAP[item.sector] ||
-    '/resources/green-energy/60056.webp'
-  );
-}
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -104,11 +67,10 @@ export default function GreenProducts() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 text-[11px] uppercase font-mono tracking-[0.18em] transition-all duration-200 border ${
-                activeCategory === cat.id
-                  ? 'bg-[#141c18] dark:bg-white text-white dark:text-[#0d1410] border-[#141c18] dark:border-white font-bold shadow-sm'
-                  : 'bg-transparent text-[#141c18]/80 dark:text-white/80 border-[#141c18]/20 dark:border-white/20 hover:border-[#059669] dark:hover:border-emerald-400 hover:text-[#059669] dark:hover:text-emerald-400 font-medium'
-              }`}
+              className={`px-4 py-2 text-[11px] uppercase font-mono tracking-[0.18em] transition-all duration-200 border ${activeCategory === cat.id
+                ? 'bg-[#141c18] dark:bg-white text-white dark:text-[#0d1410] border-[#141c18] dark:border-white font-bold shadow-sm'
+                : 'bg-transparent text-[#141c18]/80 dark:text-white/80 border-[#141c18]/20 dark:border-white/20 hover:border-[#059669] dark:hover:border-emerald-400 hover:text-[#059669] dark:hover:text-emerald-400 font-medium'
+                }`}
             >
               {cat.label}
             </motion.button>

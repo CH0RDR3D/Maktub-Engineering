@@ -65,7 +65,7 @@ export default function Footer() {
             <div className="text-xs font-mono uppercase tracking-[0.25em] text-[#141c18]/50 dark:text-white/50">
               [ 02 / NAVIGATION ]
             </div>
-            <ul className="space-y-2.5 text-xs font-mono uppercase tracking-[0.18em]">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-[#141c18]/70 dark:text-white/70 font-light">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -84,7 +84,7 @@ export default function Footer() {
             <div className="text-xs font-mono uppercase tracking-[0.25em] text-[#141c18]/50 dark:text-white/50">
               [ 03 / EXPERTISE ]
             </div>
-            <ul className="space-y-2.5 text-xs font-mono uppercase tracking-[0.18em] text-[#141c18]/80 dark:text-white/80">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-[#141c18]/70 dark:text-white/70 font-light">
               <li>
                 <Link
                   href="/services#services-section-civil"
@@ -112,7 +112,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/green-energy"
-                  className="hover:text-[#059669] dark:hover:text-[#34d399] transition-colors inline-block text-[#059669] dark:text-[#34d399]"
+                  className="hover:text-[#059669] dark:hover:text-[#34d399] transition-colors inline-block text-[#059669] dark:text-[#34d399] font-medium"
                 >
                   Green Energy &amp; Solar &rarr;
                 </Link>

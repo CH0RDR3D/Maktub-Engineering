@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/green-energy/commercial-industrial-solar":{},"/green-energy/battery-storage-bess":{},"/green-energy/hybrid-power-systems":{},"/green-energy/solar-minigrids-rural":{},"/green-energy/government-public-sector":{},"/green-energy/mining-heavy-industry":{},"/green-energy/solar-agriculture":{},"/green-energy/energy-efficient-infrastructure":{},"/green-energy/smart-energy-management":{},"/green-energy/net-metering":{},"/green-energy/renewable-project-development":{},"/green-energy/epc-turnkey-delivery":{},"/green-energy/energy-as-a-service":{},"/green-energy/electric-mobility-ev":{},"/green-energy/solar-street-lighting":{},"/green-energy/solar-water-wastewater":{},"/green-energy/telecom-clean-energy":{},"/green-energy/carbon-sustainability":{},"/green-energy/energy-auditing-advisory":{},"/green-energy/operations-maintenance":{}},"dynamicRoutes":{"/green-energy/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/green-energy/[slug]","routeRegex":"^\\/green\\-energy\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"d4ff26242c547f436aa95e728b3b18ff","previewModeSigningKey":"2c0c384c34d3227b78775e8c2c25eee6baba033618266e8c45ac3ea64f48c6dd","previewModeEncryptionKey":"80c769c67241837c362344f28debb3869626b96bafcb86a70d23499bde8ed4b9"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "4e53f594bcf0bad9bb966edddb1eb0e5",
+    "previewModeSigningKey": "44e0faa99fa73a64c691f52c4b88747bcb7712d405d894011a2675b713deb34b",
+    "previewModeEncryptionKey": "10661de6fe1c3689dd027ae185e75df2d1857ca20d3cf18e17ed901eda051cd5"
+  }
+}
